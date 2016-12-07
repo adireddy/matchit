@@ -1,0 +1,36 @@
+-cmd haxelib newrepo
+#-cmd haxelib install bindx2 || true
+#-cmd haxelib install pixijs || true
+#-cmd haxelib install minject || true
+#-cmd haxelib install msignal || true
+#-cmd haxelib install actuate || true
+#-cmd haxelib install compiletime || true
+#-cmd haxelib install waud || true
+#-cmd haxelib install checkstyle || true
+
+--next
+-cmd resource-scaler -i assets/1024x648/@2x -o assets/1024x648/@1x -s 0.5
+-cmd resource-scaler -i assets/1024x648 -o assets/728x392 -s 0.7109375
+-cmd resource-scaler -i assets/1024x648 -o assets/480x320 -s 0.46875
+-cp utils
+-x Assets
+-cmd rm Assets.n
+
+--next
+-cp src
+-cp utils
+-main matchit.Main
+-js js/matchit.dev.js
+
+-lib msignal
+-lib minject
+-lib actuate
+-lib minject
+-lib pixijs
+-lib waud
+-lib bindx2
+-lib compiletime
+
+-debug
+-dce full
+-D source-map-content
