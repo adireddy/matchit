@@ -1,5 +1,6 @@
 package matchit.controller;
 
+import haxe.Timer;
 import minject.Injector;
 import matchit.core.components.ComponentModel;
 import matchit.core.components.ComponentView;
@@ -50,8 +51,10 @@ class Controller {
 	}
 
 	function _onPreloadingComplete() {
-		for (controller in componentControllers) controller.setup();
-		_componentViews = null;
+		Timer.delay(function() {
+			for (controller in componentControllers) controller.setup();
+			_componentViews = null;
+		}, 1500);
 	}
 
 	function _setupComponents() {

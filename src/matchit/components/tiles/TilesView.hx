@@ -7,10 +7,11 @@ import matchit.core.components.ComponentView;
 class TilesView extends ComponentView {
 
 	static inline var GAP:Int = 15;
+	static inline var ALL_TILE_COUNT:Int = 77;
 
 	var _rowMax:Int;
 	var _tileCount:Int;
-	var _tiles:Array<Sprite>;
+	var _tiles:Array<Tile>;
 
 	override public function init() {
 		super.init();
@@ -20,6 +21,7 @@ class TilesView extends ComponentView {
 
 	override public function addAssetsToLoad() {
 		loader.addAsset(AssetsList.TILES_TILE, AssetsList.TILES_TILE_PNG);
+		for (i in 1 ... ALL_TILE_COUNT) loader.addAsset("tiles_icons_" + i, "tiles/icons/" + i + ".png");
 	}
 
 	public function drawTiles(count:Int) {
@@ -27,15 +29,18 @@ class TilesView extends ComponentView {
 		_tiles = [];
 		_determineRowMax();
 
-		var tile:Sprite;
+		var tile:Tile;
 		var scale:Float = _getScaleFactor();
+		var tileId:Int = 1;
 		for (i in 0 ... _tileCount) {
-			tile = new Sprite(loader.getTexture(AssetsList.TILES_TILE));
+			tile = new Tile(loader.getTexture("tiles_icons_" + tileId), loader.getTexture(AssetsList.TILES_TILE));
 			tile.scale.set(scale);
+			tile.id = tileId;
+			tileId++;
+			if (tileId > _tileCount / 2) tileId = 1;
 			_tiles.push(tile);
-			_container.addChild(tile);
-
 		}
+		_tiles = Random.shuffle(_tiles);
 		_positionTiles();
 		_resize();
 	}
@@ -43,9 +48,10 @@ class TilesView extends ComponentView {
 	function _positionTiles() {
 		var xpos:Float = 0;
 		var ypos:Float = 0;
-		var tile:Sprite;
+		var tile:Tile;
 		for (i in 0 ... _tileCount) {
 			tile = _tiles[i];
+			_container.addChild(tile);
 			if (i == 0) {
 				tile.position.set(xpos, ypos);
 				continue;

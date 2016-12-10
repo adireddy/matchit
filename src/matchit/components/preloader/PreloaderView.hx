@@ -1,5 +1,7 @@
 package matchit.components.preloader;
 
+import motion.easing.*;
+import motion.Actuate;
 import pixi.core.graphics.Graphics;
 import msignal.Signal.Signal0;
 import pixi.core.sprites.Sprite;
@@ -46,12 +48,12 @@ class PreloaderView extends ComponentView {
 
 		_loadingBarBG = new Graphics();
 		_loadingBarBG.beginFill(0xEA5A20);
-		_loadingBarBG.drawRect(0, 0, 204, 26);
+		_loadingBarBG.drawRect(0, 0, 204, 24);
 		_loadingBarBG.endFill();
 
 		_loadingBar = new Graphics();
 		_loadingBar.beginFill(0x0FFFFFF);
-		_loadingBar.drawRect(0, 0, 200, 22);
+		_loadingBar.drawRect(0, 0, 200, 20);
 		_loadingBar.endFill();
 
 		_loadingBarContainer.addChild(_loadingBarBG);
@@ -59,10 +61,11 @@ class PreloaderView extends ComponentView {
 		_loadingBar.x = _loadingBar.y = 2;
 		_loadingBar.scale.x = 0.05;
 
-		_loadingBarContainer.position.set(_logo.x - _loadingBarBG.width / 2, _logo.y + _logo.height / 2 + 10);
+		_loadingBarContainer.position.set(_logo.x - _loadingBarBG.width / 2, _logo.y + _logo.height / 2 + 25);
 	}
 
 	public function reset() {
+		Actuate.stop(_logo);
 		_container.removeChild(_logo);
 		_container.removeChild(_loadingBarContainer);
 		_loadingBarContainer = null;
@@ -72,7 +75,19 @@ class PreloaderView extends ComponentView {
 	}
 
 	function _update(elapsed:Float) {
-		if (_loadingBar != null) _loadingBar.scale.x = loader.loadProgress / 100;
+		if (_loadingBar != null) {
+			_loadingBar.scale.x = loader.loadProgress / 100;
+			if (_loadingBar.scale.x == 1) {
+				_loadingBarContainer.visible = false;
+				_animateLogo();
+				Main.update.remove(_update);
+			}
+		}
+	}
+
+	function _animateLogo() {
+		Actuate.tween(_logo.scale, 0.4, { x:1.5, y:1.5 }).ease(Bounce.easeOut);
+		Actuate.tween(_logo, 0.4, { y: _logo.y + 25 }).ease(Bounce.easeOut).reflect();
 	}
 
 	function _resize() {
