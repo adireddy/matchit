@@ -86,7 +86,7 @@ class PreloaderView extends ComponentView {
 	}
 
 	function _animateLogo() {
-		Actuate.tween(_logo.scale, 0.4, { x:1.5, y:1.5 }).ease(Bounce.easeOut);
+		Actuate.tween(_logo.scale, 0.4, { x: 2, y: 2 }).ease(Bounce.easeOut);
 		Actuate.tween(_logo, 0.4, { y: _logo.y + 25 }).ease(Bounce.easeOut).reflect();
 	}
 

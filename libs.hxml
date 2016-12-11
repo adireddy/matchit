@@ -1,0 +1,10 @@
+-cmd haxelib newrepo
+-cmd haxelib install bindx2 || true
+-cmd haxelib install pixijs || true
+-cmd haxelib install minject || true
+-cmd haxelib install msignal || true
+-cmd haxelib install actuate || true
+-cmd haxelib install compiletime || true
+-cmd haxelib install waud || true
+-cmd haxelib install checkstyle || true
+-cmd haxelib install random || true

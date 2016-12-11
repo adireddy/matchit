@@ -66,8 +66,6 @@ class Main extends Application {
 				_stageProperties.screenY = (_stageProperties.screenHeight - _stageProperties.bucketHeight) / 2;
 			}
 
-			trace(_stageProperties.bucketWidth, _stageProperties.bucketHeight);
-
 			_init();
 			_setupApplication();
 		}
