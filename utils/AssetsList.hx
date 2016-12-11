@@ -12,6 +12,8 @@ class AssetsList {
 			"assets/1024x648/@1x/menu/button_48-tiles.png",
 			"assets/1024x648/@1x/menu/button_6-tiles.png",
 			"assets/1024x648/@1x/preloader/logo.png",
+			"assets/1024x648/@1x/quickmenu/back.png",
+			"assets/1024x648/@1x/quickmenu/home.png",
 			"assets/1024x648/@1x/tiles/tile.png",
 			"assets/1024x648/@2x/backgrounds/bg.jpg",
 			"assets/1024x648/@2x/menu/button_12-tiles.png",
@@ -19,6 +21,8 @@ class AssetsList {
 			"assets/1024x648/@2x/menu/button_48-tiles.png",
 			"assets/1024x648/@2x/menu/button_6-tiles.png",
 			"assets/1024x648/@2x/preloader/logo.png",
+			"assets/1024x648/@2x/quickmenu/back.png",
+			"assets/1024x648/@2x/quickmenu/home.png",
 			"assets/1024x648/@2x/tiles/tile.png",
 			"assets/480x320/@1x/backgrounds/bg.jpg",
 			"assets/480x320/@1x/menu/button_12-tiles.png",
@@ -26,6 +30,8 @@ class AssetsList {
 			"assets/480x320/@1x/menu/button_48-tiles.png",
 			"assets/480x320/@1x/menu/button_6-tiles.png",
 			"assets/480x320/@1x/preloader/logo.png",
+			"assets/480x320/@1x/quickmenu/back.png",
+			"assets/480x320/@1x/quickmenu/home.png",
 			"assets/480x320/@1x/tiles/tile.png",
 			"assets/480x320/@2x/backgrounds/bg.jpg",
 			"assets/480x320/@2x/menu/button_12-tiles.png",
@@ -33,6 +39,8 @@ class AssetsList {
 			"assets/480x320/@2x/menu/button_48-tiles.png",
 			"assets/480x320/@2x/menu/button_6-tiles.png",
 			"assets/480x320/@2x/preloader/logo.png",
+			"assets/480x320/@2x/quickmenu/back.png",
+			"assets/480x320/@2x/quickmenu/home.png",
 			"assets/480x320/@2x/tiles/tile.png",
 			"assets/728x392/@1x/backgrounds/bg.jpg",
 			"assets/728x392/@1x/menu/button_12-tiles.png",
@@ -40,6 +48,8 @@ class AssetsList {
 			"assets/728x392/@1x/menu/button_48-tiles.png",
 			"assets/728x392/@1x/menu/button_6-tiles.png",
 			"assets/728x392/@1x/preloader/logo.png",
+			"assets/728x392/@1x/quickmenu/back.png",
+			"assets/728x392/@1x/quickmenu/home.png",
 			"assets/728x392/@1x/tiles/tile.png",
 			"assets/728x392/@2x/backgrounds/bg.jpg",
 			"assets/728x392/@2x/menu/button_12-tiles.png",
@@ -47,6 +57,8 @@ class AssetsList {
 			"assets/728x392/@2x/menu/button_48-tiles.png",
 			"assets/728x392/@2x/menu/button_6-tiles.png",
 			"assets/728x392/@2x/preloader/logo.png",
+			"assets/728x392/@2x/quickmenu/back.png",
+			"assets/728x392/@2x/quickmenu/home.png",
 			"assets/728x392/@2x/tiles/tile.png",
 			"assets/1024x648/@1x/tiles/icons/1.png",
 			"assets/1024x648/@1x/tiles/icons/10.png",
@@ -732,6 +744,7 @@ class AssetsList {
 	public static inline var TILES_SOCIAL_ICON4_PNG:String = "tiles/social/icon4.png";
 	public static inline var TILES_ICONS_74_PNG:String = "tiles/icons/74.png";
 	public static inline var TILES_SOCIAL_ICON20_PNG:String = "tiles/social/icon20.png";
+	public static inline var QUICKMENU_BACK_PNG:String = "quickmenu/back.png";
 	public static inline var TILES_ICONS_25_PNG:String = "tiles/icons/25.png";
 	public static inline var TILES_ICONS_59_PNG:String = "tiles/icons/59.png";
 	public static inline var TILES_SOCIAL_ICON17_PNG:String = "tiles/social/icon17.png";
@@ -740,6 +753,7 @@ class AssetsList {
 	public static inline var TILES_ICONS_33_PNG:String = "tiles/icons/33.png";
 	public static inline var TILES_ICONS_67_PNG:String = "tiles/icons/67.png";
 	public static inline var TILES_SOCIAL_ICON21_PNG:String = "tiles/social/icon21.png";
+	public static inline var QUICKMENU_HOME_PNG:String = "quickmenu/home.png";
 	public static inline var TILES_ICONS_18_PNG:String = "tiles/icons/18.png";
 	public static inline var BACKGROUNDS_BG_JPG:String = "backgrounds/bg.jpg";
 	public static inline var TILES_ICONS_51_PNG:String = "tiles/icons/51.png";
@@ -849,6 +863,7 @@ class AssetsList {
 	public static inline var TILES_SOCIAL_ICON1:String = "tiles_social_icon1";
 	public static inline var TILES_ICONS_28:String = "tiles_icons_28";
 	public static inline var TILES_SOCIAL_ICON17:String = "tiles_social_icon17";
+	public static inline var QUICKMENU_HOME:String = "quickmenu_home";
 	public static inline var TILES_ICONS_61:String = "tiles_icons_61";
 	public static inline var TILES_ICONS_12:String = "tiles_icons_12";
 	public static inline var TILES_SOCIAL_ICON21:String = "tiles_social_icon21";
@@ -905,6 +920,7 @@ class AssetsList {
 	public static inline var TILES_ICONS_30:String = "tiles_icons_30";
 	public static inline var TILES_SOCIAL_ICON9:String = "tiles_social_icon9";
 	public static inline var TILES_ICONS_64:String = "tiles_icons_64";
+	public static inline var QUICKMENU_BACK:String = "quickmenu_back";
 	public static inline var TILES_ICONS_15:String = "tiles_icons_15";
 	public static inline var TILES_SOCIAL_ICON22:String = "tiles_social_icon22";
 	public static inline var TILES_ICONS_49:String = "tiles_icons_49";

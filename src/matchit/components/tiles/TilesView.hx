@@ -50,7 +50,6 @@ class TilesView extends ComponentView {
 			_tiles.push(tile);
 		}
 		_tiles = Random.shuffle(_tiles);
-		_positionTiles();
 		_resize();
 	}
 
@@ -153,11 +152,11 @@ class TilesView extends ComponentView {
 		_positionTiles();
 		_container.position.set((stageProperties.screenWidth - _container.width) / 2, (stageProperties.screenHeight - _container.height) / 2);
 
-		if (_container.position.y < 25 || _container.position.x < 25) {
+		if (_container.position.y < 50 || _container.position.x < 50) {
 			_container.scale.set(_container.scale.x - 0.01, _container.scale.y - 0.01);
 			_resize();
 		}
-		else if (_container.position.y > 75 && _container.position.x > 75) {
+		else if (_container.position.y > 80 && _container.position.x > 80) {
 			_container.scale.set(_container.scale.x + 0.01, _container.scale.y + 0.01);
 			_resize();
 		}
