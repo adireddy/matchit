@@ -161,4 +161,14 @@ class TilesView extends ComponentView {
 			_resize();
 		}
 	}
+
+	public function reset() {
+		_prevId = null;
+		_prevName = null;
+		_tileCount = 0;
+		_rowMax = 0;
+		_tiles = [];
+		if (_clickTimer != null) _clickTimer.stop();
+		_container.removeChildren();
+	}
 }

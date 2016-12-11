@@ -1460,48 +1460,6 @@ WebAudioAPISound.prototype = $extend(BaseSound.prototype,{
 	}
 	,__class__: WebAudioAPISound
 });
-var bindx_Signal = function() {
-	this.lock = 0;
-	this.listeners = [];
-	this.lock = 0;
-};
-$hxClasses["bindx.Signal"] = bindx_Signal;
-bindx_Signal.__name__ = ["bindx","Signal"];
-bindx_Signal.prototype = {
-	add: function(listener) {
-		var pos = HxOverrides.indexOf(this.listeners,listener,0);
-		if(this.lock > 0) {
-			this.listeners = this.listeners.slice();
-			this.lock = 0;
-		}
-		if(pos > -1) this.listeners.splice(pos,1);
-		this.listeners.push(listener);
-	}
-	,__class__: bindx_Signal
-};
-var bindx_FieldSignal = function() {
-	bindx_Signal.call(this);
-};
-$hxClasses["bindx.FieldSignal"] = bindx_FieldSignal;
-bindx_FieldSignal.__name__ = ["bindx","FieldSignal"];
-bindx_FieldSignal.__super__ = bindx_Signal;
-bindx_FieldSignal.prototype = $extend(bindx_Signal.prototype,{
-	dispatch: function(oldValue,newValue) {
-		this.lock++;
-		var ls = this.listeners;
-		var _g = 0;
-		while(_g < ls.length) {
-			var l = ls[_g];
-			++_g;
-			l(oldValue,newValue);
-		}
-		if(this.lock > 0) this.lock--;
-	}
-	,__class__: bindx_FieldSignal
-});
-var bindx_IBindable = function() { };
-$hxClasses["bindx.IBindable"] = bindx_IBindable;
-bindx_IBindable.__name__ = ["bindx","IBindable"];
 var haxe_IMap = function() { };
 $hxClasses["haxe.IMap"] = haxe_IMap;
 haxe_IMap.__name__ = ["haxe","IMap"];
@@ -2156,11 +2114,15 @@ matchit_components_menu_MenuController.__name__ = ["matchit","components","menu"
 matchit_components_menu_MenuController.__super__ = matchit_core_components_ComponentController;
 matchit_components_menu_MenuController.prototype = $extend(matchit_core_components_ComponentController.prototype,{
 	setup: function() {
+		this.model.showMenu.add($bind(this,this._showMenu));
 		this.view.tiles.add($bind(this,this._onTiles));
 		this.view.showMenu();
 	}
+	,_showMenu: function() {
+		this.view._container.visible = true;
+	}
 	,_onTiles: function(count) {
-		this.model.set_tiles(count);
+		this.model.tiles.dispatch(count);
 		this.view._container.visible = false;
 	}
 	,__class__: matchit_components_menu_MenuController
@@ -2321,9 +2283,22 @@ matchit_components_quickmenu_QuickMenuController.__name__ = ["matchit","componen
 matchit_components_quickmenu_QuickMenuController.__super__ = matchit_core_components_ComponentController;
 matchit_components_quickmenu_QuickMenuController.prototype = $extend(matchit_core_components_ComponentController.prototype,{
 	setup: function() {
+		this.view.home.add($bind(this,this._onHome));
+		this.view.back.add($bind(this,this._onBack));
+		this.model.tiles.add($bind(this,this._onTiles));
 		this.view.showMenu();
+		this.view._container.visible = false;
+	}
+	,_onHome: function() {
+		this.model.showCategories.dispatch();
+		this.view._container.visible = false;
+	}
+	,_onBack: function() {
+		this.model.showMenu.dispatch();
+		this.view._container.visible = false;
 	}
 	,_onTiles: function(count) {
+		this.view._container.visible = true;
 	}
 	,__class__: matchit_components_quickmenu_QuickMenuController
 });
@@ -2409,10 +2384,15 @@ matchit_components_tiles_TilesController.__name__ = ["matchit","components","til
 matchit_components_tiles_TilesController.__super__ = matchit_core_components_ComponentController;
 matchit_components_tiles_TilesController.prototype = $extend(matchit_core_components_ComponentController.prototype,{
 	setup: function() {
-		this.model.get_tilesChanged().add($bind(this,this._onTiles));
+		this.model.showCategories.add($bind(this,this._reset));
+		this.model.showMenu.add($bind(this,this._reset));
+		this.model.tiles.add($bind(this,this._onTiles));
 	}
-	,_onTiles: function(from,to) {
-		this.view.drawTiles(to);
+	,_onTiles: function(count) {
+		this.view.drawTiles(count);
+	}
+	,_reset: function() {
+		this.view.reset();
 	}
 	,__class__: matchit_components_tiles_TilesController
 });
@@ -2584,6 +2564,15 @@ matchit_components_tiles_TilesView.prototype = $extend(matchit_core_components_C
 			this._container.scale.set(this._container.scale.x + 0.01,this._container.scale.y + 0.01);
 			this._resize();
 		}
+	}
+	,reset: function() {
+		this._prevId = null;
+		this._prevName = null;
+		this._tileCount = 0;
+		this._rowMax = 0;
+		this._tiles = [];
+		if(this._clickTimer != null) this._clickTimer.stop();
+		this._container.removeChildren();
 	}
 	,__class__: matchit_components_tiles_TilesView
 });
@@ -2912,23 +2901,14 @@ matchit_core_utils_StageProperties.prototype = {
 var matchit_model_Model = function() {
 	this.addAssets = new msignal_Signal0();
 	this.updateFps = new msignal_Signal1(Int);
+	this.tiles = new msignal_Signal1(Int);
+	this.showMenu = new msignal_Signal0();
+	this.showCategories = new msignal_Signal0();
 };
 $hxClasses["matchit.model.Model"] = matchit_model_Model;
 matchit_model_Model.__name__ = ["matchit","model","Model"];
-matchit_model_Model.__interfaces__ = [bindx_IBindable];
 matchit_model_Model.prototype = {
-	get_tilesChanged: function() {
-		if(this._tilesChanged == null) this._tilesChanged = new bindx_FieldSignal();
-		return this._tilesChanged;
-	}
-	,set_tiles: function(value) {
-		var __oldValue__ = this.tiles;
-		if(__oldValue__ == value) return __oldValue__;
-		this.tiles = value;
-		if(this._tilesChanged != null) this._tilesChanged.dispatch(__oldValue__,value);
-		return value;
-	}
-	,init: function() {
+	init: function() {
 	}
 	,set_preloaderReady: function(val) {
 		this.preloaderReady = val;
@@ -2936,7 +2916,7 @@ matchit_model_Model.prototype = {
 		return this.preloaderReady;
 	}
 	,__class__: matchit_model_Model
-	,__properties__: {set_tiles:"set_tiles",get_tilesChanged:"get_tilesChanged",set_preloaderReady:"set_preloaderReady"}
+	,__properties__: {set_preloaderReady:"set_preloaderReady"}
 };
 var matchit_view_View = function(stage) {
 	this.stage = stage;
@@ -4247,7 +4227,6 @@ WaudFocusManager.PAGE_SHOW = "pageshow";
 WaudFocusManager.PAGE_HIDE = "pagehide";
 WaudFocusManager.WINDOW = "window";
 WaudFocusManager.DOCUMENT = "document";
-bindx_IBindable.__meta__ = { obj : { 'interface' : null}};
 haxe_IMap.__meta__ = { obj : { 'interface' : null}};
 haxe_ds_ObjectMap.count = 0;
 js_Boot.__toStr = {}.toString;
@@ -4264,7 +4243,6 @@ matchit_components_tiles_TilesView.GAP = 15;
 matchit_components_tiles_TilesView.ALL_TILE_COUNT = 30;
 matchit_controller_Controller.__meta__ = { fields : { model : { type : ["matchit.model.Model"], inject : null}, view : { type : ["matchit.view.View"], inject : null}, stageProperties : { type : ["matchit.core.utils.StageProperties"], inject : null}}};
 matchit_core_components_ComponentModel.__meta__ = { fields : { model : { type : ["matchit.model.Model"], inject : null}}};
-matchit_model_Model.__meta__ = { fields : { _tilesChanged : { BindSignal : ["tiles",true]}}};
 matchit_view_View.__meta__ = { fields : { loader : { type : ["matchit.core.loader.AssetLoader"], inject : null}}};
 minject_point_InjectionPoint.__meta__ = { obj : { 'interface' : null}};
 motion_actuators_IGenericActuator.__meta__ = { obj : { 'interface' : null}};
