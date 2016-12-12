@@ -84,8 +84,8 @@ class Main extends Application {
 		transparent = false;
 		super.start();
 
-		var perf = new Perf(Perf.BOTTOM_RIGHT);
-		perf.addInfo(["UNKNOWN", "WEBGL", "CANVAS"][renderer.type] + " - " + pixelRatio);
+		//var perf = new Perf(Perf.BOTTOM_RIGHT);
+		//perf.addInfo(["UNKNOWN", "WEBGL", "CANVAS"][renderer.type] + " - " + pixelRatio);
 	}
 
 	inline function _setupApplication() {
