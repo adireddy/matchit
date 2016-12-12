@@ -8,9 +8,11 @@ class QuickMenuController extends ComponentController {
 
 	override public function setup() {
 		view.home.add(_onHome);
-		view.back.add(_onBack);
+		view.menu.add(_onMenu);
+		view.categories.add(_onCategories);
+		model.showMenu.add(_onShowMenu);
 		model.tiles.add(_onTiles);
-		view.showMenu();
+		view.createMenu();
 		view.hide();
 	}
 
@@ -19,12 +21,22 @@ class QuickMenuController extends ComponentController {
 		view.hide();
 	}
 
-	function _onBack() {
+	function _onMenu() {
 		model.showMenu.dispatch();
+	}
+
+	function _onCategories() {
+		model.showCategories.dispatch();
 		view.hide();
 	}
 
 	function _onTiles(count:Int) {
+		view.setupForTiles();
+		view.show();
+	}
+
+	function _onShowMenu() {
+		view.setupForMenu();
 		view.show();
 	}
 }

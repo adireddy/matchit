@@ -30,7 +30,7 @@ class MenuView extends ComponentView {
 		loader.addAsset(AssetsList.MENU_BUTTON_48_TILES, AssetsList.MENU_BUTTON_48_TILES_PNG);
 	}
 
-	public function showMenu() {
+	public function createMenu() {
 		_menu6 = new Sprite(loader.getTexture(AssetsList.MENU_BUTTON_6_TILES));
 		_container.addChild(_menu6);
 

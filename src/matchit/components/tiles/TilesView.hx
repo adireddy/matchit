@@ -7,32 +7,61 @@ import matchit.core.components.ComponentView;
 class TilesView extends ComponentView {
 
 	static inline var GAP:Int = 15;
-	static inline var ALL_TILE_COUNT:Int = 30;
 
 	var _rowMax:Int;
 	var _tileCount:Int;
 	var _tiles:Array<Tile>;
 
-	var _prevId:Int;
-	var _prevName:String;
+	var _firstOpenTile:Tile;
+	var _secondOpenTile:Tile;
 	var _clickTimer:Timer;
 
 	var _category:String;
 
+	var _movesCounter:Int;
+	var _matchCount:Int;
+
+	var _availableTilesCount:Int;
+	var _tilesLoaded:Bool;
+
 	override public function init() {
 		super.init();
 		index = 4;
+		_tilesLoaded = false;
 		Main.resize.add(_resize);
 	}
 
 	override public function addAssetsToLoad() {
-		_category = "social";
+		loader.addAudioAsset(AssetsList.AUDIO_APPLAUSE, AssetsList.AUDIO_APPLAUSE_MP3);
+		loader.addAudioAsset(AssetsList.AUDIO_NICE, AssetsList.AUDIO_NICE_MP3);
+		loader.addAudioAsset(AssetsList.AUDIO_TOUCH, AssetsList.AUDIO_TOUCH_MP3);
+		loader.addAudioAsset(AssetsList.AUDIO_UHOH, AssetsList.AUDIO_UHOH_MP3);
+		loader.addAudioAsset(AssetsList.AUDIO_WOW, AssetsList.AUDIO_WOW_MP3);
 		loader.addAsset(AssetsList.TILES_TILE, AssetsList.TILES_TILE_PNG);
-		for (i in 1 ... ALL_TILE_COUNT) loader.addAsset("tiles_" + _category + "_" + i, "tiles/" + _category + "/icon" + i + ".png");
+
 	}
 
-	public function drawTiles(count:Int) {
-		_tileCount = count;
+	public function loadCategoryTiles(category:String, count:Int) {
+		_tilesLoaded = false;
+		_category = category;
+		_availableTilesCount = count;
+		loader.reset();
+		for (i in 1 ... _availableTilesCount) loader.addAsset("tiles_" + _category + "_" + i, "tiles/" + _category + "/icon" + i + ".png");
+		loader.start(_onTilesLoaded);
+	}
+
+	function _onTilesLoaded() {
+		_tilesLoaded = true;
+		if (_tileCount != null && _tileCount > 0) drawTiles(_tileCount);
+	}
+
+	public function drawTiles(drawCount:Int) {
+		_tileCount = drawCount;
+
+		if (!_tilesLoaded) return;
+
+		_movesCounter = 0;
+		_matchCount = 0;
 		_tiles = [];
 		_determineRowMax();
 
@@ -54,33 +83,61 @@ class TilesView extends ComponentView {
 	}
 
 	function _onSelect(name:String, id:Int) {
-		if (_clickTimer != null) _clickTimer.stop();
-		if (_prevId == null) {
-			_prevId = id;
-			_prevName = name;
+		loader.playAudio(AssetsList.AUDIO_TOUCH);
+		if (_firstOpenTile == null) {
+			_firstOpenTile = cast _container.getChildByName(name);
 		}
 		else {
-			if (_prevId == id) {
+			_secondOpenTile = cast _container.getChildByName(name);
+			_disableAll();
+		}
+		_checkCards();
+	}
+
+	function _checkCards() {
+		if (_secondOpenTile != null) {
+			_movesCounter++;
+			//_moves.text = "Moves: " + _movesCounter;
+			if (_firstOpenTile.id == _secondOpenTile.id) {
+				_firstOpenTile = null;
+				_secondOpenTile = null;
 				_enableAll();
-				_prevId = null;
-				_prevName = null;
+				_matchCount += 2;
+				if (_matchCount == _tileCount) {
+					//_showCompleteAnimation();
+				}
+				loader.playAudio(AssetsList.AUDIO_NICE);
 			}
 			else {
-				_disableAll();
-				_clickTimer = Timer.delay(function() {
-					var tile1:Tile = cast _container.getChildByName(_prevName);
-					var tile2:Tile = cast _container.getChildByName(name);
-					tile1.reset();
-					tile2.reset();
-				}, 300);
-
-				Timer.delay(function() {
-					_prevId = null;
-					_prevName = null;
-					_enableAll();
-				}, 500);
+				loader.playAudio(AssetsList.AUDIO_UHOH);
+				Timer.delay(_resetTiles, 1000);
 			}
+			if (_clickTimer != null) _clickTimer.stop();
 		}
+		else {
+			_clickTimer = Timer.delay(resetTile, 2000);
+		}
+	}
+
+	function _resetTiles() {
+		if (_firstOpenTile != null) {
+			_firstOpenTile.reset();
+		}
+		if (_secondOpenTile != null) {
+			_secondOpenTile.reset();
+		}
+		_firstOpenTile = null;
+		_secondOpenTile = null;
+		_enableAll();
+	}
+
+	function resetTile() {
+		if (_clickTimer != null) _clickTimer.stop();
+		if (_secondOpenTile == null && _firstOpenTile != null) {
+			_firstOpenTile.reset();
+			_firstOpenTile = null;
+		}
+		_enableAll();
 	}
 
 	function _disableAll() {
@@ -163,8 +220,8 @@ class TilesView extends ComponentView {
 	}
 
 	public function reset() {
-		_prevId = null;
-		_prevName = null;
+		_firstOpenTile = null;
+		_secondOpenTile = null;
 		_tileCount = 0;
 		_rowMax = 0;
 		_tiles = [];

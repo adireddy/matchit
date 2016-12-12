@@ -9,7 +9,8 @@ import matchit.core.components.ComponentView;
 class QuickMenuView extends ComponentView {
 
 	public var home:Signal0;
-	public var back:Signal0;
+	public var menu:Signal0;
+	public var categories:Signal0;
 
 	static inline var GAP:Int = 5;
 
@@ -20,7 +21,8 @@ class QuickMenuView extends ComponentView {
 		super.init();
 		index = 5;
 		home = new Signal0();
-		back = new Signal0();
+		menu = new Signal0();
+		categories = new Signal0();
 		Main.resize.add(_resize);
 	}
 
@@ -29,7 +31,7 @@ class QuickMenuView extends ComponentView {
 		loader.addAsset(AssetsList.QUICKMENU_BACK, AssetsList.QUICKMENU_BACK_PNG);
 	}
 
-	public function showMenu() {
+	public function createMenu() {
 		_home = new Sprite(loader.getTexture(AssetsList.QUICKMENU_HOME));
 		_container.addChild(_home);
 
@@ -37,12 +39,22 @@ class QuickMenuView extends ComponentView {
 		_container.addChild(_back);
 
 		_home.click = _home.tap = function(evt:EventTarget) { home.dispatch(); };
-		_back.click = _back.tap = function(evt:EventTarget) { back.dispatch(); };
+		_back.click = _back.tap = function(evt:EventTarget) { menu.dispatch(); };
 
 		_home.interactive = true;
 		_back.interactive = true;
 
 		_resize();
+	}
+
+	public function setupForMenu() {
+		_home.visible = false;
+		_back.click = _back.tap = function(evt:EventTarget) { categories.dispatch(); };
+	}
+
+	public function setupForTiles() {
+		_home.visible = true;
+		_back.click = _back.tap = function(evt:EventTarget) { menu.dispatch(); };
 	}
 
 	function _resize() {

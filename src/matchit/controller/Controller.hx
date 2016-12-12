@@ -54,7 +54,7 @@ class Controller {
 		Timer.delay(function() {
 			for (controller in componentControllers) controller.setup();
 			_componentViews = null;
-		}, 1500);
+		}, 1000);
 	}
 
 	function _setupComponents() {

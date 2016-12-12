@@ -68,12 +68,11 @@ class Assets {
 
 		if (name.indexOf(".DS_Store") == -1) {
 			if (name.indexOf("@1x") > 0) filePath = name.substring(name.indexOf("@1x") + 4, name.length);
-			else if (name.indexOf("sounds") > 0) filePath = name.substring(name.indexOf("sounds"), name.length);
+			else if (name.indexOf("audio") > 0) filePath = name.substring(name.indexOf("audio"), name.length);
 
 			if (filePath != "") {
 				fileName = filePath.split("/").join("_");
 				fileName = fileName.split("-").join("_");
-				//fileName = fileName.split("x").join("_");
 				fileName = fileName.split(".").join("_");
 				_fileNames.set(fileName.toUpperCase(), filePath);
 

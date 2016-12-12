@@ -34,8 +34,8 @@ class Tile extends Container {
 		Actuate.tween(_closeTile, 0.5, { alpha: 0 }).onComplete(function() {
 			_closeTile.visible = false;
 			_closeTile.alpha = 1;
-			clicked.dispatch(name, id);
 		});
+		clicked.dispatch(name, id);
 		disable();
 	}
 

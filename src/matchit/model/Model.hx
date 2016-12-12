@@ -2,12 +2,14 @@ package matchit.model;
 
 import msignal.Signal.Signal0;
 import msignal.Signal.Signal1;
+import msignal.Signal.Signal2;
 
 class Model {
 
 	public var addAssets:Signal0;
 	public var updateFps:Signal1<Int>;
 	public var tiles:Signal1<Int>;
+	public var category:Signal2<String, Int>;
 	public var showMenu:Signal0;
 	public var showCategories:Signal0;
 
@@ -18,6 +20,7 @@ class Model {
 		addAssets = new Signal0();
 		updateFps = new Signal1(Int);
 		tiles = new Signal1(Int);
+		category = new Signal2(String, Int);
 		showMenu = new Signal0();
 		showCategories = new Signal0();
 	}
