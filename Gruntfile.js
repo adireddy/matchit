@@ -23,7 +23,7 @@ module.exports = function (grunt) {
 
         copy: {
             main: {
-                src: ["assets/**", "index.html", "js/**", "libs/**"],
+                src: ["assets/**", "index.html", "js/**", "libs/**", "favico.ico"],
                 dest: "/projects/adireddy.github.io/matchit/"
             }
         },
@@ -31,7 +31,6 @@ module.exports = function (grunt) {
     });
 
     grunt.loadNpmTasks("grunt-haxe");
-    grunt.loadNpmTasks("grunt-shell");
     grunt.loadNpmTasks("grunt-contrib-clean");
     grunt.loadNpmTasks("grunt-contrib-copy");
 
