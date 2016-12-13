@@ -2,7 +2,6 @@ package matchit.components.tiles;
 
 import js.html.Storage;
 import js.Browser;
-import matchit.core.utils.TimeUtils;
 import pixi.core.display.Container;
 import pixi.core.text.TextStyleObject;
 import haxe.Timer;
@@ -33,10 +32,8 @@ class TilesView extends ComponentView {
 
 	var _tilesContainer:Container;
 	var _movesCountTxt:Text;
-	var _movesTimeTxt:Text;
 	var _bestTxt:Text;
 
-	var _startTime:Float;
 	var _ls:Storage;
 
 	override public function init() {
@@ -55,18 +52,13 @@ class TilesView extends ComponentView {
 		_movesCountTxt.anchor.set(0, 1);
 		_container.addChild(_movesCountTxt);
 
-		_movesTimeTxt = new Text("", style1);
-		_movesTimeTxt.anchor.set(1, 0);
-		_container.addChild(_movesTimeTxt);
-
 		_bestTxt = new Text("", style1);
-		_bestTxt.anchor.set(0.5, 1);
+		_bestTxt.anchor.set(1, 0);
 		_container.addChild(_bestTxt);
 
 		Main.resize.add(_resize);
 
 		_ls = Browser.getLocalStorage();
-		if (_ls.getItem("best") != null) _bestTxt.text = _ls.getItem("best");
 	}
 
 	override public function addAssetsToLoad() {
@@ -97,8 +89,8 @@ class TilesView extends ComponentView {
 
 		if (!_tilesLoaded) return;
 
-		_startTime = Date.now().getSeconds();
-		Main.update.add(_update);
+		if (_ls.getItem("best" + _tileCount) != null) _bestTxt.text = _ls.getItem("best" + _tileCount);
+		else _bestTxt.text = "Best: Not Available";
 		_movesCounter = 0;
 		_matchCount = 0;
 		_movesTime = 0;
@@ -145,14 +137,13 @@ class TilesView extends ComponentView {
 				if (_matchCount == _tileCount) {
 					loader.playAudio(AssetsList.AUDIO_WOW);
 					loader.playAudio(AssetsList.AUDIO_APPLAUSE);
-					Main.update.remove(_update);
 
 					var bestMoves:String = _ls.getItem("bestMoves");
 					var bestTime:String = _ls.getItem("bestTime");
 					if (bestMoves == null) bestMoves = "0";
 					if (bestTime == null) bestTime = "0";
-					if (Std.parseInt(bestMoves) < _movesCounter && Std.parseInt(bestTime) < _movesTime) {
-						_ls.setItem("best", "Best - " + _movesCounter + " moves in " + _movesTime);
+					if (Std.parseInt(bestMoves) < _movesCounter) {
+						_ls.setItem("best" + _tileCount, "Best: " + _movesCounter + " moves");
 					}
 				}
 				loader.playAudio(AssetsList.AUDIO_NICE);
@@ -258,27 +249,20 @@ class TilesView extends ComponentView {
 		_positionTiles();
 		_tilesContainer.position.set((stageProperties.screenWidth - _tilesContainer.width) / 2, (stageProperties.screenHeight - _tilesContainer.height) / 2);
 
-		if (_tilesContainer.position.y < 50 || _tilesContainer.position.x < 50) {
+		if (_tilesContainer.position.y < 40 || _tilesContainer.position.x < 40) {
 			_tilesContainer.scale.set(_tilesContainer.scale.x - 0.01, _tilesContainer.scale.y - 0.01);
 			_resize();
 		}
-		else if (_tilesContainer.position.y > 80 && _tilesContainer.position.x > 80) {
+		else if (_tilesContainer.position.y > 60 && _tilesContainer.position.x > 60) {
 			_tilesContainer.scale.set(_tilesContainer.scale.x + 0.01, _tilesContainer.scale.y + 0.01);
 			_resize();
 		}
 
 		_movesCountTxt.position.set(0, stageProperties.screenHeight);
-		_movesTimeTxt.position.set(stageProperties.screenWidth, stageProperties.screenHeight - _movesCountTxt.height);
-		_bestTxt.position.set(stageProperties.screenWidth / 2, stageProperties.screenHeight);
-	}
-
-	function _update(t:Float) {
-		_movesTime = Date.now().getSeconds() - _startTime;
-		_movesTimeTxt.text = TimeUtils.convertToHHMMSS(_movesTime);
+		_bestTxt.position.set(stageProperties.screenWidth, stageProperties.screenHeight - _movesCountTxt.height);
 	}
 
 	public function reset() {
-		Main.update.remove(_update);
 		_firstOpenTile = null;
 		_secondOpenTile = null;
 		_tileCount = 0;
@@ -289,6 +273,6 @@ class TilesView extends ComponentView {
 		_movesCounter = 0;
 		_movesTime = 0;
 		_movesCountTxt.text = "";
-		_movesTimeTxt.text = "";
+		_bestTxt.text = "";
 	}
 }

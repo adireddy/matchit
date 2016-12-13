@@ -19,13 +19,21 @@ module.exports = function (grunt) {
             project: {
                 hxml: "build.hxml"
             }
-        }
+        },
+
+        copy: {
+            main: {
+                src: ["assets/**", "index.html", "js/**", "libs/**"],
+                dest: "/projects/adireddy.github.io/matchit/"
+            }
+        },
 
     });
 
     grunt.loadNpmTasks("grunt-haxe");
     grunt.loadNpmTasks("grunt-shell");
     grunt.loadNpmTasks("grunt-contrib-clean");
+    grunt.loadNpmTasks("grunt-contrib-copy");
 
     grunt.registerTask("default", ["clean", "haxe"]);
 };

@@ -28,6 +28,8 @@ class CategoriesView extends ComponentView {
 		loader.addAsset(AssetsList.CATEGORIES_POKEMAN, AssetsList.CATEGORIES_POKEMAN_PNG);
 		loader.addAsset(AssetsList.CATEGORIES_SOCIAL, AssetsList.CATEGORIES_SOCIAL_PNG);
 		loader.addAsset(AssetsList.CATEGORIES_RANDOM, AssetsList.CATEGORIES_RANDOM_PNG);
+		loader.addAsset(AssetsList.CATEGORIES_RANDOM, AssetsList.CATEGORIES_RANDOM_PNG);
+		loader.addAsset(AssetsList.CATEGORIES_RANDOM, AssetsList.CATEGORIES_RANDOM_PNG);
 	}
 
 	public function createCategories() {
