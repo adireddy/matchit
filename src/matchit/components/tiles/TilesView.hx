@@ -46,7 +46,7 @@ class TilesView extends ComponentView {
 
 		var style1:TextStyleObject = {};
 		style1.fill = 0x003366;
-		style1.fontSize = 14;
+		style1.fontSize = 16;
 		//style1.fontFamily = "Tahoma";
 		_movesCountTxt = new Text("", style1);
 		_movesCountTxt.anchor.set(0, 1);
@@ -75,7 +75,9 @@ class TilesView extends ComponentView {
 		_category = category;
 		_availableTilesCount = count;
 		loader.reset();
-		for (i in 1 ... _availableTilesCount) loader.addAsset("tiles_" + _category + "_" + i, "tiles/" + _category + "/icon" + i + ".png");
+		for (i in 0 ... _availableTilesCount) {
+			loader.addAsset("tiles_" + _category + "_" + (i + 1), "tiles/" + _category + "/icon" + (i + 1) + ".png");
+		}
 		loader.start(_onTilesLoaded);
 	}
 
@@ -98,21 +100,32 @@ class TilesView extends ComponentView {
 		_movesCountTxt.text = "Moves: " + _movesCounter;
 		_determineRowMax();
 
-		var tile:Tile;
+
 		var scale:Float = _getScaleFactor();
-		var tileId:Int = 1;
-		for (i in 0 ... _tileCount) {
-			tile = new Tile(loader.getTexture("tiles_" + _category + "_" + tileId), loader.getTexture(AssetsList.TILES_TILE));
-			tile.scale.set(scale);
-			tile.id = tileId;
-			tile.name = "tile" + i;
-			tile.clicked.add(_onSelect);
-			tileId++;
-			if (tileId > _tileCount / 2) tileId = 1;
-			_tiles.push(tile);
+		var tileId:Int;
+		var tileIds:Array<Int> = [];
+
+		for (i in 0 ... Std.int(_tileCount / 2)) {
+			tileId = Std.random(_availableTilesCount) + 1;
+			tileIds.push(tileId);
+			_createTile(tileId, scale, i);
+		}
+		var id = 0;
+		for (i in Std.int(_tileCount / 2) ... _tileCount) {
+			_createTile(tileIds[id], scale, i);
+			id++;
 		}
 		_tiles = Random.shuffle(_tiles);
 		_resize();
+	}
+
+	function _createTile(tileId:Int, scale:Float, id:Int) {
+		var tile:Tile = new Tile(loader.getTexture("tiles_" + _category + "_" + tileId), loader.getTexture(AssetsList.TILES_TILE));
+		tile.scale.set(scale);
+		tile.id = tileId;
+		tile.name = "tile" + id;
+		tile.clicked.add(_onSelect);
+		_tiles.push(tile);
 	}
 
 	function _onSelect(name:String, id:Int) {
