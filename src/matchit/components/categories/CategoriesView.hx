@@ -61,12 +61,12 @@ class CategoriesView extends ComponentView {
 		_creditsTxt.click = _creditsTxt.tap = function(evt:EventTarget) {
 			Browser.window.open("http://www.flaticon.com/", "_blank");
 		};
-		_container.addChild(_creditsTxt);
+		//_container.addChild(_creditsTxt);
 
 		_select = new Sprite(loader.getTexture(AssetsList.CATEGORIES_BUTTON_SELECT_A_CATEGORY));
 		_select.position.y = GAP * 2;
 		_select.anchor.x = 0.5;
-		_container.addChild(_select);
+		//_container.addChild(_select);
 
 		_christmas = new Sprite(loader.getTexture(AssetsList.CATEGORIES_CHRISTMAS));
 		_categoriesContainer.addChild(_christmas);
@@ -127,7 +127,8 @@ class CategoriesView extends ComponentView {
 	function _resize() {
 		_positionCategories();
 		_categoriesContainer.position.set((stageProperties.screenWidth - _categoriesContainer.width) / 2, (stageProperties.screenHeight - _categoriesContainer.height) / 2);
-		_creditsTxt.position.set(stageProperties.screenWidth / 2, stageProperties.screenHeight);
-		_select.position.x = stageProperties.screenWidth / 2;
+		//_categoriesContainer.position.y += GAP;
+		//_creditsTxt.position.set(stageProperties.screenWidth / 2, stageProperties.screenHeight);
+		//_select.position.x = stageProperties.screenWidth / 2;
 	}
 }
