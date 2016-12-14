@@ -26,6 +26,7 @@ class Main extends Application {
 
 	public function new() {
 		super();
+		BrowserUtils.registerServiceWorker();
 		_setStageProperties();
 		_setScreenDimensions();
 		_loadBucketConfig();

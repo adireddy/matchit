@@ -1818,6 +1818,7 @@ pixi_plugins_app_Application.prototype = {
 };
 var matchit_Main = function() {
 	pixi_plugins_app_Application.call(this);
+	matchit_core_utils_BrowserUtils.registerServiceWorker();
 	this._stageProperties = new matchit_core_utils_StageProperties();
 	this._stageProperties.actualPixelRatio = window.devicePixelRatio;
 	this._stageProperties.pixelRatio = matchit_core_utils_BrowserUtils.getPixelRatio();
@@ -3039,6 +3040,33 @@ matchit_core_utils_BrowserUtils.getPixelRatio = function() {
 };
 matchit_core_utils_BrowserUtils.isiOS = function() {
 	return new EReg("(iPad|iPhone|iPod)","i").match(window.navigator.userAgent);
+};
+matchit_core_utils_BrowserUtils.registerServiceWorker = function() {
+	
+			if ("serviceWorker" in navigator) {
+				navigator.serviceWorker.register("game-cache-sw.js").then(function (reg) {
+					reg.onupdatefound = function () {
+						var installingWorker = reg.installing;
+						installingWorker.onstatechange = function () {
+							switch (installingWorker.state) {
+								case "installed":
+									//if (navigator.serviceWorker.controller) document.getElementById("cacheStatus").style.visibility = "visible";
+									//else
+									console.log("Content is now available offline!");
+									break;
+								case "redundant":
+									console.error("The installing service worker became redundant.");
+									break;
+							}
+						};
+					};
+				}).catch(function (e) {
+					console.error("Error during service worker registration:", e);
+				});
+
+				//BrowserUtils.sendMessageToSW("Hello SW");
+			}
+		;
 };
 var matchit_core_utils_StageProperties = function() {
 	this.pixelRatio = 1;

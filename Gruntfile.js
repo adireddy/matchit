@@ -1,9 +1,23 @@
 module.exports = function (grunt) {
     "use strict";
 
+    var swPrecache = require("sw-precache");
+    var path = require("path");
+
     grunt.initConfig({
 
         pkg: grunt.file.readJSON("package.json"),
+
+        swPrecache: {
+            default: {
+                handleFetch: true,
+                rootDir: "assets"
+            },
+            dev: {
+                handleFetch: false,
+                rootDir: "assets"
+            }
+        },
 
         clean: {
             files: ["js/"]
@@ -30,9 +44,34 @@ module.exports = function (grunt) {
 
     });
 
+    function writeServiceWorkerFile(rootDir, handleFetch, callback) {
+        var config = {
+            staticFileGlobs: [
+                rootDir + "/**"
+            ],
+            handleFetch: handleFetch,
+            verbose: true
+        };
+
+        swPrecache.write("game-cache-sw.js", config, callback);
+    }
+
     grunt.loadNpmTasks("grunt-haxe");
     grunt.loadNpmTasks("grunt-contrib-clean");
     grunt.loadNpmTasks("grunt-contrib-copy");
 
-    grunt.registerTask("default", ["clean", "haxe"]);
+    grunt.registerMultiTask("swPrecache", function () {
+        var done = this.async();
+        var rootDir = this.data.rootDir;
+        var handleFetch = this.data.handleFetch;
+
+        writeServiceWorkerFile(rootDir, handleFetch, function (error) {
+            if (error) {
+                grunt.fail.warn(error);
+            }
+            done();
+        });
+    });
+
+    grunt.registerTask("default", ["clean", "swPrecache", "haxe"]);
 };

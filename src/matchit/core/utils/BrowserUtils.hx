@@ -1,5 +1,6 @@
 package matchit.core.utils;
 
+import Reflect;
 import js.Browser;
 
 class BrowserUtils {
@@ -38,12 +39,40 @@ class BrowserUtils {
 		~/Windows Phone/i.match(ua));
 	}
 
-	public static function isChrome():Bool{
+	public static function isChrome():Bool {
 		return Browser.navigator.userAgent.toLowerCase().indexOf("chrome") > -1;
 	}
 
 	public static function refreshWindow() {
 		JConsole.log(Browser.window.document.location.href);
 		Browser.window.document.location.href = Browser.window.document.location.href;
+	}
+
+	public static function registerServiceWorker() {
+		untyped __js__('
+			if ("serviceWorker" in navigator) {
+				navigator.serviceWorker.register("game-cache-sw.js").then(function (reg) {
+					reg.onupdatefound = function () {
+						var installingWorker = reg.installing;
+						installingWorker.onstatechange = function () {
+							switch (installingWorker.state) {
+								case "installed":
+									//if (navigator.serviceWorker.controller) document.getElementById("cacheStatus").style.visibility = "visible";
+									//else
+									console.log("Content is now available offline!");
+									break;
+								case "redundant":
+									console.error("The installing service worker became redundant.");
+									break;
+							}
+						};
+					};
+				}).catch(function (e) {
+					console.error("Error during service worker registration:", e);
+				});
+
+				//BrowserUtils.sendMessageToSW("Hello SW");
+			}
+		');
 	}
 }
