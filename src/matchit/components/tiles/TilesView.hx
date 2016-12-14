@@ -44,15 +44,15 @@ class TilesView extends ComponentView {
 		_tilesContainer = new Container();
 		_container.addChild(_tilesContainer);
 
-		var style1:TextStyleObject = {};
-		style1.fill = 0x003366;
-		style1.fontSize = 16;
-		//style1.fontFamily = "Tahoma";
-		_movesCountTxt = new Text("", style1);
+		var style:TextStyleObject = {};
+		style.fill = 0x003366;
+		style.fontSize = 15;
+		style.fontFamily = "Tahoma";
+		_movesCountTxt = new Text("", style, stageProperties.pixelRatio);
 		_movesCountTxt.anchor.set(0, 1);
 		_container.addChild(_movesCountTxt);
 
-		_bestTxt = new Text("", style1);
+		_bestTxt = new Text("", style, stageProperties.pixelRatio);
 		_bestTxt.anchor.set(1, 0);
 		_container.addChild(_bestTxt);
 
@@ -107,9 +107,11 @@ class TilesView extends ComponentView {
 
 		for (i in 0 ... Std.int(_tileCount / 2)) {
 			tileId = Std.random(_availableTilesCount) + 1;
+			while (tileIds.indexOf(tileId) > -1) tileId = Std.random(_availableTilesCount) + 1;
 			tileIds.push(tileId);
 			_createTile(tileId, scale, i);
 		}
+		trace(tileIds);
 		var id = 0;
 		for (i in Std.int(_tileCount / 2) ... _tileCount) {
 			_createTile(tileIds[id], scale, i);
@@ -163,7 +165,7 @@ class TilesView extends ComponentView {
 			}
 			else {
 				loader.playAudio(AssetsList.AUDIO_UHOH);
-				Timer.delay(_resetTiles, 1000);
+				Timer.delay(_resetTiles, 800);
 			}
 			if (_clickTimer != null) _clickTimer.stop();
 		}
