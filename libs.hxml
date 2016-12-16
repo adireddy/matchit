@@ -8,3 +8,4 @@
 -cmd haxelib install waud || true
 -cmd haxelib install checkstyle || true
 -cmd haxelib install random || true
+-cmd haxelib install WebFont || true

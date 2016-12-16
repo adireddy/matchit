@@ -12,6 +12,7 @@
 -lib bindx2
 -lib compiletime
 -lib random
+-lib WebFont
 
 -debug
 -dce full

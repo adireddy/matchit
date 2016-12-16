@@ -11,10 +11,10 @@ class MenuView extends ComponentView {
 
 	static inline var GAP:Int = 15;
 
-	var _menu6:Sprite;
-	var _menu12:Sprite;
-	var _menu24:Sprite;
-	var _menu48:Sprite;
+	var _menu6:MenuItem;
+	var _menu12:MenuItem;
+	var _menu24:MenuItem;
+	var _menu48:MenuItem;
 
 	override public function init() {
 		super.init();
@@ -31,18 +31,18 @@ class MenuView extends ComponentView {
 	}
 
 	public function createMenu() {
-		_menu6 = new Sprite(loader.getTexture(AssetsList.MENU_BUTTON_6_TILES));
+		_menu6 = new MenuItem(loader.getTexture(AssetsList.MENU_BUTTON_6_TILES), "6 Tiles", stageProperties);
 		_container.addChild(_menu6);
 
-		_menu12 = new Sprite(loader.getTexture(AssetsList.MENU_BUTTON_12_TILES));
+		_menu12 = new MenuItem(loader.getTexture(AssetsList.MENU_BUTTON_12_TILES), "12 Tiles", stageProperties);
 		_menu12.position.y = _menu6.position.y + _menu6.height + GAP;
 		_container.addChild(_menu12);
 
-		_menu24 = new Sprite(loader.getTexture(AssetsList.MENU_BUTTON_24_TILES));
+		_menu24 = new MenuItem(loader.getTexture(AssetsList.MENU_BUTTON_24_TILES), "24 Tiles", stageProperties);
 		_menu24.position.y = _menu12.position.y + _menu12.height + GAP;
 		_container.addChild(_menu24);
 
-		_menu48 = new Sprite(loader.getTexture(AssetsList.MENU_BUTTON_48_TILES));
+		_menu48 = new MenuItem(loader.getTexture(AssetsList.MENU_BUTTON_48_TILES), "48 Tiles", stageProperties);
 		_menu48.position.y = _menu24.position.y + _menu24.height + GAP;
 		_container.addChild(_menu48);
 
@@ -50,11 +50,6 @@ class MenuView extends ComponentView {
 		_menu12.click = _menu12.tap = function(evt:EventTarget) { tiles.dispatch(12); };
 		_menu24.click = _menu24.tap = function(evt:EventTarget) { tiles.dispatch(24); };
 		_menu48.click = _menu48.tap = function(evt:EventTarget) { tiles.dispatch(48); };
-
-		_menu6.interactive = true;
-		_menu12.interactive = true;
-		_menu24.interactive = true;
-		_menu48.interactive = true;
 
 		_resize();
 	}

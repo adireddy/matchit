@@ -49,6 +49,18 @@ module.exports = function (grunt) {
             staticFileGlobs: [
                 rootDir + "/**"
             ],
+            runtimeCaching: [
+                {
+                    urlPattern: /^https:\/\/fonts.(googleapis|gstatic).com\/.*/,
+                    handler: "fastest",
+                    options: {
+                        cache: {
+                            maxEntries: 10,
+                            name: "fonts-cache"
+                        }
+                    }
+                }
+            ],
             handleFetch: handleFetch,
             verbose: true
         };

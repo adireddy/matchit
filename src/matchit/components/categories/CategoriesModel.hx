@@ -5,6 +5,7 @@ import matchit.core.components.ComponentModel;
 class CategoriesModel extends ComponentModel {
 
 	public var education:Int = 32;
+	public var avatars:Int = 50;
 	public var christmas:Int = 50;
 	public var emoticons:Int = 36;
 	public var pokeman:Int = 99;

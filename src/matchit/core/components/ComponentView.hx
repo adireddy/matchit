@@ -11,6 +11,7 @@ import pixi.core.display.Container;
 	@inject public var stageProperties:StageProperties;
 
 	var _container:Container;
+	var _scaleFactor:Float;
 
 	public var componentName:String;
 
@@ -37,6 +38,7 @@ import pixi.core.display.Container;
 
 	public function init() {
 		view.stage.addChild(_container);
+		_scaleFactor = stageProperties.getScaleFactor();
 	}
 
 	public function addAssetsToLoad() {}

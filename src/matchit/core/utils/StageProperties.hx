@@ -29,4 +29,10 @@ class StageProperties {
 		screenX = 0;
 		screenY = 0;
 	}
+
+	public function getScaleFactor():Float {
+		if (bucketWidth == 480 || bucketHeight == 480) return 0.46875;
+		if (bucketWidth == 728 || bucketHeight == 728) return 0.7109375;
+		return 1;
+	}
 }

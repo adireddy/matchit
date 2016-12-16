@@ -3,6 +3,7 @@
 -cmd resource-scaler -i assets/1024x648/@1x -o assets/728x392/@1x -s 0.7109375
 -cmd resource-scaler -i assets/1024x648/@2x -o assets/480x320/@2x -s 0.46875
 -cmd resource-scaler -i assets/1024x648/@1x -o assets/480x320/@1x -s 0.46875
+
 -cp utils
 -x Assets
 -cmd rm Assets.n

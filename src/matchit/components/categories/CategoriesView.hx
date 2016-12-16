@@ -7,7 +7,6 @@ import pixi.core.text.TextStyleObject;
 import matchit.core.utils.StageProperties;
 import pixi.interaction.EventTarget;
 import msignal.Signal.Signal1;
-import pixi.core.sprites.Sprite;
 import matchit.core.components.ComponentView;
 
 class CategoriesView extends ComponentView {
@@ -16,16 +15,16 @@ class CategoriesView extends ComponentView {
 
 	static inline var GAP:Int = 15;
 
-	var _select:Sprite;
+	var _select:Text;
 
-	var _christmas:Sprite;
-	var _pokeman:Sprite;
-	var _emoticons:Sprite;
-	var _education:Sprite;
-	var _social:Sprite;
-	var _landscapes:Sprite;
+	var _christmas:Category;
+	var _pokeman:Category;
+	var _emoticons:Category;
+	var _avatars:Category;
+	var _social:Category;
+	var _landscapes:Category;
 
-	var _categories:Array<Sprite>;
+	var _categories:Array<Category>;
 
 	var _categoriesContainer:Container;
 	var _creditsTxt:Text;
@@ -43,7 +42,7 @@ class CategoriesView extends ComponentView {
 
 	override public function addAssetsToLoad() {
 		loader.addAsset(AssetsList.CATEGORIES_BUTTON_SELECT_A_CATEGORY, AssetsList.CATEGORIES_BUTTON_SELECT_A_CATEGORY_PNG);
-		loader.addAsset(AssetsList.CATEGORIES_EDUCATION, AssetsList.CATEGORIES_EDUCATION_PNG);
+		loader.addAsset(AssetsList.CATEGORIES_AVATARS, AssetsList.CATEGORIES_AVATARS_PNG);
 		loader.addAsset(AssetsList.CATEGORIES_POKEMAN, AssetsList.CATEGORIES_POKEMAN_PNG);
 		loader.addAsset(AssetsList.CATEGORIES_SOCIAL, AssetsList.CATEGORIES_SOCIAL_PNG);
 		loader.addAsset(AssetsList.CATEGORIES_LANDSCAPES, AssetsList.CATEGORIES_LANDSCAPES_PNG);
@@ -53,9 +52,8 @@ class CategoriesView extends ComponentView {
 
 	public function createCategories() {
 		var style:TextStyleObject = {};
-		style.fill = 0x003366;
-		style.fontSize = 14;
-		style.fontFamily = "Tahoma";
+		style.fontSize = _getTextCreditsSize();
+		style.fontFamily = "Pontano Sans";
 		_creditsTxt = new Text("Icons designed by Freepik from Flaticon", style, stageProperties.pixelRatio);
 		_creditsTxt.anchor.set(0.5, 1.2);
 		_creditsTxt.interactive = true;
@@ -64,44 +62,46 @@ class CategoriesView extends ComponentView {
 		};
 		_container.addChild(_creditsTxt);
 
-		_select = new Sprite(loader.getTexture(AssetsList.CATEGORIES_BUTTON_SELECT_A_CATEGORY));
-		_select.position.y = GAP * 1.5;
-		_select.anchor.x = 0.5;
+		style.fill = 0x003366;
+		style.fontSize = _getTextTitleSize();
+		style.fontFamily = "Covered By Your Grace";
+		_select = new Text("CHOOSE A CATEGORY", style, stageProperties.pixelRatio);
+		_select.anchor.set(0.5);
 		_container.addChild(_select);
 
-		_christmas = new Sprite(loader.getTexture(AssetsList.CATEGORIES_CHRISTMAS));
+		_christmas = new Category(loader.getTexture(AssetsList.CATEGORIES_CHRISTMAS), "christmas", stageProperties, 0x00B494);
 		_categoriesContainer.addChild(_christmas);
 
-		_emoticons = new Sprite(loader.getTexture(AssetsList.CATEGORIES_EMOTICONS));
+		_emoticons = new Category(loader.getTexture(AssetsList.CATEGORIES_EMOTICONS), "emoticons", stageProperties, 0x000000);
 		_categoriesContainer.addChild(_emoticons);
 
-		_education = new Sprite(loader.getTexture(AssetsList.CATEGORIES_EDUCATION));
-		_categoriesContainer.addChild(_education);
+		_avatars = new Category(loader.getTexture(AssetsList.CATEGORIES_AVATARS), "avatars", stageProperties, 0x666666);
+		_categoriesContainer.addChild(_avatars);
 
-		_pokeman = new Sprite(loader.getTexture(AssetsList.CATEGORIES_POKEMAN));
+		_pokeman = new Category(loader.getTexture(AssetsList.CATEGORIES_POKEMAN), "pokeman", stageProperties, 0xD4101A);
 		_categoriesContainer.addChild(_pokeman);
 
-		_social = new Sprite(loader.getTexture(AssetsList.CATEGORIES_SOCIAL));
+		_social = new Category(loader.getTexture(AssetsList.CATEGORIES_SOCIAL), "social", stageProperties, 0x501A96);
 		_categoriesContainer.addChild(_social);
 
-		_landscapes = new Sprite(loader.getTexture(AssetsList.CATEGORIES_LANDSCAPES));
+		_landscapes = new Category(loader.getTexture(AssetsList.CATEGORIES_LANDSCAPES), "landscapes", stageProperties, 0x43AB5F);
 		_categoriesContainer.addChild(_landscapes);
 
-		_education.click = _education.tap = function(evt:EventTarget) { selectedCategory.dispatch("education"); };
+		_avatars.click = _avatars.tap = function(evt:EventTarget) { selectedCategory.dispatch("avatars"); };
 		_pokeman.click = _pokeman.tap = function(evt:EventTarget) { selectedCategory.dispatch("pokeman"); };
 		_social.click = _social.tap = function(evt:EventTarget) { selectedCategory.dispatch("social"); };
 		_landscapes.click = _landscapes.tap = function(evt:EventTarget) { selectedCategory.dispatch("landscapes"); };
 		_christmas.click = _christmas.tap = function(evt:EventTarget) { selectedCategory.dispatch("christmas"); };
 		_emoticons.click = _emoticons.tap = function(evt:EventTarget) { selectedCategory.dispatch("emoticons"); };
 
-		_education.interactive = true;
+		_avatars.interactive = true;
 		_pokeman.interactive = true;
 		_social.interactive = true;
 		_landscapes.interactive = true;
 		_christmas.interactive = true;
 		_emoticons.interactive = true;
 
-		_categories = [_christmas, _emoticons, _pokeman, _social, _education, _landscapes];
+		_categories = [_christmas, _emoticons, _pokeman, _social, _avatars, _landscapes];
 		_positionCategories();
 
 		_resize();
@@ -114,13 +114,14 @@ class CategoriesView extends ComponentView {
 		var xpos:Float = 0;
 		var ypos:Float = 0;
 		var count = 0;
+
 		for (category in _categories) {
 			count++;
 			category.position.set(xpos, ypos);
-			xpos += category.width + GAP;
+			xpos += category.width + (GAP * _scaleFactor);
 			if (count % rowMax == 0) {
 				xpos = 0;
-				ypos += category.width + GAP;
+				ypos += category.height + (GAP * _scaleFactor);
 			}
 		}
 	}
@@ -128,8 +129,24 @@ class CategoriesView extends ComponentView {
 	function _resize() {
 		_positionCategories();
 		_categoriesContainer.position.set((stageProperties.screenWidth - _categoriesContainer.width) / 2, (stageProperties.screenHeight - _categoriesContainer.height) / 2);
-		_categoriesContainer.position.y += GAP / 2;
+		_categoriesContainer.position.y += (GAP * _scaleFactor) / 2;
 		_creditsTxt.position.set(stageProperties.screenWidth / 2, stageProperties.screenHeight);
 		_select.position.x = stageProperties.screenWidth / 2;
+		_select.position.y = _categoriesContainer.position.y - _select.height - (GAP * _scaleFactor);
+
+		_select.visible = (stageProperties.orientation == StageProperties.PORTRAIT || _scaleFactor == 1);
+		_creditsTxt.visible = (stageProperties.orientation == StageProperties.PORTRAIT || _scaleFactor == 1);
+	}
+
+	function _getTextTitleSize() {
+		if (stageProperties.bucketWidth == 1024 || stageProperties.bucketHeight == 1024) return 48;
+		if (stageProperties.bucketWidth == 728 || stageProperties.bucketHeight == 728) return 36;
+		return 24;
+	}
+
+	function _getTextCreditsSize() {
+		if (stageProperties.bucketWidth == 1024 || stageProperties.bucketHeight == 1024) return 16;
+		if (stageProperties.bucketWidth == 728 || stageProperties.bucketHeight == 728) return 14;
+		return 10;
 	}
 }

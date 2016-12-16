@@ -15,10 +15,12 @@ class AssetsList {
 			"assets/favico/manifest.json",
 			"assets/favico/mstile-150x150.png",
 			"assets/favico/safari-pinned-tab.svg",
+			"assets/1024x648/@1x/backgrounds/alchemy.jpg",
 			"assets/1024x648/@1x/backgrounds/bg.jpg",
 			"assets/1024x648/@1x/backgrounds/restaurant.png",
 			"assets/1024x648/@1x/backgrounds/school.png",
 			"assets/1024x648/@1x/backgrounds/weather.png",
+			"assets/1024x648/@1x/categories/avatars.png",
 			"assets/1024x648/@1x/categories/button_select-a-category.png",
 			"assets/1024x648/@1x/categories/christmas.png",
 			"assets/1024x648/@1x/categories/education.png",
@@ -35,10 +37,12 @@ class AssetsList {
 			"assets/1024x648/@1x/quickmenu/back.png",
 			"assets/1024x648/@1x/quickmenu/home.png",
 			"assets/1024x648/@1x/tiles/tile.png",
+			"assets/1024x648/@2x/backgrounds/alchemy.jpg",
 			"assets/1024x648/@2x/backgrounds/bg.jpg",
 			"assets/1024x648/@2x/backgrounds/restaurant.png",
 			"assets/1024x648/@2x/backgrounds/school.png",
 			"assets/1024x648/@2x/backgrounds/weather.png",
+			"assets/1024x648/@2x/categories/avatars.png",
 			"assets/1024x648/@2x/categories/button_select-a-category.png",
 			"assets/1024x648/@2x/categories/christmas.png",
 			"assets/1024x648/@2x/categories/education.png",
@@ -55,10 +59,12 @@ class AssetsList {
 			"assets/1024x648/@2x/quickmenu/back.png",
 			"assets/1024x648/@2x/quickmenu/home.png",
 			"assets/1024x648/@2x/tiles/tile.png",
+			"assets/480x320/@1x/backgrounds/alchemy.jpg",
 			"assets/480x320/@1x/backgrounds/bg.jpg",
 			"assets/480x320/@1x/backgrounds/restaurant.png",
 			"assets/480x320/@1x/backgrounds/school.png",
 			"assets/480x320/@1x/backgrounds/weather.png",
+			"assets/480x320/@1x/categories/avatars.png",
 			"assets/480x320/@1x/categories/button_select-a-category.png",
 			"assets/480x320/@1x/categories/christmas.png",
 			"assets/480x320/@1x/categories/education.png",
@@ -75,10 +81,12 @@ class AssetsList {
 			"assets/480x320/@1x/quickmenu/back.png",
 			"assets/480x320/@1x/quickmenu/home.png",
 			"assets/480x320/@1x/tiles/tile.png",
+			"assets/480x320/@2x/backgrounds/alchemy.jpg",
 			"assets/480x320/@2x/backgrounds/bg.jpg",
 			"assets/480x320/@2x/backgrounds/restaurant.png",
 			"assets/480x320/@2x/backgrounds/school.png",
 			"assets/480x320/@2x/backgrounds/weather.png",
+			"assets/480x320/@2x/categories/avatars.png",
 			"assets/480x320/@2x/categories/button_select-a-category.png",
 			"assets/480x320/@2x/categories/christmas.png",
 			"assets/480x320/@2x/categories/education.png",
@@ -95,10 +103,12 @@ class AssetsList {
 			"assets/480x320/@2x/quickmenu/back.png",
 			"assets/480x320/@2x/quickmenu/home.png",
 			"assets/480x320/@2x/tiles/tile.png",
+			"assets/728x392/@1x/backgrounds/alchemy.jpg",
 			"assets/728x392/@1x/backgrounds/bg.jpg",
 			"assets/728x392/@1x/backgrounds/restaurant.png",
 			"assets/728x392/@1x/backgrounds/school.png",
 			"assets/728x392/@1x/backgrounds/weather.png",
+			"assets/728x392/@1x/categories/avatars.png",
 			"assets/728x392/@1x/categories/button_select-a-category.png",
 			"assets/728x392/@1x/categories/christmas.png",
 			"assets/728x392/@1x/categories/education.png",
@@ -115,10 +125,12 @@ class AssetsList {
 			"assets/728x392/@1x/quickmenu/back.png",
 			"assets/728x392/@1x/quickmenu/home.png",
 			"assets/728x392/@1x/tiles/tile.png",
+			"assets/728x392/@2x/backgrounds/alchemy.jpg",
 			"assets/728x392/@2x/backgrounds/bg.jpg",
 			"assets/728x392/@2x/backgrounds/restaurant.png",
 			"assets/728x392/@2x/backgrounds/school.png",
 			"assets/728x392/@2x/backgrounds/weather.png",
+			"assets/728x392/@2x/categories/avatars.png",
 			"assets/728x392/@2x/categories/button_select-a-category.png",
 			"assets/728x392/@2x/categories/christmas.png",
 			"assets/728x392/@2x/categories/education.png",
@@ -135,6 +147,56 @@ class AssetsList {
 			"assets/728x392/@2x/quickmenu/back.png",
 			"assets/728x392/@2x/quickmenu/home.png",
 			"assets/728x392/@2x/tiles/tile.png",
+			"assets/1024x648/@1x/tiles/avatars/icon1.png",
+			"assets/1024x648/@1x/tiles/avatars/icon10.png",
+			"assets/1024x648/@1x/tiles/avatars/icon11.png",
+			"assets/1024x648/@1x/tiles/avatars/icon12.png",
+			"assets/1024x648/@1x/tiles/avatars/icon13.png",
+			"assets/1024x648/@1x/tiles/avatars/icon14.png",
+			"assets/1024x648/@1x/tiles/avatars/icon15.png",
+			"assets/1024x648/@1x/tiles/avatars/icon16.png",
+			"assets/1024x648/@1x/tiles/avatars/icon17.png",
+			"assets/1024x648/@1x/tiles/avatars/icon18.png",
+			"assets/1024x648/@1x/tiles/avatars/icon19.png",
+			"assets/1024x648/@1x/tiles/avatars/icon2.png",
+			"assets/1024x648/@1x/tiles/avatars/icon20.png",
+			"assets/1024x648/@1x/tiles/avatars/icon21.png",
+			"assets/1024x648/@1x/tiles/avatars/icon22.png",
+			"assets/1024x648/@1x/tiles/avatars/icon23.png",
+			"assets/1024x648/@1x/tiles/avatars/icon24.png",
+			"assets/1024x648/@1x/tiles/avatars/icon25.png",
+			"assets/1024x648/@1x/tiles/avatars/icon26.png",
+			"assets/1024x648/@1x/tiles/avatars/icon27.png",
+			"assets/1024x648/@1x/tiles/avatars/icon28.png",
+			"assets/1024x648/@1x/tiles/avatars/icon29.png",
+			"assets/1024x648/@1x/tiles/avatars/icon3.png",
+			"assets/1024x648/@1x/tiles/avatars/icon30.png",
+			"assets/1024x648/@1x/tiles/avatars/icon31.png",
+			"assets/1024x648/@1x/tiles/avatars/icon32.png",
+			"assets/1024x648/@1x/tiles/avatars/icon33.png",
+			"assets/1024x648/@1x/tiles/avatars/icon34.png",
+			"assets/1024x648/@1x/tiles/avatars/icon35.png",
+			"assets/1024x648/@1x/tiles/avatars/icon36.png",
+			"assets/1024x648/@1x/tiles/avatars/icon37.png",
+			"assets/1024x648/@1x/tiles/avatars/icon38.png",
+			"assets/1024x648/@1x/tiles/avatars/icon39.png",
+			"assets/1024x648/@1x/tiles/avatars/icon4.png",
+			"assets/1024x648/@1x/tiles/avatars/icon40.png",
+			"assets/1024x648/@1x/tiles/avatars/icon41.png",
+			"assets/1024x648/@1x/tiles/avatars/icon42.png",
+			"assets/1024x648/@1x/tiles/avatars/icon43.png",
+			"assets/1024x648/@1x/tiles/avatars/icon44.png",
+			"assets/1024x648/@1x/tiles/avatars/icon45.png",
+			"assets/1024x648/@1x/tiles/avatars/icon46.png",
+			"assets/1024x648/@1x/tiles/avatars/icon47.png",
+			"assets/1024x648/@1x/tiles/avatars/icon48.png",
+			"assets/1024x648/@1x/tiles/avatars/icon49.png",
+			"assets/1024x648/@1x/tiles/avatars/icon5.png",
+			"assets/1024x648/@1x/tiles/avatars/icon50.png",
+			"assets/1024x648/@1x/tiles/avatars/icon6.png",
+			"assets/1024x648/@1x/tiles/avatars/icon7.png",
+			"assets/1024x648/@1x/tiles/avatars/icon8.png",
+			"assets/1024x648/@1x/tiles/avatars/icon9.png",
 			"assets/1024x648/@1x/tiles/christmas/icon1.png",
 			"assets/1024x648/@1x/tiles/christmas/icon10.png",
 			"assets/1024x648/@1x/tiles/christmas/icon11.png",
@@ -488,6 +550,56 @@ class AssetsList {
 			"assets/1024x648/@1x/tiles/social/icon7.png",
 			"assets/1024x648/@1x/tiles/social/icon8.png",
 			"assets/1024x648/@1x/tiles/social/icon9.png",
+			"assets/1024x648/@2x/tiles/avatars/icon1.png",
+			"assets/1024x648/@2x/tiles/avatars/icon10.png",
+			"assets/1024x648/@2x/tiles/avatars/icon11.png",
+			"assets/1024x648/@2x/tiles/avatars/icon12.png",
+			"assets/1024x648/@2x/tiles/avatars/icon13.png",
+			"assets/1024x648/@2x/tiles/avatars/icon14.png",
+			"assets/1024x648/@2x/tiles/avatars/icon15.png",
+			"assets/1024x648/@2x/tiles/avatars/icon16.png",
+			"assets/1024x648/@2x/tiles/avatars/icon17.png",
+			"assets/1024x648/@2x/tiles/avatars/icon18.png",
+			"assets/1024x648/@2x/tiles/avatars/icon19.png",
+			"assets/1024x648/@2x/tiles/avatars/icon2.png",
+			"assets/1024x648/@2x/tiles/avatars/icon20.png",
+			"assets/1024x648/@2x/tiles/avatars/icon21.png",
+			"assets/1024x648/@2x/tiles/avatars/icon22.png",
+			"assets/1024x648/@2x/tiles/avatars/icon23.png",
+			"assets/1024x648/@2x/tiles/avatars/icon24.png",
+			"assets/1024x648/@2x/tiles/avatars/icon25.png",
+			"assets/1024x648/@2x/tiles/avatars/icon26.png",
+			"assets/1024x648/@2x/tiles/avatars/icon27.png",
+			"assets/1024x648/@2x/tiles/avatars/icon28.png",
+			"assets/1024x648/@2x/tiles/avatars/icon29.png",
+			"assets/1024x648/@2x/tiles/avatars/icon3.png",
+			"assets/1024x648/@2x/tiles/avatars/icon30.png",
+			"assets/1024x648/@2x/tiles/avatars/icon31.png",
+			"assets/1024x648/@2x/tiles/avatars/icon32.png",
+			"assets/1024x648/@2x/tiles/avatars/icon33.png",
+			"assets/1024x648/@2x/tiles/avatars/icon34.png",
+			"assets/1024x648/@2x/tiles/avatars/icon35.png",
+			"assets/1024x648/@2x/tiles/avatars/icon36.png",
+			"assets/1024x648/@2x/tiles/avatars/icon37.png",
+			"assets/1024x648/@2x/tiles/avatars/icon38.png",
+			"assets/1024x648/@2x/tiles/avatars/icon39.png",
+			"assets/1024x648/@2x/tiles/avatars/icon4.png",
+			"assets/1024x648/@2x/tiles/avatars/icon40.png",
+			"assets/1024x648/@2x/tiles/avatars/icon41.png",
+			"assets/1024x648/@2x/tiles/avatars/icon42.png",
+			"assets/1024x648/@2x/tiles/avatars/icon43.png",
+			"assets/1024x648/@2x/tiles/avatars/icon44.png",
+			"assets/1024x648/@2x/tiles/avatars/icon45.png",
+			"assets/1024x648/@2x/tiles/avatars/icon46.png",
+			"assets/1024x648/@2x/tiles/avatars/icon47.png",
+			"assets/1024x648/@2x/tiles/avatars/icon48.png",
+			"assets/1024x648/@2x/tiles/avatars/icon49.png",
+			"assets/1024x648/@2x/tiles/avatars/icon5.png",
+			"assets/1024x648/@2x/tiles/avatars/icon50.png",
+			"assets/1024x648/@2x/tiles/avatars/icon6.png",
+			"assets/1024x648/@2x/tiles/avatars/icon7.png",
+			"assets/1024x648/@2x/tiles/avatars/icon8.png",
+			"assets/1024x648/@2x/tiles/avatars/icon9.png",
 			"assets/1024x648/@2x/tiles/christmas/icon1.png",
 			"assets/1024x648/@2x/tiles/christmas/icon10.png",
 			"assets/1024x648/@2x/tiles/christmas/icon11.png",
@@ -841,6 +953,56 @@ class AssetsList {
 			"assets/1024x648/@2x/tiles/social/icon7.png",
 			"assets/1024x648/@2x/tiles/social/icon8.png",
 			"assets/1024x648/@2x/tiles/social/icon9.png",
+			"assets/480x320/@1x/tiles/avatars/icon1.png",
+			"assets/480x320/@1x/tiles/avatars/icon10.png",
+			"assets/480x320/@1x/tiles/avatars/icon11.png",
+			"assets/480x320/@1x/tiles/avatars/icon12.png",
+			"assets/480x320/@1x/tiles/avatars/icon13.png",
+			"assets/480x320/@1x/tiles/avatars/icon14.png",
+			"assets/480x320/@1x/tiles/avatars/icon15.png",
+			"assets/480x320/@1x/tiles/avatars/icon16.png",
+			"assets/480x320/@1x/tiles/avatars/icon17.png",
+			"assets/480x320/@1x/tiles/avatars/icon18.png",
+			"assets/480x320/@1x/tiles/avatars/icon19.png",
+			"assets/480x320/@1x/tiles/avatars/icon2.png",
+			"assets/480x320/@1x/tiles/avatars/icon20.png",
+			"assets/480x320/@1x/tiles/avatars/icon21.png",
+			"assets/480x320/@1x/tiles/avatars/icon22.png",
+			"assets/480x320/@1x/tiles/avatars/icon23.png",
+			"assets/480x320/@1x/tiles/avatars/icon24.png",
+			"assets/480x320/@1x/tiles/avatars/icon25.png",
+			"assets/480x320/@1x/tiles/avatars/icon26.png",
+			"assets/480x320/@1x/tiles/avatars/icon27.png",
+			"assets/480x320/@1x/tiles/avatars/icon28.png",
+			"assets/480x320/@1x/tiles/avatars/icon29.png",
+			"assets/480x320/@1x/tiles/avatars/icon3.png",
+			"assets/480x320/@1x/tiles/avatars/icon30.png",
+			"assets/480x320/@1x/tiles/avatars/icon31.png",
+			"assets/480x320/@1x/tiles/avatars/icon32.png",
+			"assets/480x320/@1x/tiles/avatars/icon33.png",
+			"assets/480x320/@1x/tiles/avatars/icon34.png",
+			"assets/480x320/@1x/tiles/avatars/icon35.png",
+			"assets/480x320/@1x/tiles/avatars/icon36.png",
+			"assets/480x320/@1x/tiles/avatars/icon37.png",
+			"assets/480x320/@1x/tiles/avatars/icon38.png",
+			"assets/480x320/@1x/tiles/avatars/icon39.png",
+			"assets/480x320/@1x/tiles/avatars/icon4.png",
+			"assets/480x320/@1x/tiles/avatars/icon40.png",
+			"assets/480x320/@1x/tiles/avatars/icon41.png",
+			"assets/480x320/@1x/tiles/avatars/icon42.png",
+			"assets/480x320/@1x/tiles/avatars/icon43.png",
+			"assets/480x320/@1x/tiles/avatars/icon44.png",
+			"assets/480x320/@1x/tiles/avatars/icon45.png",
+			"assets/480x320/@1x/tiles/avatars/icon46.png",
+			"assets/480x320/@1x/tiles/avatars/icon47.png",
+			"assets/480x320/@1x/tiles/avatars/icon48.png",
+			"assets/480x320/@1x/tiles/avatars/icon49.png",
+			"assets/480x320/@1x/tiles/avatars/icon5.png",
+			"assets/480x320/@1x/tiles/avatars/icon50.png",
+			"assets/480x320/@1x/tiles/avatars/icon6.png",
+			"assets/480x320/@1x/tiles/avatars/icon7.png",
+			"assets/480x320/@1x/tiles/avatars/icon8.png",
+			"assets/480x320/@1x/tiles/avatars/icon9.png",
 			"assets/480x320/@1x/tiles/christmas/icon1.png",
 			"assets/480x320/@1x/tiles/christmas/icon10.png",
 			"assets/480x320/@1x/tiles/christmas/icon11.png",
@@ -1194,6 +1356,56 @@ class AssetsList {
 			"assets/480x320/@1x/tiles/social/icon7.png",
 			"assets/480x320/@1x/tiles/social/icon8.png",
 			"assets/480x320/@1x/tiles/social/icon9.png",
+			"assets/480x320/@2x/tiles/avatars/icon1.png",
+			"assets/480x320/@2x/tiles/avatars/icon10.png",
+			"assets/480x320/@2x/tiles/avatars/icon11.png",
+			"assets/480x320/@2x/tiles/avatars/icon12.png",
+			"assets/480x320/@2x/tiles/avatars/icon13.png",
+			"assets/480x320/@2x/tiles/avatars/icon14.png",
+			"assets/480x320/@2x/tiles/avatars/icon15.png",
+			"assets/480x320/@2x/tiles/avatars/icon16.png",
+			"assets/480x320/@2x/tiles/avatars/icon17.png",
+			"assets/480x320/@2x/tiles/avatars/icon18.png",
+			"assets/480x320/@2x/tiles/avatars/icon19.png",
+			"assets/480x320/@2x/tiles/avatars/icon2.png",
+			"assets/480x320/@2x/tiles/avatars/icon20.png",
+			"assets/480x320/@2x/tiles/avatars/icon21.png",
+			"assets/480x320/@2x/tiles/avatars/icon22.png",
+			"assets/480x320/@2x/tiles/avatars/icon23.png",
+			"assets/480x320/@2x/tiles/avatars/icon24.png",
+			"assets/480x320/@2x/tiles/avatars/icon25.png",
+			"assets/480x320/@2x/tiles/avatars/icon26.png",
+			"assets/480x320/@2x/tiles/avatars/icon27.png",
+			"assets/480x320/@2x/tiles/avatars/icon28.png",
+			"assets/480x320/@2x/tiles/avatars/icon29.png",
+			"assets/480x320/@2x/tiles/avatars/icon3.png",
+			"assets/480x320/@2x/tiles/avatars/icon30.png",
+			"assets/480x320/@2x/tiles/avatars/icon31.png",
+			"assets/480x320/@2x/tiles/avatars/icon32.png",
+			"assets/480x320/@2x/tiles/avatars/icon33.png",
+			"assets/480x320/@2x/tiles/avatars/icon34.png",
+			"assets/480x320/@2x/tiles/avatars/icon35.png",
+			"assets/480x320/@2x/tiles/avatars/icon36.png",
+			"assets/480x320/@2x/tiles/avatars/icon37.png",
+			"assets/480x320/@2x/tiles/avatars/icon38.png",
+			"assets/480x320/@2x/tiles/avatars/icon39.png",
+			"assets/480x320/@2x/tiles/avatars/icon4.png",
+			"assets/480x320/@2x/tiles/avatars/icon40.png",
+			"assets/480x320/@2x/tiles/avatars/icon41.png",
+			"assets/480x320/@2x/tiles/avatars/icon42.png",
+			"assets/480x320/@2x/tiles/avatars/icon43.png",
+			"assets/480x320/@2x/tiles/avatars/icon44.png",
+			"assets/480x320/@2x/tiles/avatars/icon45.png",
+			"assets/480x320/@2x/tiles/avatars/icon46.png",
+			"assets/480x320/@2x/tiles/avatars/icon47.png",
+			"assets/480x320/@2x/tiles/avatars/icon48.png",
+			"assets/480x320/@2x/tiles/avatars/icon49.png",
+			"assets/480x320/@2x/tiles/avatars/icon5.png",
+			"assets/480x320/@2x/tiles/avatars/icon50.png",
+			"assets/480x320/@2x/tiles/avatars/icon6.png",
+			"assets/480x320/@2x/tiles/avatars/icon7.png",
+			"assets/480x320/@2x/tiles/avatars/icon8.png",
+			"assets/480x320/@2x/tiles/avatars/icon9.png",
 			"assets/480x320/@2x/tiles/christmas/icon1.png",
 			"assets/480x320/@2x/tiles/christmas/icon10.png",
 			"assets/480x320/@2x/tiles/christmas/icon11.png",
@@ -1547,6 +1759,56 @@ class AssetsList {
 			"assets/480x320/@2x/tiles/social/icon7.png",
 			"assets/480x320/@2x/tiles/social/icon8.png",
 			"assets/480x320/@2x/tiles/social/icon9.png",
+			"assets/728x392/@1x/tiles/avatars/icon1.png",
+			"assets/728x392/@1x/tiles/avatars/icon10.png",
+			"assets/728x392/@1x/tiles/avatars/icon11.png",
+			"assets/728x392/@1x/tiles/avatars/icon12.png",
+			"assets/728x392/@1x/tiles/avatars/icon13.png",
+			"assets/728x392/@1x/tiles/avatars/icon14.png",
+			"assets/728x392/@1x/tiles/avatars/icon15.png",
+			"assets/728x392/@1x/tiles/avatars/icon16.png",
+			"assets/728x392/@1x/tiles/avatars/icon17.png",
+			"assets/728x392/@1x/tiles/avatars/icon18.png",
+			"assets/728x392/@1x/tiles/avatars/icon19.png",
+			"assets/728x392/@1x/tiles/avatars/icon2.png",
+			"assets/728x392/@1x/tiles/avatars/icon20.png",
+			"assets/728x392/@1x/tiles/avatars/icon21.png",
+			"assets/728x392/@1x/tiles/avatars/icon22.png",
+			"assets/728x392/@1x/tiles/avatars/icon23.png",
+			"assets/728x392/@1x/tiles/avatars/icon24.png",
+			"assets/728x392/@1x/tiles/avatars/icon25.png",
+			"assets/728x392/@1x/tiles/avatars/icon26.png",
+			"assets/728x392/@1x/tiles/avatars/icon27.png",
+			"assets/728x392/@1x/tiles/avatars/icon28.png",
+			"assets/728x392/@1x/tiles/avatars/icon29.png",
+			"assets/728x392/@1x/tiles/avatars/icon3.png",
+			"assets/728x392/@1x/tiles/avatars/icon30.png",
+			"assets/728x392/@1x/tiles/avatars/icon31.png",
+			"assets/728x392/@1x/tiles/avatars/icon32.png",
+			"assets/728x392/@1x/tiles/avatars/icon33.png",
+			"assets/728x392/@1x/tiles/avatars/icon34.png",
+			"assets/728x392/@1x/tiles/avatars/icon35.png",
+			"assets/728x392/@1x/tiles/avatars/icon36.png",
+			"assets/728x392/@1x/tiles/avatars/icon37.png",
+			"assets/728x392/@1x/tiles/avatars/icon38.png",
+			"assets/728x392/@1x/tiles/avatars/icon39.png",
+			"assets/728x392/@1x/tiles/avatars/icon4.png",
+			"assets/728x392/@1x/tiles/avatars/icon40.png",
+			"assets/728x392/@1x/tiles/avatars/icon41.png",
+			"assets/728x392/@1x/tiles/avatars/icon42.png",
+			"assets/728x392/@1x/tiles/avatars/icon43.png",
+			"assets/728x392/@1x/tiles/avatars/icon44.png",
+			"assets/728x392/@1x/tiles/avatars/icon45.png",
+			"assets/728x392/@1x/tiles/avatars/icon46.png",
+			"assets/728x392/@1x/tiles/avatars/icon47.png",
+			"assets/728x392/@1x/tiles/avatars/icon48.png",
+			"assets/728x392/@1x/tiles/avatars/icon49.png",
+			"assets/728x392/@1x/tiles/avatars/icon5.png",
+			"assets/728x392/@1x/tiles/avatars/icon50.png",
+			"assets/728x392/@1x/tiles/avatars/icon6.png",
+			"assets/728x392/@1x/tiles/avatars/icon7.png",
+			"assets/728x392/@1x/tiles/avatars/icon8.png",
+			"assets/728x392/@1x/tiles/avatars/icon9.png",
 			"assets/728x392/@1x/tiles/christmas/icon1.png",
 			"assets/728x392/@1x/tiles/christmas/icon10.png",
 			"assets/728x392/@1x/tiles/christmas/icon11.png",
@@ -1900,6 +2162,56 @@ class AssetsList {
 			"assets/728x392/@1x/tiles/social/icon7.png",
 			"assets/728x392/@1x/tiles/social/icon8.png",
 			"assets/728x392/@1x/tiles/social/icon9.png",
+			"assets/728x392/@2x/tiles/avatars/icon1.png",
+			"assets/728x392/@2x/tiles/avatars/icon10.png",
+			"assets/728x392/@2x/tiles/avatars/icon11.png",
+			"assets/728x392/@2x/tiles/avatars/icon12.png",
+			"assets/728x392/@2x/tiles/avatars/icon13.png",
+			"assets/728x392/@2x/tiles/avatars/icon14.png",
+			"assets/728x392/@2x/tiles/avatars/icon15.png",
+			"assets/728x392/@2x/tiles/avatars/icon16.png",
+			"assets/728x392/@2x/tiles/avatars/icon17.png",
+			"assets/728x392/@2x/tiles/avatars/icon18.png",
+			"assets/728x392/@2x/tiles/avatars/icon19.png",
+			"assets/728x392/@2x/tiles/avatars/icon2.png",
+			"assets/728x392/@2x/tiles/avatars/icon20.png",
+			"assets/728x392/@2x/tiles/avatars/icon21.png",
+			"assets/728x392/@2x/tiles/avatars/icon22.png",
+			"assets/728x392/@2x/tiles/avatars/icon23.png",
+			"assets/728x392/@2x/tiles/avatars/icon24.png",
+			"assets/728x392/@2x/tiles/avatars/icon25.png",
+			"assets/728x392/@2x/tiles/avatars/icon26.png",
+			"assets/728x392/@2x/tiles/avatars/icon27.png",
+			"assets/728x392/@2x/tiles/avatars/icon28.png",
+			"assets/728x392/@2x/tiles/avatars/icon29.png",
+			"assets/728x392/@2x/tiles/avatars/icon3.png",
+			"assets/728x392/@2x/tiles/avatars/icon30.png",
+			"assets/728x392/@2x/tiles/avatars/icon31.png",
+			"assets/728x392/@2x/tiles/avatars/icon32.png",
+			"assets/728x392/@2x/tiles/avatars/icon33.png",
+			"assets/728x392/@2x/tiles/avatars/icon34.png",
+			"assets/728x392/@2x/tiles/avatars/icon35.png",
+			"assets/728x392/@2x/tiles/avatars/icon36.png",
+			"assets/728x392/@2x/tiles/avatars/icon37.png",
+			"assets/728x392/@2x/tiles/avatars/icon38.png",
+			"assets/728x392/@2x/tiles/avatars/icon39.png",
+			"assets/728x392/@2x/tiles/avatars/icon4.png",
+			"assets/728x392/@2x/tiles/avatars/icon40.png",
+			"assets/728x392/@2x/tiles/avatars/icon41.png",
+			"assets/728x392/@2x/tiles/avatars/icon42.png",
+			"assets/728x392/@2x/tiles/avatars/icon43.png",
+			"assets/728x392/@2x/tiles/avatars/icon44.png",
+			"assets/728x392/@2x/tiles/avatars/icon45.png",
+			"assets/728x392/@2x/tiles/avatars/icon46.png",
+			"assets/728x392/@2x/tiles/avatars/icon47.png",
+			"assets/728x392/@2x/tiles/avatars/icon48.png",
+			"assets/728x392/@2x/tiles/avatars/icon49.png",
+			"assets/728x392/@2x/tiles/avatars/icon5.png",
+			"assets/728x392/@2x/tiles/avatars/icon50.png",
+			"assets/728x392/@2x/tiles/avatars/icon6.png",
+			"assets/728x392/@2x/tiles/avatars/icon7.png",
+			"assets/728x392/@2x/tiles/avatars/icon8.png",
+			"assets/728x392/@2x/tiles/avatars/icon9.png",
 			"assets/728x392/@2x/tiles/christmas/icon1.png",
 			"assets/728x392/@2x/tiles/christmas/icon10.png",
 			"assets/728x392/@2x/tiles/christmas/icon11.png",
@@ -2264,8 +2576,10 @@ class AssetsList {
 	public static inline var TILES_EMOTICONS_ICON9_PNG:String = "tiles/emoticons/icon9.png";
 	public static inline var TILES_SOCIAL_ICON5_PNG:String = "tiles/social/icon5.png";
 	public static inline var TILES_POKEMAN_ICON33_PNG:String = "tiles/pokeman/icon33.png";
+	public static inline var TILES_AVATARS_ICON39_PNG:String = "tiles/avatars/icon39.png";
 	public static inline var TILES_SOCIAL_ICON30_PNG:String = "tiles/social/icon30.png";
 	public static inline var TILES_POKEMAN_ICON42_PNG:String = "tiles/pokeman/icon42.png";
+	public static inline var TILES_AVATARS_ICON48_PNG:String = "tiles/avatars/icon48.png";
 	public static inline var TILES_EDUCATION_ICON1_PNG:String = "tiles/education/icon1.png";
 	public static inline var TILES_LANDSCAPES_ICON12_PNG:String = "tiles/landscapes/icon12.png";
 	public static inline var TILES_POKEMAN_ICON51_PNG:String = "tiles/pokeman/icon51.png";
@@ -2291,6 +2605,7 @@ class AssetsList {
 	public static inline var TILES_EDUCATION_ICON13_PNG:String = "tiles/education/icon13.png";
 	public static inline var TILES_EMOTICONS_ICON14_PNG:String = "tiles/emoticons/icon14.png";
 	public static inline var TILES_POKEMAN_ICON65_PNG:String = "tiles/pokeman/icon65.png";
+	public static inline var TILES_AVATARS_ICON3_PNG:String = "tiles/avatars/icon3.png";
 	public static inline var TILES_CHRISTMAS_ICON2_PNG:String = "tiles/christmas/icon2.png";
 	public static inline var TILES_CHRISTMAS_ICON31_PNG:String = "tiles/christmas/icon31.png";
 	public static inline var TILES_POKEMAN_ICON74_PNG:String = "tiles/pokeman/icon74.png";
@@ -2314,9 +2629,15 @@ class AssetsList {
 	public static inline var TILES_POKEMAN_ICON88_PNG:String = "tiles/pokeman/icon88.png";
 	public static inline var TILES_LANDSCAPES_ICON11_PNG:String = "tiles/landscapes/icon11.png";
 	public static inline var TILES_POKEMAN_ICON97_PNG:String = "tiles/pokeman/icon97.png";
+	public static inline var TILES_AVATARS_ICON12_PNG:String = "tiles/avatars/icon12.png";
 	public static inline var TILES_LANDSCAPES_ICON22_PNG:String = "tiles/landscapes/icon22.png";
 	public static inline var TILES_RANDOM_ICON14_PNG:String = "tiles/random/icon14.png";
+	public static inline var TILES_AVATARS_ICON21_PNG:String = "tiles/avatars/icon21.png";
+	public static inline var TILES_AVATARS_ICON8_PNG:String = "tiles/avatars/icon8.png";
+	public static inline var TILES_AVATARS_ICON30_PNG:String = "tiles/avatars/icon30.png";
 	public static inline var TILES_POKEMAN_ICON4_PNG:String = "tiles/pokeman/icon4.png";
+	public static inline var TILES_AVATARS_ICON42_PNG:String = "tiles/avatars/icon42.png";
+	public static inline var CATEGORIES_AVATARS_PNG:String = "categories/avatars.png";
 	public static inline var TILES_RANDOM_ICON17_PNG:String = "tiles/random/icon17.png";
 	public static inline var TILES_EDUCATION_ICON20_PNG:String = "tiles/education/icon20.png";
 	public static inline var TILES_EMOTICONS_ICON21_PNG:String = "tiles/emoticons/icon21.png";
@@ -2326,28 +2647,36 @@ class AssetsList {
 	public static inline var TILES_RANDOM_ICON21_PNG:String = "tiles/random/icon21.png";
 	public static inline var AUDIO_WOW_MP3:String = "audio/wow.mp3";
 	public static inline var TILES_POKEMAN_ICON20_PNG:String = "tiles/pokeman/icon20.png";
+	public static inline var TILES_AVATARS_ICON26_PNG:String = "tiles/avatars/icon26.png";
 	public static inline var TILES_CHRISTMAS_ICON48_PNG:String = "tiles/christmas/icon48.png";
 	public static inline var TILES_CHRISTMAS_ICON8_PNG:String = "tiles/christmas/icon8.png";
 	public static inline var TILES_SOCIAL_ICON21_PNG:String = "tiles/social/icon21.png";
+	public static inline var BACKGROUNDS_ALCHEMY_JPG:String = "backgrounds/alchemy.jpg";
 	public static inline var TILES_EDUCATION_ICON14_PNG:String = "tiles/education/icon14.png";
 	public static inline var TILES_EMOTICONS_ICON15_PNG:String = "tiles/emoticons/icon15.png";
 	public static inline var QUICKMENU_HOME_PNG:String = "quickmenu/home.png";
+	public static inline var TILES_AVATARS_ICON35_PNG:String = "tiles/avatars/icon35.png";
 	public static inline var TILES_RANDOM_ICON47_PNG:String = "tiles/random/icon47.png";
 	public static inline var TILES_CHRISTMAS_ICON32_PNG:String = "tiles/christmas/icon32.png";
+	public static inline var TILES_AVATARS_ICON44_PNG:String = "tiles/avatars/icon44.png";
 	public static inline var TILES_LANDSCAPES_ICON24_PNG:String = "tiles/landscapes/icon24.png";
 	public static inline var TILES_RANDOM_ICON74_PNG:String = "tiles/random/icon74.png";
 	public static inline var TILES_RANDOM_ICON51_PNG:String = "tiles/random/icon51.png";
 	public static inline var TILES_SOCIAL_ICON24_PNG:String = "tiles/social/icon24.png";
 	public static inline var TILES_EDUCATION_ICON4_PNG:String = "tiles/education/icon4.png";
 	public static inline var TILES_POKEMAN_ICON13_PNG:String = "tiles/pokeman/icon13.png";
+	public static inline var TILES_AVATARS_ICON19_PNG:String = "tiles/avatars/icon19.png";
 	public static inline var TILES_CHRISTMAS_ICON26_PNG:String = "tiles/christmas/icon26.png";
 	public static inline var TILES_POKEMAN_ICON22_PNG:String = "tiles/pokeman/icon22.png";
 	public static inline var TILES_RANDOM_ICON77_PNG:String = "tiles/random/icon77.png";
+	public static inline var TILES_AVATARS_ICON28_PNG:String = "tiles/avatars/icon28.png";
 	public static inline var TILES_CHRISTMAS_ICON10_PNG:String = "tiles/christmas/icon10.png";
 	public static inline var TILES_LANDSCAPES_ICON10_PNG:String = "tiles/landscapes/icon10.png";
+	public static inline var TILES_AVATARS_ICON37_PNG:String = "tiles/avatars/icon37.png";
 	public static inline var TILES_LANDSCAPES_ICON2_PNG:String = "tiles/landscapes/icon2.png";
 	public static inline var TILES_POKEMAN_ICON43_PNG:String = "tiles/pokeman/icon43.png";
 	public static inline var TILES_POKEMAN_ICON9_PNG:String = "tiles/pokeman/icon9.png";
+	public static inline var TILES_AVATARS_ICON49_PNG:String = "tiles/avatars/icon49.png";
 	public static inline var TILES_POKEMAN_ICON52_PNG:String = "tiles/pokeman/icon52.png";
 	public static inline var TILES_LANDSCAPES_ICON21_PNG:String = "tiles/landscapes/icon21.png";
 	public static inline var TILES_POKEMAN_ICON18_PNG:String = "tiles/pokeman/icon18.png";
@@ -2362,6 +2691,7 @@ class AssetsList {
 	public static inline var TILES_EMOTICONS_ICON7_PNG:String = "tiles/emoticons/icon7.png";
 	public static inline var TILES_POKEMAN_ICON45_PNG:String = "tiles/pokeman/icon45.png";
 	public static inline var TILES_RANDOM_ICON29_PNG:String = "tiles/random/icon29.png";
+	public static inline var TILES_AVATARS_ICON1_PNG:String = "tiles/avatars/icon1.png";
 	public static inline var TILES_POKEMAN_ICON54_PNG:String = "tiles/pokeman/icon54.png";
 	public static inline var TILES_RANDOM_ICON3_PNG:String = "tiles/random/icon3.png";
 	public static inline var TILES_RANDOM_ICON56_PNG:String = "tiles/random/icon56.png";
@@ -2396,34 +2726,47 @@ class AssetsList {
 	public static inline var TILES_LANDSCAPES_ICON20_PNG:String = "tiles/landscapes/icon20.png";
 	public static inline var TILES_RANDOM_ICON12_PNG:String = "tiles/random/icon12.png";
 	public static inline var TILES_LANDSCAPES_ICON3_PNG:String = "tiles/landscapes/icon3.png";
+	public static inline var TILES_AVATARS_ICON6_PNG:String = "tiles/avatars/icon6.png";
+	public static inline var TILES_AVATARS_ICON10_PNG:String = "tiles/avatars/icon10.png";
 	public static inline var TILES_EMOTICONS_ICON2_PNG:String = "tiles/emoticons/icon2.png";
 	public static inline var TILES_POKEMAN_ICON2_PNG:String = "tiles/pokeman/icon2.png";
+	public static inline var TILES_AVATARS_ICON22_PNG:String = "tiles/avatars/icon22.png";
 	public static inline var TILES_RANDOM_ICON38_PNG:String = "tiles/random/icon38.png";
 	public static inline var TILES_RANDOM_ICON15_PNG:String = "tiles/random/icon15.png";
+	public static inline var TILES_AVATARS_ICON31_PNG:String = "tiles/avatars/icon31.png";
 	public static inline var TILES_SOCIAL_ICON7_PNG:String = "tiles/social/icon7.png";
+	public static inline var TILES_AVATARS_ICON9_PNG:String = "tiles/avatars/icon9.png";
 	public static inline var TILES_RANDOM_ICON42_PNG:String = "tiles/random/icon42.png";
 	public static inline var TILES_SOCIAL_ICON15_PNG:String = "tiles/social/icon15.png";
+	public static inline var TILES_AVATARS_ICON40_PNG:String = "tiles/avatars/icon40.png";
 	public static inline var TILES_POKEMAN_ICON5_PNG:String = "tiles/pokeman/icon5.png";
 	public static inline var TILES_EDUCATION_ICON7_PNG:String = "tiles/education/icon7.png";
 	public static inline var TILES_RANDOM_ICON68_PNG:String = "tiles/random/icon68.png";
+	public static inline var TILES_AVATARS_ICON15_PNG:String = "tiles/avatars/icon15.png";
 	public static inline var TILES_RANDOM_ICON45_PNG:String = "tiles/random/icon45.png";
 	public static inline var TILES_SOCIAL_ICON18_PNG:String = "tiles/social/icon18.png";
+	public static inline var TILES_AVATARS_ICON24_PNG:String = "tiles/avatars/icon24.png";
 	public static inline var TILES_EDUCATION_ICON22_PNG:String = "tiles/education/icon22.png";
 	public static inline var TILES_EMOTICONS_ICON23_PNG:String = "tiles/emoticons/icon23.png";
 	public static inline var TILES_RANDOM_ICON72_PNG:String = "tiles/random/icon72.png";
 	public static inline var TILES_SOCIAL_ICON22_PNG:String = "tiles/social/icon22.png";
+	public static inline var TILES_AVATARS_ICON33_PNG:String = "tiles/avatars/icon33.png";
 	public static inline var TILES_CHRISTMAS_ICON40_PNG:String = "tiles/christmas/icon40.png";
 	public static inline var TILES_EDUCATION_ICON16_PNG:String = "tiles/education/icon16.png";
 	public static inline var TILES_EMOTICONS_ICON17_PNG:String = "tiles/emoticons/icon17.png";
 	public static inline var TILES_RANDOM_ICON75_PNG:String = "tiles/random/icon75.png";
 	public static inline var TILES_CHRISTMAS_ICON34_PNG:String = "tiles/christmas/icon34.png";
+	public static inline var TILES_AVATARS_ICON17_PNG:String = "tiles/avatars/icon17.png";
 	public static inline var TILES_POKEMAN_ICON23_PNG:String = "tiles/pokeman/icon23.png";
 	public static inline var TILES_POKEMAN_ICON7_PNG:String = "tiles/pokeman/icon7.png";
 	public static inline var CATEGORIES_BUTTON_SELECT_A_CATEGORY_PNG:String = "categories/button_select-a-category.png";
+	public static inline var TILES_AVATARS_ICON29_PNG:String = "tiles/avatars/icon29.png";
 	public static inline var TILES_POKEMAN_ICON32_PNG:String = "tiles/pokeman/icon32.png";
+	public static inline var TILES_AVATARS_ICON38_PNG:String = "tiles/avatars/icon38.png";
 	public static inline var TILES_CHRISTMAS_ICON28_PNG:String = "tiles/christmas/icon28.png";
 	public static inline var TILES_CHRISTMAS_ICON6_PNG:String = "tiles/christmas/icon6.png";
 	public static inline var TILES_POKEMAN_ICON41_PNG:String = "tiles/pokeman/icon41.png";
+	public static inline var TILES_AVATARS_ICON47_PNG:String = "tiles/avatars/icon47.png";
 	public static inline var TILES_RANDOM_ICON24_PNG:String = "tiles/random/icon24.png";
 	public static inline var TILES_POKEMAN_ICON50_PNG:String = "tiles/pokeman/icon50.png";
 	public static inline var TILES_CHRISTMAS_ICON12_PNG:String = "tiles/christmas/icon12.png";
@@ -2460,6 +2803,7 @@ class AssetsList {
 	public static inline var TILES_POKEMAN_ICON66_PNG:String = "tiles/pokeman/icon66.png";
 	public static inline var TILES_CHRISTMAS_ICON35_PNG:String = "tiles/christmas/icon35.png";
 	public static inline var TILES_RANDOM_ICON10_PNG:String = "tiles/random/icon10.png";
+	public static inline var TILES_AVATARS_ICON4_PNG:String = "tiles/avatars/icon4.png";
 	public static inline var TILES_POKEMAN_ICON87_PNG:String = "tiles/pokeman/icon87.png";
 	public static inline var AUDIO_NICE_MP3:String = "audio/nice.mp3";
 	public static inline var CATEGORIES_RANDOM_PNG:String = "categories/random.png";
@@ -2468,9 +2812,12 @@ class AssetsList {
 	public static inline var TILES_RANDOM_ICON36_PNG:String = "tiles/random/icon36.png";
 	public static inline var TILES_CHRISTMAS_ICON29_PNG:String = "tiles/christmas/icon29.png";
 	public static inline var TILES_RANDOM_ICON13_PNG:String = "tiles/random/icon13.png";
+	public static inline var TILES_AVATARS_ICON11_PNG:String = "tiles/avatars/icon11.png";
 	public static inline var TILES_SOCIAL_ICON1_PNG:String = "tiles/social/icon1.png";
+	public static inline var TILES_AVATARS_ICON7_PNG:String = "tiles/avatars/icon7.png";
 	public static inline var TILES_RANDOM_ICON40_PNG:String = "tiles/random/icon40.png";
 	public static inline var TILES_SOCIAL_ICON13_PNG:String = "tiles/social/icon13.png";
+	public static inline var TILES_AVATARS_ICON20_PNG:String = "tiles/avatars/icon20.png";
 	public static inline var TILES_CHRISTMAS_ICON13_PNG:String = "tiles/christmas/icon13.png";
 	public static inline var TILES_EDUCATION_ICON8_PNG:String = "tiles/education/icon8.png";
 	public static inline var TILES_POKEMAN_ICON3_PNG:String = "tiles/pokeman/icon3.png";
@@ -2491,6 +2838,7 @@ class AssetsList {
 	public static inline var TILES_RANDOM_ICON70_PNG:String = "tiles/random/icon70.png";
 	public static inline var TILES_SOCIAL_ICON20_PNG:String = "tiles/social/icon20.png";
 	public static inline var QUICKMENU_BACK_PNG:String = "quickmenu/back.png";
+	public static inline var TILES_AVATARS_ICON13_PNG:String = "tiles/avatars/icon13.png";
 	public static inline var TILES_EDUCATION_ICON26_PNG:String = "tiles/education/icon26.png";
 	public static inline var TILES_EMOTICONS_ICON27_PNG:String = "tiles/emoticons/icon27.png";
 	public static inline var TILES_RANDOM_ICON69_PNG:String = "tiles/random/icon69.png";
@@ -2499,9 +2847,11 @@ class AssetsList {
 	public static inline var TILES_EMOTICONS_ICON31_PNG:String = "tiles/emoticons/icon31.png";
 	public static inline var TILES_CHRISTMAS_ICON44_PNG:String = "tiles/christmas/icon44.png";
 	public static inline var TILES_RANDOM_ICON7_PNG:String = "tiles/random/icon7.png";
+	public static inline var TILES_AVATARS_ICON34_PNG:String = "tiles/avatars/icon34.png";
 	public static inline var TILES_EDUCATION_ICON10_PNG:String = "tiles/education/icon10.png";
 	public static inline var TILES_EMOTICONS_ICON11_PNG:String = "tiles/emoticons/icon11.png";
 	public static inline var TILES_RANDOM_ICON73_PNG:String = "tiles/random/icon73.png";
+	public static inline var TILES_AVATARS_ICON43_PNG:String = "tiles/avatars/icon43.png";
 	public static inline var TILES_CHRISTMAS_ICON9_PNG:String = "tiles/christmas/icon9.png";
 	public static inline var TILES_EDUCATION_ICON24_PNG:String = "tiles/education/icon24.png";
 	public static inline var TILES_EMOTICONS_ICON25_PNG:String = "tiles/emoticons/icon25.png";
@@ -2511,16 +2861,20 @@ class AssetsList {
 	public static inline var TILES_POKEMAN_ICON12_PNG:String = "tiles/pokeman/icon12.png";
 	public static inline var TILES_RANDOM_ICON18_PNG:String = "tiles/random/icon18.png";
 	public static inline var BACKGROUNDS_BG_JPG:String = "backgrounds/bg.jpg";
+	public static inline var TILES_AVATARS_ICON18_PNG:String = "tiles/avatars/icon18.png";
 	public static inline var TILES_CHRISTMAS_ICON22_PNG:String = "tiles/christmas/icon22.png";
 	public static inline var TILES_POKEMAN_ICON21_PNG:String = "tiles/pokeman/icon21.png";
+	public static inline var TILES_AVATARS_ICON27_PNG:String = "tiles/avatars/icon27.png";
 	public static inline var TILES_EDUCATION_ICON18_PNG:String = "tiles/education/icon18.png";
 	public static inline var TILES_EDUCATION_ICON5_PNG:String = "tiles/education/icon5.png";
 	public static inline var TILES_EMOTICONS_ICON19_PNG:String = "tiles/emoticons/icon19.png";
 	public static inline var TILES_POKEMAN_ICON8_PNG:String = "tiles/pokeman/icon8.png";
 	public static inline var TILES_RANDOM_ICON22_PNG:String = "tiles/random/icon22.png";
 	public static inline var TILES_POKEMAN_ICON30_PNG:String = "tiles/pokeman/icon30.png";
+	public static inline var TILES_AVATARS_ICON36_PNG:String = "tiles/avatars/icon36.png";
 	public static inline var TILES_CHRISTMAS_ICON36_PNG:String = "tiles/christmas/icon36.png";
 	public static inline var TILES_EDUCATION_ICON3_PNG:String = "tiles/education/icon3.png";
+	public static inline var TILES_AVATARS_ICON45_PNG:String = "tiles/avatars/icon45.png";
 	public static inline var TILES_CHRISTMAS_ICON16_PNG:String = "tiles/christmas/icon16.png";
 	public static inline var TILES_RANDOM_ICON48_PNG:String = "tiles/random/icon48.png";
 	public static inline var TILES_CHRISTMAS_ICON20_PNG:String = "tiles/christmas/icon20.png";
@@ -2566,6 +2920,7 @@ class AssetsList {
 	public static inline var TILES_EDUCATION_ICON25_PNG:String = "tiles/education/icon25.png";
 	public static inline var TILES_EMOTICONS_ICON26_PNG:String = "tiles/emoticons/icon26.png";
 	public static inline var BACKGROUNDS_SCHOOL_PNG:String = "backgrounds/school.png";
+	public static inline var TILES_AVATARS_ICON2_PNG:String = "tiles/avatars/icon2.png";
 	public static inline var TILES_CHRISTMAS_ICON39_PNG:String = "tiles/christmas/icon39.png";
 	public static inline var TILES_POKEMAN_ICON67_PNG:String = "tiles/pokeman/icon67.png";
 	public static inline var TILES_CHRISTMAS_ICON43_PNG:String = "tiles/christmas/icon43.png";
@@ -2577,6 +2932,7 @@ class AssetsList {
 	public static inline var TILES_RANDOM_ICON11_PNG:String = "tiles/random/icon11.png";
 	public static inline var TILES_EDUCATION_ICON19_PNG:String = "tiles/education/icon19.png";
 	public static inline var TILES_POKEMAN_ICON85_PNG:String = "tiles/pokeman/icon85.png";
+	public static inline var TILES_AVATARS_ICON5_PNG:String = "tiles/avatars/icon5.png";
 	public static inline var TILES_SOCIAL_ICON11_PNG:String = "tiles/social/icon11.png";
 	public static inline var TILES_CHRISTMAS_ICON37_PNG:String = "tiles/christmas/icon37.png";
 	public static inline var TILES_POKEMAN_ICON1_PNG:String = "tiles/pokeman/icon1.png";
@@ -2599,23 +2955,30 @@ class AssetsList {
 	public static inline var TILES_RANDOM_ICON67_PNG:String = "tiles/random/icon67.png";
 	public static inline var TILES_LANDSCAPES_ICON7_PNG:String = "tiles/landscapes/icon7.png";
 	public static inline var TILES_POKEMAN_ICON99_PNG:String = "tiles/pokeman/icon99.png";
+	public static inline var TILES_AVATARS_ICON14_PNG:String = "tiles/avatars/icon14.png";
 	public static inline var TILES_EMOTICONS_ICON35_PNG:String = "tiles/emoticons/icon35.png";
 	public static inline var TILES_RANDOM_ICON71_PNG:String = "tiles/random/icon71.png";
 	public static inline var TILES_LANDSCAPES_ICON13_PNG:String = "tiles/landscapes/icon13.png";
+	public static inline var TILES_AVATARS_ICON23_PNG:String = "tiles/avatars/icon23.png";
+	public static inline var TILES_AVATARS_ICON32_PNG:String = "tiles/avatars/icon32.png";
 	public static inline var AUDIO_UHOH_MP3:String = "audio/uhoh.mp3";
 	public static inline var TILES_EDUCATION_ICON28_PNG:String = "tiles/education/icon28.png";
 	public static inline var TILES_EDUCATION_ICON6_PNG:String = "tiles/education/icon6.png";
 	public static inline var TILES_EMOTICONS_ICON29_PNG:String = "tiles/emoticons/icon29.png";
 	public static inline var TILES_RANDOM_ICON16_PNG:String = "tiles/random/icon16.png";
+	public static inline var TILES_AVATARS_ICON41_PNG:String = "tiles/avatars/icon41.png";
 	public static inline var TILES_CHRISTMAS_ICON46_PNG:String = "tiles/christmas/icon46.png";
+	public static inline var TILES_AVATARS_ICON50_PNG:String = "tiles/avatars/icon50.png";
 	public static inline var TILES_EDUCATION_ICON12_PNG:String = "tiles/education/icon12.png";
 	public static inline var TILES_EMOTICONS_ICON13_PNG:String = "tiles/emoticons/icon13.png";
 	public static inline var TILES_POKEMAN_ICON6_PNG:String = "tiles/pokeman/icon6.png";
 	public static inline var TILES_RANDOM_ICON20_PNG:String = "tiles/random/icon20.png";
 	public static inline var TILES_POKEMAN_ICON10_PNG:String = "tiles/pokeman/icon10.png";
 	public static inline var MENU_BUTTON_24_TILES_PNG:String = "menu/button_24-tiles.png";
+	public static inline var TILES_AVATARS_ICON16_PNG:String = "tiles/avatars/icon16.png";
 	public static inline var TILES_CHRISTMAS_ICON30_PNG:String = "tiles/christmas/icon30.png";
 	public static inline var TILES_RANDOM_ICON19_PNG:String = "tiles/random/icon19.png";
+	public static inline var TILES_AVATARS_ICON25_PNG:String = "tiles/avatars/icon25.png";
 	public static inline var TILES_POKEMAN_ICON31_PNG:String = "tiles/pokeman/icon31.png";
 	public static inline var TILES_RANDOM_ICON2_PNG:String = "tiles/random/icon2.png";
 	public static inline var TILES_RANDOM_ICON46_PNG:String = "tiles/random/icon46.png";
@@ -2623,6 +2986,7 @@ class AssetsList {
 	public static inline var TILES_RANDOM_ICON23_PNG:String = "tiles/random/icon23.png";
 	public static inline var TILES_POKEMAN_ICON40_PNG:String = "tiles/pokeman/icon40.png";
 	public static inline var TILES_SOCIAL_ICON2_PNG:String = "tiles/social/icon2.png";
+	public static inline var TILES_AVATARS_ICON46_PNG:String = "tiles/avatars/icon46.png";
 	public static inline var TILES_CHRISTMAS_ICON24_PNG:String = "tiles/christmas/icon24.png";
 	public static inline var TILES_LANDSCAPES_ICON15_PNG:String = "tiles/landscapes/icon15.png";
 	public static inline var TILES_RANDOM_ICON50_PNG:String = "tiles/random/icon50.png";
@@ -2633,6 +2997,7 @@ class AssetsList {
 	public static inline var TILES_LANDSCAPES_ICON26_PNG:String = "tiles/landscapes/icon26.png";
 	public static inline var TILES_RANDOM_ICON5_PNG:String = "tiles/random/icon5.png";
 	public static inline var TILES_RANDOM_ICON76_PNG:String = "tiles/random/icon76.png";
+	public static inline var TILES_AVATARS_ICON45:String = "tiles_avatars_icon45";
 	public static inline var TILES_LANDSCAPES_ICON22:String = "tiles_landscapes_icon22";
 	public static inline var TILES_SOCIAL_ICON30:String = "tiles_social_icon30";
 	public static inline var MENU_BUTTON_48_TILES:String = "menu_button_48_tiles";
@@ -2641,6 +3006,8 @@ class AssetsList {
 	public static inline var TILES_EMOTICONS_ICON30:String = "tiles_emoticons_icon30";
 	public static inline var TILES_POKEMAN_ICON23:String = "tiles_pokeman_icon23";
 	public static inline var TILES_RANDOM_ICON25:String = "tiles_random_icon25";
+	public static inline var TILES_AVATARS_ICON29:String = "tiles_avatars_icon29";
+	public static inline var TILES_AVATARS_ICON38:String = "tiles_avatars_icon38";
 	public static inline var TILES_POKEMAN_ICON44:String = "tiles_pokeman_icon44";
 	public static inline var CATEGORIES_POKEMAN:String = "categories_pokeman";
 	public static inline var TILES_RANDOM_ICON5:String = "tiles_random_icon5";
@@ -2684,6 +3051,7 @@ class AssetsList {
 	public static inline var TILES_LANDSCAPES_ICON5:String = "tiles_landscapes_icon5";
 	public static inline var TILES_POKEMAN_ICON94:String = "tiles_pokeman_icon94";
 	public static inline var TILES_RANDOM_ICON11:String = "tiles_random_icon11";
+	public static inline var TILES_AVATARS_ICON5:String = "tiles_avatars_icon5";
 	public static inline var TILES_POKEMAN_ICON1:String = "tiles_pokeman_icon1";
 	public static inline var TILES_POKEMAN_ICON69:String = "tiles_pokeman_icon69";
 	public static inline var CATEGORIES_EDUCATION:String = "categories_education";
@@ -2695,26 +3063,35 @@ class AssetsList {
 	public static inline var TILES_EDUCATION_ICON30:String = "tiles_education_icon30";
 	public static inline var TILES_EMOTICONS_ICON31:String = "tiles_emoticons_icon31";
 	public static inline var TILES_EMOTICONS_ICON6:String = "tiles_emoticons_icon6";
+	public static inline var TILES_AVATARS_ICON8:String = "tiles_avatars_icon8";
 	public static inline var TILES_POKEMAN_ICON87:String = "tiles_pokeman_icon87";
 	public static inline var TILES_RANDOM_ICON41:String = "tiles_random_icon41";
 	public static inline var TILES_POKEMAN_ICON4:String = "tiles_pokeman_icon4";
 	public static inline var TILES_EDUCATION_ICON24:String = "tiles_education_icon24";
 	public static inline var TILES_EMOTICONS_ICON25:String = "tiles_emoticons_icon25";
 	public static inline var TILES_RANDOM_ICON67:String = "tiles_random_icon67";
+	public static inline var TILES_AVATARS_ICON23:String = "tiles_avatars_icon23";
 	public static inline var TILES_RANDOM_ICON44:String = "tiles_random_icon44";
 	public static inline var TILES_SOCIAL_ICON17:String = "tiles_social_icon17";
 	public static inline var TILES_CHRISTMAS_ICON42:String = "tiles_christmas_icon42";
+	public static inline var TILES_AVATARS_ICON32:String = "tiles_avatars_icon32";
 	public static inline var TILES_SOCIAL_ICON21:String = "tiles_social_icon21";
+	public static inline var TILES_AVATARS_ICON41:String = "tiles_avatars_icon41";
 	public static inline var TILES_EDUCATION_ICON18:String = "tiles_education_icon18";
 	public static inline var TILES_EMOTICONS_ICON19:String = "tiles_emoticons_icon19";
+	public static inline var TILES_AVATARS_ICON50:String = "tiles_avatars_icon50";
 	public static inline var TILES_CHRISTMAS_ICON36:String = "tiles_christmas_icon36";
 	public static inline var TILES_POKEMAN_ICON10:String = "tiles_pokeman_icon10";
 	public static inline var TILES_RANDOM_ICON74:String = "tiles_random_icon74";
 	public static inline var MENU_BUTTON_24_TILES:String = "menu_button_24_tiles";
+	public static inline var TILES_AVATARS_ICON16:String = "tiles_avatars_icon16";
 	public static inline var TILES_RANDOM_ICON51:String = "tiles_random_icon51";
 	public static inline var TILES_SOCIAL_ICON24:String = "tiles_social_icon24";
 	public static inline var TILES_CHRISTMAS_ICON20:String = "tiles_christmas_icon20";
+	public static inline var CATEGORIES_AVATARS:String = "categories_avatars";
+	public static inline var TILES_AVATARS_ICON25:String = "tiles_avatars_icon25";
 	public static inline var TILES_LANDSCAPES_ICON20:String = "tiles_landscapes_icon20";
+	public static inline var TILES_AVATARS_ICON34:String = "tiles_avatars_icon34";
 	public static inline var TILES_RANDOM_ICON19:String = "tiles_random_icon19";
 	public static inline var TILES_CHRISTMAS_ICON14:String = "tiles_christmas_icon14";
 	public static inline var TILES_EMOTICONS_ICON1:String = "tiles_emoticons_icon1";
@@ -2725,9 +3102,11 @@ class AssetsList {
 	public static inline var TILES_RANDOM_ICON49:String = "tiles_random_icon49";
 	public static inline var TILES_POKEMAN_ICON33:String = "tiles_pokeman_icon33";
 	public static inline var TILES_RANDOM_ICON26:String = "tiles_random_icon26";
+	public static inline var TILES_AVATARS_ICON39:String = "tiles_avatars_icon39";
 	public static inline var TILES_EDUCATION_ICON27:String = "tiles_education_icon27";
 	public static inline var TILES_POKEMAN_ICON42:String = "tiles_pokeman_icon42";
 	public static inline var TILES_RANDOM_ICON53:String = "tiles_random_icon53";
+	public static inline var TILES_AVATARS_ICON48:String = "tiles_avatars_icon48";
 	public static inline var TILES_EDUCATION_ICON31:String = "tiles_education_icon31";
 	public static inline var TILES_EDUCATION_ICON6:String = "tiles_education_icon6";
 	public static inline var TILES_EMOTICONS_ICON32:String = "tiles_emoticons_icon32";
@@ -2735,6 +3114,7 @@ class AssetsList {
 	public static inline var TILES_CHRISTMAS_ICON45:String = "tiles_christmas_icon45";
 	public static inline var TILES_POKEMAN_ICON51:String = "tiles_pokeman_icon51";
 	public static inline var TILES_EDUCATION_ICON11:String = "tiles_education_icon11";
+	public static inline var TILES_AVATARS_ICON1:String = "tiles_avatars_icon1";
 	public static inline var TILES_POKEMAN_ICON17:String = "tiles_pokeman_icon17";
 	public static inline var TILES_POKEMAN_ICON60:String = "tiles_pokeman_icon60";
 	public static inline var TILES_RANDOM_ICON2:String = "tiles_random_icon2";
@@ -2756,6 +3136,7 @@ class AssetsList {
 	public static inline var TILES_CHRISTMAS_ICON37:String = "tiles_christmas_icon37";
 	public static inline var TILES_POKEMAN_ICON65:String = "tiles_pokeman_icon65";
 	public static inline var TILES_RANDOM_ICON63:String = "tiles_random_icon63";
+	public static inline var BACKGROUNDS_ALCHEMY:String = "backgrounds_alchemy";
 	public static inline var AUDIO_TOUCH:String = "audio_touch";
 	public static inline var TILES_POKEMAN_ICON74:String = "tiles_pokeman_icon74";
 	public static inline var TILES_CHRISTMAS_ICON21:String = "tiles_christmas_icon21";
@@ -2763,6 +3144,7 @@ class AssetsList {
 	public static inline var TILES_EMOTICONS_ICON9:String = "tiles_emoticons_icon9";
 	public static inline var TILES_POKEMAN_ICON83:String = "tiles_pokeman_icon83";
 	public static inline var TILES_RANDOM_ICON3:String = "tiles_random_icon3";
+	public static inline var TILES_AVATARS_ICON3:String = "tiles_avatars_icon3";
 	public static inline var TILES_POKEMAN_ICON49:String = "tiles_pokeman_icon49";
 	public static inline var TILES_POKEMAN_ICON92:String = "tiles_pokeman_icon92";
 	public static inline var TILES_SOCIAL_ICON3:String = "tiles_social_icon3";
@@ -2772,6 +3154,7 @@ class AssetsList {
 	public static inline var TILES_RANDOM_ICON12:String = "tiles_random_icon12";
 	public static inline var TILES_EDUCATION_ICON1:String = "tiles_education_icon1";
 	public static inline var TILES_LANDSCAPES_ICON7:String = "tiles_landscapes_icon7";
+	public static inline var TILES_AVATARS_ICON6:String = "tiles_avatars_icon6";
 	public static inline var TILES_POKEMAN_ICON67:String = "tiles_pokeman_icon67";
 	public static inline var TILES_EMOTICONS_ICON35:String = "tiles_emoticons_icon35";
 	public static inline var TILES_POKEMAN_ICON2:String = "tiles_pokeman_icon2";
@@ -2786,15 +3169,18 @@ class AssetsList {
 	public static inline var TILES_SOCIAL_ICON15:String = "tiles_social_icon15";
 	public static inline var TILES_EDUCATION_ICON28:String = "tiles_education_icon28";
 	public static inline var TILES_EMOTICONS_ICON29:String = "tiles_emoticons_icon29";
+	public static inline var TILES_AVATARS_ICON12:String = "tiles_avatars_icon12";
 	public static inline var TILES_EDUCATION_ICON32:String = "tiles_education_icon32";
 	public static inline var TILES_EMOTICONS_ICON33:String = "tiles_emoticons_icon33";
 	public static inline var TILES_CHRISTMAS_ICON46:String = "tiles_christmas_icon46";
 	public static inline var TILES_RANDOM_ICON9:String = "tiles_random_icon9";
+	public static inline var TILES_AVATARS_ICON21:String = "tiles_avatars_icon21";
 	public static inline var TILES_CHRISTMAS_ICON50:String = "tiles_christmas_icon50";
 	public static inline var TILES_EDUCATION_ICON12:String = "tiles_education_icon12";
 	public static inline var TILES_EMOTICONS_ICON13:String = "tiles_emoticons_icon13";
 	public static inline var TILES_RANDOM_ICON68:String = "tiles_random_icon68";
 	public static inline var TILES_SOCIAL_ICON9:String = "tiles_social_icon9";
+	public static inline var TILES_AVATARS_ICON30:String = "tiles_avatars_icon30";
 	public static inline var TILES_CHRISTMAS_ICON30:String = "tiles_christmas_icon30";
 	public static inline var QUICKMENU_BACK:String = "quickmenu_back";
 	public static inline var TILES_EDUCATION_ICON26:String = "tiles_education_icon26";
@@ -2807,25 +3193,32 @@ class AssetsList {
 	public static inline var TILES_EMOTICONS_ICON4:String = "tiles_emoticons_icon4";
 	public static inline var TILES_POKEMAN_ICON99:String = "tiles_pokeman_icon99";
 	public static inline var TILES_CHRISTMAS_ICON24:String = "tiles_christmas_icon24";
+	public static inline var TILES_AVATARS_ICON14:String = "tiles_avatars_icon14";
 	public static inline var TILES_RANDOM_ICON17:String = "tiles_random_icon17";
 	public static inline var TILES_RANDOM_ICON75:String = "tiles_random_icon75";
 	public static inline var TILES_CHRISTMAS_ICON38:String = "tiles_christmas_icon38";
+	public static inline var TILES_AVATARS_ICON35:String = "tiles_avatars_icon35";
 	public static inline var TILES_POKEMAN_ICON7:String = "tiles_pokeman_icon7";
 	public static inline var TILES_RANDOM_ICON21:String = "tiles_random_icon21";
 	public static inline var TILES_CHRISTMAS_ICON18:String = "tiles_christmas_icon18";
 	public static inline var TILES_TILE:String = "tiles_tile";
+	public static inline var TILES_AVATARS_ICON44:String = "tiles_avatars_icon44";
 	public static inline var TILES_CHRISTMAS_ICON22:String = "tiles_christmas_icon22";
 	public static inline var TILES_EDUCATION_ICON9:String = "tiles_education_icon9";
 	public static inline var TILES_RANDOM_ICON47:String = "tiles_random_icon47";
 	public static inline var TILES_POKEMAN_ICON13:String = "tiles_pokeman_icon13";
 	public static inline var TILES_RANDOM_ICON24:String = "tiles_random_icon24";
+	public static inline var TILES_AVATARS_ICON19:String = "tiles_avatars_icon19";
 	public static inline var TILES_CHRISTMAS_ICON16:String = "tiles_christmas_icon16";
 	public static inline var TILES_POKEMAN_ICON22:String = "tiles_pokeman_icon22";
+	public static inline var TILES_AVATARS_ICON28:String = "tiles_avatars_icon28";
 	public static inline var TILES_LANDSCAPES_ICON8:String = "tiles_landscapes_icon8";
 	public static inline var TILES_POKEMAN_ICON31:String = "tiles_pokeman_icon31";
+	public static inline var TILES_AVATARS_ICON37:String = "tiles_avatars_icon37";
 	public static inline var TILES_EMOTICONS_ICON36:String = "tiles_emoticons_icon36";
 	public static inline var TILES_POKEMAN_ICON40:String = "tiles_pokeman_icon40";
 	public static inline var TILES_RANDOM_ICON77:String = "tiles_random_icon77";
+	public static inline var TILES_AVATARS_ICON46:String = "tiles_avatars_icon46";
 	public static inline var TILES_POKEMAN_ICON52:String = "tiles_pokeman_icon52";
 	public static inline var TILES_RANDOM_ICON54:String = "tiles_random_icon54";
 	public static inline var TILES_SOCIAL_ICON27:String = "tiles_social_icon27";
@@ -2862,6 +3255,7 @@ class AssetsList {
 	public static inline var TILES_LANDSCAPES_ICON1:String = "tiles_landscapes_icon1";
 	public static inline var TILES_POKEMAN_ICON93:String = "tiles_pokeman_icon93";
 	public static inline var PRELOADER_LOGO:String = "preloader_logo";
+	public static inline var TILES_AVATARS_ICON4:String = "tiles_avatars_icon4";
 	public static inline var TILES_CHRISTMAS_ICON19:String = "tiles_christmas_icon19";
 	public static inline var TILES_LANDSCAPES_ICON17:String = "tiles_landscapes_icon17";
 	public static inline var TILES_POKEMAN_ICON47:String = "tiles_pokeman_icon47";
@@ -2884,12 +3278,14 @@ class AssetsList {
 	public static inline var TILES_RANDOM_ICON66:String = "tiles_random_icon66";
 	public static inline var TILES_EMOTICONS_ICON7:String = "tiles_emoticons_icon7";
 	public static inline var TILES_SOCIAL_ICON16:String = "tiles_social_icon16";
+	public static inline var TILES_AVATARS_ICON10:String = "tiles_avatars_icon10";
 	public static inline var TILES_EDUCATION_ICON20:String = "tiles_education_icon20";
 	public static inline var TILES_EMOTICONS_ICON21:String = "tiles_emoticons_icon21";
 	public static inline var TILES_RANDOM_ICON70:String = "tiles_random_icon70";
 	public static inline var TILES_SOCIAL_ICON20:String = "tiles_social_icon20";
 	public static inline var TILES_LANDSCAPES_ICON19:String = "tiles_landscapes_icon19";
 	public static inline var TILES_POKEMAN_ICON79:String = "tiles_pokeman_icon79";
+	public static inline var TILES_AVATARS_ICON40:String = "tiles_avatars_icon40";
 	public static inline var TILES_CHRISTMAS_ICON48:String = "tiles_christmas_icon48";
 	public static inline var TILES_SOCIAL_ICON1:String = "tiles_social_icon1";
 	public static inline var TILES_EDUCATION_ICON14:String = "tiles_education_icon14";
@@ -2897,12 +3293,16 @@ class AssetsList {
 	public static inline var TILES_RANDOM_ICON15:String = "tiles_random_icon15";
 	public static inline var TILES_RANDOM_ICON73:String = "tiles_random_icon73";
 	public static inline var QUICKMENU_HOME:String = "quickmenu_home";
+	public static inline var TILES_AVATARS_ICON9:String = "tiles_avatars_icon9";
 	public static inline var TILES_CHRISTMAS_ICON32:String = "tiles_christmas_icon32";
+	public static inline var TILES_AVATARS_ICON15:String = "tiles_avatars_icon15";
 	public static inline var TILES_POKEMAN_ICON5:String = "tiles_pokeman_icon5";
 	public static inline var CATEGORIES_LANDSCAPES:String = "categories_landscapes";
 	public static inline var TILES_RANDOM_ICON4:String = "tiles_random_icon4";
+	public static inline var TILES_AVATARS_ICON24:String = "tiles_avatars_icon24";
 	public static inline var TILES_RANDOM_ICON18:String = "tiles_random_icon18";
 	public static inline var TILES_SOCIAL_ICON4:String = "tiles_social_icon4";
+	public static inline var TILES_AVATARS_ICON33:String = "tiles_avatars_icon33";
 	public static inline var TILES_CHRISTMAS_ICON26:String = "tiles_christmas_icon26";
 	public static inline var TILES_RANDOM_ICON45:String = "tiles_random_icon45";
 	public static inline var TILES_SOCIAL_ICON18:String = "tiles_social_icon18";
@@ -2910,19 +3310,23 @@ class AssetsList {
 	public static inline var TILES_POKEMAN_ICON8:String = "tiles_pokeman_icon8";
 	public static inline var TILES_RANDOM_ICON22:String = "tiles_random_icon22";
 	public static inline var AUDIO_WOW:String = "audio_wow";
+	public static inline var TILES_AVATARS_ICON42:String = "tiles_avatars_icon42";
 	public static inline var TILES_CHRISTMAS_ICON10:String = "tiles_christmas_icon10";
 	public static inline var TILES_LANDSCAPES_ICON2:String = "tiles_landscapes_icon2";
 	public static inline var TILES_RANDOM_ICON7:String = "tiles_random_icon7";
 	public static inline var TILES_LANDSCAPES_ICON27:String = "tiles_landscapes_icon27";
 	public static inline var TILES_POKEMAN_ICON11:String = "tiles_pokeman_icon11";
 	public static inline var TILES_RANDOM_ICON48:String = "tiles_random_icon48";
+	public static inline var TILES_AVATARS_ICON17:String = "tiles_avatars_icon17";
 	public static inline var TILES_SOCIAL_ICON7:String = "tiles_social_icon7";
 	public static inline var TILES_EMOTICONS_ICON2:String = "tiles_emoticons_icon2";
 	public static inline var TILES_POKEMAN_ICON20:String = "tiles_pokeman_icon20";
+	public static inline var TILES_AVATARS_ICON26:String = "tiles_avatars_icon26";
 	public static inline var TILES_POKEMAN_ICON32:String = "tiles_pokeman_icon32";
 	public static inline var TILES_RANDOM_ICON52:String = "tiles_random_icon52";
 	public static inline var TILES_SOCIAL_ICON25:String = "tiles_social_icon25";
 	public static inline var TILES_POKEMAN_ICON41:String = "tiles_pokeman_icon41";
+	public static inline var TILES_AVATARS_ICON47:String = "tiles_avatars_icon47";
 	public static inline var TILES_CHRISTMAS_ICON9:String = "tiles_christmas_icon9";
 	public static inline var TILES_POKEMAN_ICON50:String = "tiles_pokeman_icon50";
 	public static inline var TILES_RANDOM_ICON78:String = "tiles_random_icon78";
@@ -2937,6 +3341,7 @@ class AssetsList {
 	public static inline var TILES_POKEMAN_ICON34:String = "tiles_pokeman_icon34";
 	public static inline var TILES_POKEMAN_ICON43:String = "tiles_pokeman_icon43";
 	public static inline var TILES_RANDOM_ICON27:String = "tiles_random_icon27";
+	public static inline var TILES_AVATARS_ICON49:String = "tiles_avatars_icon49";
 	public static inline var TILES_CHRISTMAS_ICON49:String = "tiles_christmas_icon49";
 	public static inline var TILES_EDUCATION_ICON15:String = "tiles_education_icon15";
 	public static inline var TILES_EMOTICONS_ICON16:String = "tiles_emoticons_icon16";
@@ -2945,6 +3350,7 @@ class AssetsList {
 	public static inline var TILES_CHRISTMAS_ICON33:String = "tiles_christmas_icon33";
 	public static inline var TILES_POKEMAN_ICON18:String = "tiles_pokeman_icon18";
 	public static inline var TILES_POKEMAN_ICON73:String = "tiles_pokeman_icon73";
+	public static inline var TILES_AVATARS_ICON2:String = "tiles_avatars_icon2";
 	public static inline var TILES_LANDSCAPES_ICON15:String = "tiles_landscapes_icon15";
 	public static inline var TILES_POKEMAN_ICON27:String = "tiles_pokeman_icon27";
 	public static inline var TILES_POKEMAN_ICON39:String = "tiles_pokeman_icon39";
@@ -2973,9 +3379,12 @@ class AssetsList {
 	public static inline var TILES_LANDSCAPES_ICON12:String = "tiles_landscapes_icon12";
 	public static inline var BACKGROUNDS_SCHOOL:String = "backgrounds_school";
 	public static inline var TILES_POKEMAN_ICON96:String = "tiles_pokeman_icon96";
+	public static inline var TILES_AVATARS_ICON11:String = "tiles_avatars_icon11";
 	public static inline var TILES_LANDSCAPES_ICON23:String = "tiles_landscapes_icon23";
+	public static inline var TILES_AVATARS_ICON20:String = "tiles_avatars_icon20";
 	public static inline var TILES_RANDOM_ICON13:String = "tiles_random_icon13";
 	public static inline var TILES_RANDOM_ICON71:String = "tiles_random_icon71";
+	public static inline var TILES_AVATARS_ICON7:String = "tiles_avatars_icon7";
 	public static inline var TILES_EDUCATION_ICON22:String = "tiles_education_icon22";
 	public static inline var TILES_EMOTICONS_ICON23:String = "tiles_emoticons_icon23";
 	public static inline var TILES_POKEMAN_ICON3:String = "tiles_pokeman_icon3";
@@ -2984,6 +3393,7 @@ class AssetsList {
 	public static inline var TILES_CHRISTMAS_ICON40:String = "tiles_christmas_icon40";
 	public static inline var TILES_POKEMAN_ICON98:String = "tiles_pokeman_icon98";
 	public static inline var TILES_RANDOM_ICON16:String = "tiles_random_icon16";
+	public static inline var TILES_AVATARS_ICON13:String = "tiles_avatars_icon13";
 	public static inline var TILES_RANDOM_ICON43:String = "tiles_random_icon43";
 	public static inline var TILES_CHRISTMAS_ICON1:String = "tiles_christmas_icon1";
 	public static inline var TILES_EDUCATION_ICON16:String = "tiles_education_icon16";
@@ -2991,11 +3401,14 @@ class AssetsList {
 	public static inline var TILES_LANDSCAPES_ICON14:String = "tiles_landscapes_icon14";
 	public static inline var TILES_POKEMAN_ICON6:String = "tiles_pokeman_icon6";
 	public static inline var TILES_RANDOM_ICON20:String = "tiles_random_icon20";
+	public static inline var TILES_AVATARS_ICON22:String = "tiles_avatars_icon22";
 	public static inline var TILES_EMOTICONS_ICON5:String = "tiles_emoticons_icon5";
 	public static inline var TILES_CHRISTMAS_ICON34:String = "tiles_christmas_icon34";
+	public static inline var TILES_AVATARS_ICON31:String = "tiles_avatars_icon31";
 	public static inline var TILES_EMOTICONS_ICON3:String = "tiles_emoticons_icon3";
 	public static inline var TILES_RANDOM_ICON1:String = "tiles_random_icon1";
 	public static inline var TILES_RANDOM_ICON69:String = "tiles_random_icon69";
+	public static inline var TILES_AVATARS_ICON43:String = "tiles_avatars_icon43";
 	public static inline var TILES_LANDSCAPES_ICON25:String = "tiles_landscapes_icon25";
 	public static inline var TILES_RANDOM_ICON46:String = "tiles_random_icon46";
 	public static inline var TILES_SOCIAL_ICON19:String = "tiles_social_icon19";
@@ -3003,13 +3416,16 @@ class AssetsList {
 	public static inline var TILES_POKEMAN_ICON12:String = "tiles_pokeman_icon12";
 	public static inline var TILES_RANDOM_ICON50:String = "tiles_random_icon50";
 	public static inline var TILES_SOCIAL_ICON23:String = "tiles_social_icon23";
+	public static inline var TILES_AVATARS_ICON18:String = "tiles_avatars_icon18";
 	public static inline var TILES_POKEMAN_ICON21:String = "tiles_pokeman_icon21";
+	public static inline var TILES_AVATARS_ICON27:String = "tiles_avatars_icon27";
 	public static inline var TILES_CHRISTMAS_ICON12:String = "tiles_christmas_icon12";
 	public static inline var TILES_EDUCATION_ICON8:String = "tiles_education_icon8";
 	public static inline var TILES_LANDSCAPES_ICON11:String = "tiles_landscapes_icon11";
 	public static inline var TILES_LANDSCAPES_ICON4:String = "tiles_landscapes_icon4";
 	public static inline var TILES_POKEMAN_ICON30:String = "tiles_pokeman_icon30";
 	public static inline var TILES_RANDOM_ICON76:String = "tiles_random_icon76";
+	public static inline var TILES_AVATARS_ICON36:String = "tiles_avatars_icon36";
 	public static inline var TILES_SOCIAL_ICON26:String = "tiles_social_icon26";
 
 	public static function exists(val:String):Bool {

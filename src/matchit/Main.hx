@@ -12,6 +12,8 @@ import pixi.plugins.app.Application;
 import msignal.Signal.Signal0;
 import msignal.Signal.Signal1;
 
+import webfont.WebFontLoader;
+
 import js.Browser;
 
 class Main extends Application {
@@ -27,9 +29,17 @@ class Main extends Application {
 	public function new() {
 		super();
 		BrowserUtils.registerServiceWorker();
-		_setStageProperties();
-		_setScreenDimensions();
-		_loadBucketConfig();
+		var webFontConfig = {
+			custom: {
+				families: ["Covered+By+Your+Grace", "Pontano Sans"]
+			},
+			active: function() {
+				_setStageProperties();
+				_setScreenDimensions();
+				_loadBucketConfig();
+			}
+		};
+		WebFontLoader.load(webFontConfig);
 	}
 
 	inline function _setStageProperties() {

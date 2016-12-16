@@ -1,5 +1,6 @@
 package matchit.components.tiles;
 
+import pixi.core.textures.Texture;
 import js.html.Storage;
 import js.Browser;
 import pixi.core.display.Container;
@@ -31,10 +32,12 @@ class TilesView extends ComponentView {
 	var _tilesLoaded:Bool;
 
 	var _tilesContainer:Container;
+	var _loadingTxt:Text;
 	var _movesCountTxt:Text;
 	var _bestTxt:Text;
 
 	var _ls:Storage;
+	var _closeTile:Texture;
 
 	override public function init() {
 		super.init();
@@ -45,16 +48,23 @@ class TilesView extends ComponentView {
 		_container.addChild(_tilesContainer);
 
 		var style:TextStyleObject = {};
-		style.fill = 0x003366;
-		style.fontSize = 15;
-		style.fontFamily = "Tahoma";
+		style.fill = 0x16511C;
+		style.fontSize = _getTextSize();
+		style.fontFamily = "Covered By Your Grace";
 		_movesCountTxt = new Text("", style, stageProperties.pixelRatio);
-		_movesCountTxt.anchor.set(0, 1);
+		_movesCountTxt.anchor.set(-0.1, 0.9);
 		_container.addChild(_movesCountTxt);
 
+		style.fill = 0xFF0000;
 		_bestTxt = new Text("", style, stageProperties.pixelRatio);
-		_bestTxt.anchor.set(1, 0);
+		_bestTxt.anchor.set(1.05, -0.1);
 		_container.addChild(_bestTxt);
+
+		style.fill = 0x000000;
+		_loadingTxt = new Text("", style, stageProperties.pixelRatio);
+		_loadingTxt.anchor.set(0.5);
+		_loadingTxt.position.set(stageProperties.screenWidth / 2, stageProperties.screenHeight / 2);
+		_container.addChild(_loadingTxt);
 
 		Main.resize.add(_resize);
 
@@ -71,6 +81,7 @@ class TilesView extends ComponentView {
 	}
 
 	public function loadCategoryTiles(category:String, count:Int) {
+		_closeTile = loader.getTexture(AssetsList.TILES_TILE);
 		_tilesLoaded = false;
 		_category = category;
 		_availableTilesCount = count;
@@ -83,13 +94,18 @@ class TilesView extends ComponentView {
 
 	function _onTilesLoaded() {
 		_tilesLoaded = true;
+		_loadingTxt.visible = false;
 		if (_tileCount != null && _tileCount > 0) drawTiles(_tileCount);
 	}
 
 	public function drawTiles(drawCount:Int) {
 		_tileCount = drawCount;
 
-		if (!_tilesLoaded) return;
+		if (!_tilesLoaded) {
+			_loadingTxt.text = "Loading...";
+			_loadingTxt.visible = true;
+			return;
+		}
 
 		if (_ls.getItem("best" + _tileCount) != null) _bestTxt.text = _ls.getItem("best" + _tileCount);
 		else _bestTxt.text = "Best: Not Available";
@@ -99,7 +115,6 @@ class TilesView extends ComponentView {
 		_tiles = [];
 		_movesCountTxt.text = "Moves: " + _movesCounter;
 		_determineRowMax();
-
 
 		var scale:Float = _getScaleFactor();
 		var tileId:Int;
@@ -111,7 +126,6 @@ class TilesView extends ComponentView {
 			tileIds.push(tileId);
 			_createTile(tileId, scale, i);
 		}
-		trace(tileIds);
 		var id = 0;
 		for (i in Std.int(_tileCount / 2) ... _tileCount) {
 			_createTile(tileIds[id], scale, i);
@@ -122,7 +136,7 @@ class TilesView extends ComponentView {
 	}
 
 	function _createTile(tileId:Int, scale:Float, id:Int) {
-		var tile:Tile = new Tile(loader.getTexture("tiles_" + _category + "_" + tileId), loader.getTexture(AssetsList.TILES_TILE));
+		var tile:Tile = new Tile(loader.getTexture("tiles_" + _category + "_" + tileId), _closeTile);
 		tile.scale.set(scale);
 		tile.id = tileId;
 		tile.name = "tile" + id;
@@ -142,8 +156,7 @@ class TilesView extends ComponentView {
 
 	function _checkCards() {
 		if (_secondOpenTile != null) {
-			_movesCounter++;
-			_movesCountTxt.text = "Moves: " + _movesCounter;
+			_updateMovesCount();
 			if (_firstOpenTile.id == _secondOpenTile.id) {
 				_firstOpenTile = null;
 				_secondOpenTile = null;
@@ -169,9 +182,9 @@ class TilesView extends ComponentView {
 			}
 			if (_clickTimer != null) _clickTimer.stop();
 		}
-		else {
+		/*else {
 			_clickTimer = Timer.delay(resetTile, 2000);
-		}
+		}*/
 	}
 
 	function _resetTiles() {
@@ -191,6 +204,7 @@ class TilesView extends ComponentView {
 		if (_secondOpenTile == null && _firstOpenTile != null) {
 			_firstOpenTile.reset();
 			_firstOpenTile = null;
+			_updateMovesCount();
 		}
 		_enableAll();
 	}
@@ -205,6 +219,11 @@ class TilesView extends ComponentView {
 		for (tile in _tiles) {
 			tile.enable();
 		}
+	}
+
+	function _updateMovesCount() {
+		_movesCounter++;
+		_movesCountTxt.text = "Moves: " + _movesCounter;
 	}
 
 	function _positionTiles() {
@@ -275,6 +294,7 @@ class TilesView extends ComponentView {
 
 		_movesCountTxt.position.set(0, stageProperties.screenHeight);
 		_bestTxt.position.set(stageProperties.screenWidth, stageProperties.screenHeight - _movesCountTxt.height);
+		_loadingTxt.position.set(stageProperties.screenWidth / 2, stageProperties.screenHeight / 2);
 	}
 
 	public function reset() {
@@ -289,5 +309,11 @@ class TilesView extends ComponentView {
 		_movesTime = 0;
 		_movesCountTxt.text = "";
 		_bestTxt.text = "";
+	}
+
+	function _getTextSize() {
+		if (stageProperties.bucketWidth == 1024 || stageProperties.bucketHeight == 1024) return 32;
+		if (stageProperties.bucketWidth == 728 || stageProperties.bucketHeight == 728) return 26;
+		return 20;
 	}
 }
