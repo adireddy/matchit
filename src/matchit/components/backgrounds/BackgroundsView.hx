@@ -14,7 +14,7 @@ class BackgroundsView extends ComponentView {
 	}
 
 	override public function addAssetsToLoad() {
-		loader.addAsset(AssetsList.BACKGROUNDS_BG, AssetsList.BACKGROUNDS_ALCHEMY_JPG);
+		loader.addAsset(AssetsList.BACKGROUNDS_BG, AssetsList.BACKGROUNDS_BG_JPG);
 	}
 
 	public function showBg() {

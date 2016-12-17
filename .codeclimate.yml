@@ -1,0 +1,22 @@
+engines:
+  haxe-checkstyle:
+    enabled: true
+  markdownlint:
+    enabled: true
+    checks:
+      MD002:
+        enabled: false
+      MD013:
+        enabled: false
+      MD033:
+        enabled: false
+
+exclude_paths:
+  - assets/**/*
+  - js/**/*
+  - libs/**/*
+
+ratings:
+  paths:
+    - "**.hx"
+    - "**.md"

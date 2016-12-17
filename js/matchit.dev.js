@@ -1976,7 +1976,7 @@ matchit_components_backgrounds_BackgroundsView.prototype = $extend(matchit_core_
 		matchit_Main.resize.add($bind(this,this._resize));
 	}
 	,addAssetsToLoad: function() {
-		this.loader.addAsset("backgrounds_bg","backgrounds/alchemy.jpg");
+		this.loader.addAsset("backgrounds_bg","backgrounds/bg.jpg");
 	}
 	,showBg: function() {
 		this._bg = new PIXI.extras.TilingSprite(this.loader.getTexture("backgrounds_bg"),this.stageProperties.screenWidth,this.stageProperties.screenHeight);

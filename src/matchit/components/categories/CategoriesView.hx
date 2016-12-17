@@ -75,7 +75,7 @@ class CategoriesView extends ComponentView {
 		_emoticons = new Category(loader.getTexture(AssetsList.CATEGORIES_EMOTICONS), "emoticons", stageProperties, 0x000000);
 		_categoriesContainer.addChild(_emoticons);
 
-		_avatars = new Category(loader.getTexture(AssetsList.CATEGORIES_AVATARS), "avatars", stageProperties, 0x666666);
+		_avatars = new Category(loader.getTexture(AssetsList.CATEGORIES_AVATARS), "avatars", stageProperties, 0x63DCD2);
 		_categoriesContainer.addChild(_avatars);
 
 		_pokeman = new Category(loader.getTexture(AssetsList.CATEGORIES_POKEMAN), "pokeman", stageProperties, 0xD4101A);
