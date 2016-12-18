@@ -13,6 +13,7 @@ import pixi.core.text.Text;
 class TilesView extends ComponentView {
 
 	static inline var GAP:Int = 15;
+	static inline var RESET_DELAY_TIME:Int = 800;
 
 	var _rowMax:Int;
 	var _tileCount:Int;
@@ -133,6 +134,16 @@ class TilesView extends ComponentView {
 		}
 		_tiles = Random.shuffle(_tiles);
 		_resize();
+		_showAll();
+		Timer.delay(_hideAll, _getShowAllTime());
+	}
+
+	inline function _showAll() {
+		for (tile in _tiles) tile.show();
+	}
+
+	inline function _hideAll() {
+		for (tile in _tiles) tile.reset();
 	}
 
 	function _createTile(tileId:Int, scale:Float, id:Int) {
@@ -178,7 +189,7 @@ class TilesView extends ComponentView {
 			}
 			else {
 				loader.playAudio(AssetsList.AUDIO_UHOH);
-				Timer.delay(_resetTiles, 800);
+				Timer.delay(_resetTiles, RESET_DELAY_TIME);
 			}
 			if (_clickTimer != null) _clickTimer.stop();
 		}
@@ -274,6 +285,15 @@ class TilesView extends ComponentView {
 			case 24: 0.7;
 			case 48: 0.4;
 			case _: 1;
+		}
+	}
+
+	function _getShowAllTime():Int {
+		return switch (_tileCount) {
+			case 12: 1000;
+			case 24: 1500;
+			case 48: 2000;
+			case _: 800;
 		}
 	}
 

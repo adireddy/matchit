@@ -50,4 +50,8 @@ class Tile extends Container {
 	public function reset() {
 		_closeTile.visible = true;
 	}
+
+	public function show() {
+		_closeTile.visible = false;
+	}
 }

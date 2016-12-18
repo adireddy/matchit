@@ -69,13 +69,13 @@ class CategoriesView extends ComponentView {
 		_select.anchor.set(0.5);
 		_container.addChild(_select);
 
-		_christmas = new Category(loader.getTexture(AssetsList.CATEGORIES_CHRISTMAS), "christmas", stageProperties, 0x00B494);
+		_christmas = new Category(loader.getTexture(AssetsList.CATEGORIES_CHRISTMAS), "christmas", stageProperties, 0x06A98C);
 		_categoriesContainer.addChild(_christmas);
 
 		_emoticons = new Category(loader.getTexture(AssetsList.CATEGORIES_EMOTICONS), "emoticons", stageProperties, 0x000000);
 		_categoriesContainer.addChild(_emoticons);
 
-		_avatars = new Category(loader.getTexture(AssetsList.CATEGORIES_AVATARS), "avatars", stageProperties, 0x63DCD2);
+		_avatars = new Category(loader.getTexture(AssetsList.CATEGORIES_AVATARS), "avatars", stageProperties, 0x666666);
 		_categoriesContainer.addChild(_avatars);
 
 		_pokeman = new Category(loader.getTexture(AssetsList.CATEGORIES_POKEMAN), "pokeman", stageProperties, 0xD4101A);
