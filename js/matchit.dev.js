@@ -1996,7 +1996,11 @@ $hxClasses["matchit.components.categories.CategoriesController"] = matchit_compo
 matchit_components_categories_CategoriesController.__name__ = ["matchit","components","categories","CategoriesController"];
 matchit_components_categories_CategoriesController.__super__ = matchit_core_components_ComponentController;
 matchit_components_categories_CategoriesController.prototype = $extend(matchit_core_components_ComponentController.prototype,{
-	setup: function() {
+	init: function() {
+		this.view.categories = this.componentModel.get_categories();
+		this.view.categoryColors = this.componentModel.categoryColors;
+	}
+	,setup: function() {
 		this.model.showCategories.add($bind(this,this._showCategories));
 		this.view.selectedCategory.add($bind(this,this._onCategory));
 		this.view.createCategories();
@@ -2036,7 +2040,22 @@ $hxClasses["matchit.components.categories.CategoriesModel"] = matchit_components
 matchit_components_categories_CategoriesModel.__name__ = ["matchit","components","categories","CategoriesModel"];
 matchit_components_categories_CategoriesModel.__super__ = matchit_core_components_ComponentModel;
 matchit_components_categories_CategoriesModel.prototype = $extend(matchit_core_components_ComponentModel.prototype,{
-	__class__: matchit_components_categories_CategoriesModel
+	init: function() {
+		this.categoryColors = new haxe_ds_StringMap();
+		this.categoryColors.set("education",0);
+		this.categoryColors.set("avatars",6710886);
+		this.categoryColors.set("christmas",14176072);
+		this.categoryColors.set("emoticons",0);
+		this.categoryColors.set("pokeman",13897754);
+		this.categoryColors.set("social",5249686);
+		this.categoryColors.set("landscapes",436620);
+	}
+	,get_categories: function() {
+		this.categories = ["christmas","emoticons","pokeman","social","avatars","landscapes"];
+		return this.categories;
+	}
+	,__class__: matchit_components_categories_CategoriesModel
+	,__properties__: {get_categories:"get_categories"}
 });
 var matchit_components_categories_CategoriesView = function(mainView,viewName) {
 	matchit_core_components_ComponentView.call(this,mainView,viewName);
@@ -2055,15 +2074,16 @@ matchit_components_categories_CategoriesView.prototype = $extend(matchit_core_co
 	}
 	,addAssetsToLoad: function() {
 		this.loader.addAsset("categories_button_select_a_category","categories/button_select-a-category.png");
-		this.loader.addAsset("categories_avatars","categories/avatars.png");
-		this.loader.addAsset("categories_pokeman","categories/pokeman.png");
-		this.loader.addAsset("categories_social","categories/social.png");
-		this.loader.addAsset("categories_landscapes","categories/landscapes.png");
-		this.loader.addAsset("categories_christmas","categories/christmas.png");
-		this.loader.addAsset("categories_emoticons","categories/emoticons.png");
+		var _g = 0;
+		var _g1 = this.categories;
+		while(_g < _g1.length) {
+			var c = _g1[_g];
+			++_g;
+			this.loader.addAsset("categories_" + c,"categories/" + c + ".png");
+		}
 	}
 	,createCategories: function() {
-		var _g = this;
+		this._categories = [];
 		var style = { };
 		style.fontSize = this._getTextCreditsSize();
 		style.fontFamily = "Pontano Sans";
@@ -2080,45 +2100,24 @@ matchit_components_categories_CategoriesView.prototype = $extend(matchit_core_co
 		this._select = new PIXI.Text("CHOOSE A CATEGORY",style,this.stageProperties.pixelRatio);
 		this._select.anchor.set(0.5);
 		this._container.addChild(this._select);
-		this._christmas = new matchit_components_categories_Category(this.loader.getTexture("categories_christmas"),"christmas",this.stageProperties,436620);
-		this._categoriesContainer.addChild(this._christmas);
-		this._emoticons = new matchit_components_categories_Category(this.loader.getTexture("categories_emoticons"),"emoticons",this.stageProperties,0);
-		this._categoriesContainer.addChild(this._emoticons);
-		this._avatars = new matchit_components_categories_Category(this.loader.getTexture("categories_avatars"),"avatars",this.stageProperties,6710886);
-		this._categoriesContainer.addChild(this._avatars);
-		this._pokeman = new matchit_components_categories_Category(this.loader.getTexture("categories_pokeman"),"pokeman",this.stageProperties,13897754);
-		this._categoriesContainer.addChild(this._pokeman);
-		this._social = new matchit_components_categories_Category(this.loader.getTexture("categories_social"),"social",this.stageProperties,5249686);
-		this._categoriesContainer.addChild(this._social);
-		this._landscapes = new matchit_components_categories_Category(this.loader.getTexture("categories_landscapes"),"landscapes",this.stageProperties,4434783);
-		this._categoriesContainer.addChild(this._landscapes);
-		this._avatars.click = this._avatars.tap = function(evt1) {
-			_g.selectedCategory.dispatch("avatars");
-		};
-		this._pokeman.click = this._pokeman.tap = function(evt2) {
-			_g.selectedCategory.dispatch("pokeman");
-		};
-		this._social.click = this._social.tap = function(evt3) {
-			_g.selectedCategory.dispatch("social");
-		};
-		this._landscapes.click = this._landscapes.tap = function(evt4) {
-			_g.selectedCategory.dispatch("landscapes");
-		};
-		this._christmas.click = this._christmas.tap = function(evt5) {
-			_g.selectedCategory.dispatch("christmas");
-		};
-		this._emoticons.click = this._emoticons.tap = function(evt6) {
-			_g.selectedCategory.dispatch("emoticons");
-		};
-		this._avatars.interactive = true;
-		this._pokeman.interactive = true;
-		this._social.interactive = true;
-		this._landscapes.interactive = true;
-		this._christmas.interactive = true;
-		this._emoticons.interactive = true;
-		this._categories = [this._christmas,this._emoticons,this._pokeman,this._social,this._avatars,this._landscapes];
+		var category;
+		var _g = 0;
+		var _g1 = this.categories;
+		while(_g < _g1.length) {
+			var c = _g1[_g];
+			++_g;
+			category = new matchit_components_categories_Category(this.loader.getTexture("categories_" + c),c,this.stageProperties,this.categoryColors.get(c));
+			category.name = c;
+			category.interactive = true;
+			category.click = category.tap = $bind(this,this._onCategorySelected);
+			this._categoriesContainer.addChild(category);
+			this._categories.push(category);
+		}
 		this._positionCategories();
 		this._resize();
+	}
+	,_onCategorySelected: function(evt) {
+		this.selectedCategory.dispatch(evt.target.name);
 	}
 	,_positionCategories: function() {
 		var rowMax = 2;
@@ -4532,6 +4531,20 @@ matchit_components_backgrounds_BackgroundsController.__meta__ = { fields : { vie
 matchit_core_components_ComponentView.__meta__ = { fields : { loader : { type : ["matchit.core.loader.AssetLoader"], inject : null}, stageProperties : { type : ["matchit.core.utils.StageProperties"], inject : null}}};
 matchit_components_categories_CategoriesController.__meta__ = { fields : { view : { type : ["matchit.components.categories.CategoriesView"], inject : null}, componentModel : { type : ["matchit.components.categories.CategoriesModel"], inject : null}}};
 matchit_core_components_ComponentModel.__meta__ = { fields : { model : { type : ["matchit.model.Model"], inject : null}}};
+matchit_components_categories_CategoriesModel.EDUCATION = "education";
+matchit_components_categories_CategoriesModel.AVATARS = "avatars";
+matchit_components_categories_CategoriesModel.CHRISTMAS = "christmas";
+matchit_components_categories_CategoriesModel.EMOTICONS = "emoticons";
+matchit_components_categories_CategoriesModel.POKEMAN = "pokeman";
+matchit_components_categories_CategoriesModel.SOCIAL = "social";
+matchit_components_categories_CategoriesModel.LANDSCAPES = "landscapes";
+matchit_components_categories_CategoriesModel.EDUCATION_COLOR = 0;
+matchit_components_categories_CategoriesModel.AVATARS_COLOR = 6710886;
+matchit_components_categories_CategoriesModel.CHRISTMAS_COLOR = 14176072;
+matchit_components_categories_CategoriesModel.EMOTICONS_COLOR = 0;
+matchit_components_categories_CategoriesModel.POKEMAN_COLOR = 13897754;
+matchit_components_categories_CategoriesModel.SOCIAL_COLOR = 5249686;
+matchit_components_categories_CategoriesModel.LANDSCAPES_COLOR = 436620;
 matchit_components_categories_CategoriesView.GAP = 15;
 matchit_components_menu_MenuController.__meta__ = { fields : { view : { type : ["matchit.components.menu.MenuView"], inject : null}}};
 matchit_components_menu_MenuView.GAP = 15;

@@ -7,6 +7,11 @@ class CategoriesController extends ComponentController {
 	@inject public var view:CategoriesView;
 	@inject public var componentModel:CategoriesModel;
 
+	override public function init() {
+		view.categories = componentModel.categories;
+		view.categoryColors = componentModel.categoryColors;
+	}
+
 	override public function setup() {
 		model.showCategories.add(_showCategories);
 		view.selectedCategory.add(_onCategory);

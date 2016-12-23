@@ -11,19 +11,13 @@ import matchit.core.components.ComponentView;
 
 class CategoriesView extends ComponentView {
 
+	public var categories(null, default):Array<String>;
+	public var categoryColors(null, default):Map<String, Int>;
 	public var selectedCategory:Signal1<String>;
 
 	static inline var GAP:Int = 15;
 
 	var _select:Text;
-
-	var _christmas:Category;
-	var _pokeman:Category;
-	var _emoticons:Category;
-	var _avatars:Category;
-	var _social:Category;
-	var _landscapes:Category;
-
 	var _categories:Array<Category>;
 
 	var _categoriesContainer:Container;
@@ -42,15 +36,12 @@ class CategoriesView extends ComponentView {
 
 	override public function addAssetsToLoad() {
 		loader.addAsset(AssetsList.CATEGORIES_BUTTON_SELECT_A_CATEGORY, AssetsList.CATEGORIES_BUTTON_SELECT_A_CATEGORY_PNG);
-		loader.addAsset(AssetsList.CATEGORIES_AVATARS, AssetsList.CATEGORIES_AVATARS_PNG);
-		loader.addAsset(AssetsList.CATEGORIES_POKEMAN, AssetsList.CATEGORIES_POKEMAN_PNG);
-		loader.addAsset(AssetsList.CATEGORIES_SOCIAL, AssetsList.CATEGORIES_SOCIAL_PNG);
-		loader.addAsset(AssetsList.CATEGORIES_LANDSCAPES, AssetsList.CATEGORIES_LANDSCAPES_PNG);
-		loader.addAsset(AssetsList.CATEGORIES_CHRISTMAS, AssetsList.CATEGORIES_CHRISTMAS_PNG);
-		loader.addAsset(AssetsList.CATEGORIES_EMOTICONS, AssetsList.CATEGORIES_EMOTICONS_PNG);
+		for (c in categories) loader.addAsset("categories_" + c, "categories/" + c + ".png");
 	}
 
 	public function createCategories() {
+		_categories = [];
+
 		var style:TextStyleObject = {};
 		style.fontSize = _getTextCreditsSize();
 		style.fontFamily = "Pontano Sans";
@@ -69,42 +60,22 @@ class CategoriesView extends ComponentView {
 		_select.anchor.set(0.5);
 		_container.addChild(_select);
 
-		_christmas = new Category(loader.getTexture(AssetsList.CATEGORIES_CHRISTMAS), "christmas", stageProperties, 0x06A98C);
-		_categoriesContainer.addChild(_christmas);
+		var category:Category;
+		for (c in categories) {
+			category = new Category(loader.getTexture("categories_" + c), c, stageProperties, categoryColors.get(c));
+			category.name = c;
+			category.interactive = true;
+			category.click = category.tap = _onCategorySelected;
+			_categoriesContainer.addChild(category);
+			_categories.push(category);
+		}
 
-		_emoticons = new Category(loader.getTexture(AssetsList.CATEGORIES_EMOTICONS), "emoticons", stageProperties, 0x000000);
-		_categoriesContainer.addChild(_emoticons);
-
-		_avatars = new Category(loader.getTexture(AssetsList.CATEGORIES_AVATARS), "avatars", stageProperties, 0x666666);
-		_categoriesContainer.addChild(_avatars);
-
-		_pokeman = new Category(loader.getTexture(AssetsList.CATEGORIES_POKEMAN), "pokeman", stageProperties, 0xD4101A);
-		_categoriesContainer.addChild(_pokeman);
-
-		_social = new Category(loader.getTexture(AssetsList.CATEGORIES_SOCIAL), "social", stageProperties, 0x501A96);
-		_categoriesContainer.addChild(_social);
-
-		_landscapes = new Category(loader.getTexture(AssetsList.CATEGORIES_LANDSCAPES), "landscapes", stageProperties, 0x43AB5F);
-		_categoriesContainer.addChild(_landscapes);
-
-		_avatars.click = _avatars.tap = function(evt:EventTarget) { selectedCategory.dispatch("avatars"); };
-		_pokeman.click = _pokeman.tap = function(evt:EventTarget) { selectedCategory.dispatch("pokeman"); };
-		_social.click = _social.tap = function(evt:EventTarget) { selectedCategory.dispatch("social"); };
-		_landscapes.click = _landscapes.tap = function(evt:EventTarget) { selectedCategory.dispatch("landscapes"); };
-		_christmas.click = _christmas.tap = function(evt:EventTarget) { selectedCategory.dispatch("christmas"); };
-		_emoticons.click = _emoticons.tap = function(evt:EventTarget) { selectedCategory.dispatch("emoticons"); };
-
-		_avatars.interactive = true;
-		_pokeman.interactive = true;
-		_social.interactive = true;
-		_landscapes.interactive = true;
-		_christmas.interactive = true;
-		_emoticons.interactive = true;
-
-		_categories = [_christmas, _emoticons, _pokeman, _social, _avatars, _landscapes];
 		_positionCategories();
-
 		_resize();
+	}
+
+	function _onCategorySelected(evt:EventTarget) {
+		selectedCategory.dispatch(evt.target.name);
 	}
 
 	function _positionCategories() {
