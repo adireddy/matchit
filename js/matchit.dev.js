@@ -1835,7 +1835,6 @@ $hxClasses["matchit.Main"] = matchit_Main;
 matchit_Main.__name__ = ["matchit","Main"];
 matchit_Main.main = function() {
 	Waud.init();
-	Waud.enableTouchUnlock(null);
 	new matchit_Main();
 };
 matchit_Main.__super__ = pixi_plugins_app_Application;

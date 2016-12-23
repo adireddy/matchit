@@ -131,7 +131,6 @@ class Main extends Application {
 
 	public static function main() {
 		Waud.init();
-		Waud.enableTouchUnlock(null);
 		new Main();
 	}
 }
