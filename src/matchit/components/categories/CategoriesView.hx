@@ -35,7 +35,6 @@ class CategoriesView extends ComponentView {
 	}
 
 	override public function addAssetsToLoad() {
-		loader.addAsset(AssetsList.CATEGORIES_BUTTON_SELECT_A_CATEGORY, AssetsList.CATEGORIES_BUTTON_SELECT_A_CATEGORY_PNG);
 		for (c in categories) loader.addAsset("categories_" + c, "categories/" + c + ".png");
 	}
 

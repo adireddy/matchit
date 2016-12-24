@@ -78,11 +78,11 @@ class TilesView extends ComponentView {
 		loader.addAudioAsset(AssetsList.AUDIO_TOUCH, AssetsList.AUDIO_TOUCH_MP3);
 		loader.addAudioAsset(AssetsList.AUDIO_UHOH, AssetsList.AUDIO_UHOH_MP3);
 		loader.addAudioAsset(AssetsList.AUDIO_WOW, AssetsList.AUDIO_WOW_MP3);
-		loader.addAsset(AssetsList.TILES_TILE, AssetsList.TILES_TILE_PNG);
+		loader.addAsset(AssetsList.TILES_BG_TILE, AssetsList.TILES_BG_TILE_PNG);
 	}
 
 	public function loadCategoryTiles(category:String, count:Int) {
-		_closeTile = loader.getTexture(AssetsList.TILES_TILE);
+		_closeTile = loader.getTexture(AssetsList.TILES_BG_TILE);
 		_tilesLoaded = false;
 		_category = category;
 		_availableTilesCount = count;

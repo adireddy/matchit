@@ -1,9 +1,119 @@
--cmd resource-scaler -i assets/1024x648/@2x -o assets/1024x648/@1x -s 0.5
--cmd resource-scaler -i assets/1024x648/@2x -o assets/728x392/@2x -s 0.7109375
--cmd resource-scaler -i assets/1024x648/@1x -o assets/728x392/@1x -s 0.7109375
--cmd resource-scaler -i assets/1024x648/@2x -o assets/480x320/@2x -s 0.46875
--cmd resource-scaler -i assets/1024x648/@1x -o assets/480x320/@1x -s 0.46875
+################################################################################################################
+-cmd echo 1024x648 - @1x
+-cmd mkdir -p assets/1024x648/@1x
+-cmd resource-scaler -i assets/1024x648/@2x/backgrounds -o assets/1024x648/@1x/backgrounds -s 0.5
+-cmd resource-scaler -i assets/1024x648/@2x/categories -o assets/1024x648/@1x/categories -s 0.5
+-cmd resource-scaler -i assets/1024x648/@2x/menu -o assets/1024x648/@1x/menu -s 0.5
+-cmd resource-scaler -i assets/1024x648/@2x/preloader -o assets/1024x648/@1x/preloader -s 0.5
+-cmd resource-scaler -i assets/1024x648/@2x/quickmenu -o assets/1024x648/@1x/quickmenu -s 0.5
 
+-cmd mkdir -p assets/1024x648/@1x/tiles
+-cmd resource-scaler -i assets/1024x648/@2x/tiles/avatars -o assets/1024x648/@1x/tiles/avatars -s 0.5
+-cmd resource-scaler -i assets/1024x648/@2x/tiles/christmas -o assets/1024x648/@1x/tiles/christmas -s 0.5
+-cmd resource-scaler -i assets/1024x648/@2x/tiles/education -o assets/1024x648/@1x/tiles/education -s 0.5
+-cmd resource-scaler -i assets/1024x648/@2x/tiles/emoticons -o assets/1024x648/@1x/tiles/emoticons -s 0.5
+-cmd resource-scaler -i assets/1024x648/@2x/tiles/flowers -o assets/1024x648/@1x/tiles/flowers -s 0.5
+-cmd resource-scaler -i assets/1024x648/@2x/tiles/landscapes -o assets/1024x648/@1x/tiles/landscapes -s 0.5
+-cmd resource-scaler -i assets/1024x648/@2x/tiles/math -o assets/1024x648/@1x/tiles/math -s 0.5
+-cmd resource-scaler -i assets/1024x648/@2x/tiles/pokeman -o assets/1024x648/@1x/tiles/pokeman -s 0.5
+-cmd resource-scaler -i assets/1024x648/@2x/tiles/social -o assets/1024x648/@1x/tiles/social -s 0.5
+-cmd resource-scaler -i assets/1024x648/@2x/tiles/space -o assets/1024x648/@1x/tiles/space -s 0.5
+-cmd resource-scaler -i assets/1024x648/@2x/tiles/wedding -o assets/1024x648/@1x/tiles/wedding -s 0.5
+-cmd resource-scaler -i assets/1024x648/@2x/tiles/bg -o assets/1024x648/@1x/tiles/bg -s 0.5
+
+################################################################################################################
+-cmd echo 728x392 - @2x
+-cmd mkdir -p assets/728x392/@2x
+-cmd resource-scaler -i assets/1024x648/@2x/backgrounds -o assets/728x392/@2x/backgrounds -s 0.7109375
+-cmd resource-scaler -i assets/1024x648/@2x/categories -o assets/728x392/@2x/categories -s 0.7109375
+-cmd resource-scaler -i assets/1024x648/@2x/menu -o assets/728x392/@2x/menu -s 0.7109375
+-cmd resource-scaler -i assets/1024x648/@2x/preloader -o assets/728x392/@2x/preloader -s 0.7109375
+-cmd resource-scaler -i assets/1024x648/@2x/quickmenu -o assets/728x392/@2x/quickmenu -s 0.7109375
+
+-cmd mkdir -p assets/728x392/@2x/tiles
+-cmd resource-scaler -i assets/1024x648/@2x/tiles/avatars -o assets/728x392/@2x/tiles/avatars -s 0.7109375
+-cmd resource-scaler -i assets/1024x648/@2x/tiles/christmas -o assets/728x392/@2x/tiles/christmas -s 0.7109375
+-cmd resource-scaler -i assets/1024x648/@2x/tiles/education -o assets/728x392/@2x/tiles/education -s 0.7109375
+-cmd resource-scaler -i assets/1024x648/@2x/tiles/emoticons -o assets/728x392/@2x/tiles/emoticons -s 0.7109375
+-cmd resource-scaler -i assets/1024x648/@2x/tiles/flowers -o assets/728x392/@2x/tiles/flowers -s 0.7109375
+-cmd resource-scaler -i assets/1024x648/@2x/tiles/landscapes -o assets/728x392/@2x/tiles/landscapes -s 0.7109375
+-cmd resource-scaler -i assets/1024x648/@2x/tiles/math -o assets/728x392/@2x/tiles/math -s 0.7109375
+-cmd resource-scaler -i assets/1024x648/@2x/tiles/pokeman -o assets/728x392/@2x/tiles/pokeman -s 0.7109375
+-cmd resource-scaler -i assets/1024x648/@2x/tiles/social -o assets/728x392/@2x/tiles/social -s 0.7109375
+-cmd resource-scaler -i assets/1024x648/@2x/tiles/space -o assets/728x392/@2x/tiles/space -s 0.7109375
+-cmd resource-scaler -i assets/1024x648/@2x/tiles/wedding -o assets/728x392/@2x/tiles/wedding -s 0.7109375
+-cmd resource-scaler -i assets/1024x648/@2x/tiles/bg -o assets/728x392/@2x/tiles/bg -s 0.7109375
+
+################################################################################################################
+-cmd echo 728x392 - @1x
+-cmd mkdir -p assets/728x392/@1x
+-cmd resource-scaler -i assets/1024x648/@1x/backgrounds -o assets/728x392/@1x/backgrounds -s 0.7109375
+-cmd resource-scaler -i assets/1024x648/@1x/categories -o assets/728x392/@1x/categories -s 0.7109375
+-cmd resource-scaler -i assets/1024x648/@1x/menu -o assets/728x392/@1x/menu -s 0.7109375
+-cmd resource-scaler -i assets/1024x648/@1x/preloader -o assets/728x392/@1x/preloader -s 0.7109375
+-cmd resource-scaler -i assets/1024x648/@1x/quickmenu -o assets/728x392/@1x/quickmenu -s 0.7109375
+
+-cmd mkdir -p assets/728x392/@1x/tiles
+-cmd resource-scaler -i assets/1024x648/@1x/tiles/avatars -o assets/728x392/@1x/tiles/avatars -s 0.7109375
+-cmd resource-scaler -i assets/1024x648/@1x/tiles/christmas -o assets/728x392/@1x/tiles/christmas -s 0.7109375
+-cmd resource-scaler -i assets/1024x648/@1x/tiles/education -o assets/728x392/@1x/tiles/education -s 0.7109375
+-cmd resource-scaler -i assets/1024x648/@1x/tiles/emoticons -o assets/728x392/@1x/tiles/emoticons -s 0.7109375
+-cmd resource-scaler -i assets/1024x648/@1x/tiles/flowers -o assets/728x392/@1x/tiles/flowers -s 0.7109375
+-cmd resource-scaler -i assets/1024x648/@1x/tiles/landscapes -o assets/728x392/@1x/tiles/landscapes -s 0.7109375
+-cmd resource-scaler -i assets/1024x648/@1x/tiles/math -o assets/728x392/@1x/tiles/math -s 0.7109375
+-cmd resource-scaler -i assets/1024x648/@1x/tiles/pokeman -o assets/728x392/@1x/tiles/pokeman -s 0.7109375
+-cmd resource-scaler -i assets/1024x648/@1x/tiles/social -o assets/728x392/@1x/tiles/social -s 0.7109375
+-cmd resource-scaler -i assets/1024x648/@1x/tiles/space -o assets/728x392/@1x/tiles/space -s 0.7109375
+-cmd resource-scaler -i assets/1024x648/@1x/tiles/wedding -o assets/728x392/@1x/tiles/wedding -s 0.7109375
+-cmd resource-scaler -i assets/1024x648/@1x/tiles/bg -o assets/728x392/@1x/tiles/bg -s 0.7109375
+
+################################################################################################################
+-cmd echo 480x320 - @2x
+-cmd mkdir -p assets/480x320/@2x
+-cmd resource-scaler -i assets/1024x648/@2x/backgrounds -o assets/480x320/@2x/backgrounds -s 0.46875
+-cmd resource-scaler -i assets/1024x648/@2x/categories -o assets/480x320/@2x/categories -s 0.46875
+-cmd resource-scaler -i assets/1024x648/@2x/menu -o assets/480x320/@2x/menu -s 0.46875
+-cmd resource-scaler -i assets/1024x648/@2x/preloader -o assets/480x320/@2x/preloader -s 0.46875
+-cmd resource-scaler -i assets/1024x648/@2x/quickmenu -o assets/480x320/@2x/quickmenu -s 0.46875
+
+-cmd mkdir -p assets/480x320/@2x/tiles
+-cmd resource-scaler -i assets/1024x648/@2x/tiles/avatars -o assets/480x320/@2x/tiles/avatars -s 0.46875
+-cmd resource-scaler -i assets/1024x648/@2x/tiles/christmas -o assets/480x320/@2x/tiles/christmas -s 0.46875
+-cmd resource-scaler -i assets/1024x648/@2x/tiles/education -o assets/480x320/@2x/tiles/education -s 0.46875
+-cmd resource-scaler -i assets/1024x648/@2x/tiles/emoticons -o assets/480x320/@2x/tiles/emoticons -s 0.46875
+-cmd resource-scaler -i assets/1024x648/@2x/tiles/flowers -o assets/480x320/@2x/tiles/flowers -s 0.46875
+-cmd resource-scaler -i assets/1024x648/@2x/tiles/landscapes -o assets/480x320/@2x/tiles/landscapes -s 0.46875
+-cmd resource-scaler -i assets/1024x648/@2x/tiles/math -o assets/480x320/@2x/tiles/math -s 0.46875
+-cmd resource-scaler -i assets/1024x648/@2x/tiles/pokeman -o assets/480x320/@2x/tiles/pokeman -s 0.46875
+-cmd resource-scaler -i assets/1024x648/@2x/tiles/social -o assets/480x320/@2x/tiles/social -s 0.46875
+-cmd resource-scaler -i assets/1024x648/@2x/tiles/space -o assets/480x320/@2x/tiles/space -s 0.46875
+-cmd resource-scaler -i assets/1024x648/@2x/tiles/wedding -o assets/480x320/@2x/tiles/wedding -s 0.46875
+-cmd resource-scaler -i assets/1024x648/@2x/tiles/bg -o assets/480x320/@2x/tiles/bg -s 0.46875
+
+################################################################################################################
+-cmd echo 480x320 - @1x
+-cmd mkdir -p assets/480x320/@1x
+-cmd resource-scaler -i assets/1024x648/@1x/backgrounds -o assets/480x320/@1x/backgrounds -s 0.46875
+-cmd resource-scaler -i assets/1024x648/@1x/categories -o assets/480x320/@1x/categories -s 0.46875
+-cmd resource-scaler -i assets/1024x648/@1x/menu -o assets/480x320/@1x/menu -s 0.46875
+-cmd resource-scaler -i assets/1024x648/@1x/preloader -o assets/480x320/@1x/preloader -s 0.46875
+-cmd resource-scaler -i assets/1024x648/@1x/quickmenu -o assets/480x320/@1x/quickmenu -s 0.46875
+
+-cmd mkdir -p assets/480x320/@1x/tiles
+-cmd resource-scaler -i assets/1024x648/@1x/tiles/avatars -o assets/480x320/@1x/tiles/avatars -s 0.46875
+-cmd resource-scaler -i assets/1024x648/@1x/tiles/christmas -o assets/480x320/@1x/tiles/christmas -s 0.46875
+-cmd resource-scaler -i assets/1024x648/@1x/tiles/education -o assets/480x320/@1x/tiles/education -s 0.46875
+-cmd resource-scaler -i assets/1024x648/@1x/tiles/emoticons -o assets/480x320/@1x/tiles/emoticons -s 0.46875
+-cmd resource-scaler -i assets/1024x648/@1x/tiles/flowers -o assets/480x320/@1x/tiles/flowers -s 0.46875
+-cmd resource-scaler -i assets/1024x648/@1x/tiles/landscapes -o assets/480x320/@1x/tiles/landscapes -s 0.46875
+-cmd resource-scaler -i assets/1024x648/@1x/tiles/math -o assets/480x320/@1x/tiles/math -s 0.46875
+-cmd resource-scaler -i assets/1024x648/@1x/tiles/pokeman -o assets/480x320/@1x/tiles/pokeman -s 0.46875
+-cmd resource-scaler -i assets/1024x648/@1x/tiles/social -o assets/480x320/@1x/tiles/social -s 0.46875
+-cmd resource-scaler -i assets/1024x648/@1x/tiles/space -o assets/480x320/@1x/tiles/space -s 0.46875
+-cmd resource-scaler -i assets/1024x648/@1x/tiles/wedding -o assets/480x320/@1x/tiles/wedding -s 0.46875
+-cmd resource-scaler -i assets/1024x648/@1x/tiles/bg -o assets/480x320/@1x/tiles/bg -s 0.46875
+
+################################################################################################################
 -cp utils
 -x Assets
 -cmd rm Assets.n
