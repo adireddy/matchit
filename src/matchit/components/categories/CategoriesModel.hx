@@ -4,7 +4,6 @@ import matchit.core.components.ComponentModel;
 
 class CategoriesModel extends ComponentModel {
 
-	public static inline var EDUCATION_COLOR:Int = 0x000000;
 	public static inline var AVATARS_COLOR:Int = 0x666666;
 	public static inline var CHRISTMAS_COLOR:Int = 0xD84F48;
 	public static inline var EMOTICONS_COLOR:Int = 0x000000;
@@ -12,11 +11,12 @@ class CategoriesModel extends ComponentModel {
 	public static inline var SOCIAL_COLOR:Int = 0x501A96;
 	public static inline var LANDSCAPES_COLOR:Int = 0x06A98C;
 	public static inline var WEDDING_COLOR:Int = 0x003366;
-	public static inline var MATH_COLOR:Int = 0x003366;
+	public static inline var MATH_COLOR:Int = 0x1DB6BC;
 	public static inline var SPACE_COLOR:Int = 0x003366;
-	public static inline var FLOWERS_COLOR:Int = 0x003366;
+	public static inline var FLOWERS_COLOR:Int = 0xFC4850;
+	public static inline var FOOD_COLOR:Int = 0xD4246A;
+	public static inline var GARDEN_COLOR:Int = 0xFC3B44;
 
-	public static inline var EDUCATION:String = "education";
 	public static inline var AVATARS:String = "avatars";
 	public static inline var CHRISTMAS:String = "christmas";
 	public static inline var EMOTICONS:String = "emoticons";
@@ -27,8 +27,9 @@ class CategoriesModel extends ComponentModel {
 	public static inline var MATH:String = "math";
 	public static inline var SPACE:String = "space";
 	public static inline var FLOWERS:String = "flowers";
+	public static inline var FOOD:String = "food";
+	public static inline var GARDEN:String = "garden";
 
-	public var education:Int = 32;
 	public var avatars:Int = 50;
 	public var christmas:Int = 50;
 	public var emoticons:Int = 36;
@@ -39,15 +40,16 @@ class CategoriesModel extends ComponentModel {
 	public var math:Int = 50;
 	public var space:Int = 50;
 	public var flowers:Int = 50;
+	public var food:Int = 36;
+	public var garden:Int = 41;
 
 	public var categories(get, null):Array<String>;
 	public var categoryColors(default, null):Map<String, Int>;
 
-	static var RANDOM_CATEGORIES:Array<String> = [SOCIAL, AVATARS, EDUCATION, LANDSCAPES, WEDDING, MATH, FLOWERS];
+	static var RANDOM_CATEGORIES:Array<String> = [SOCIAL, AVATARS, LANDSCAPES, WEDDING, MATH, FLOWERS, FOOD, GARDEN];
 
 	override public function init() {
 		categoryColors = new Map();
-		categoryColors.set(EDUCATION, EDUCATION_COLOR);
 		categoryColors.set(AVATARS, AVATARS_COLOR);
 		categoryColors.set(CHRISTMAS, CHRISTMAS_COLOR);
 		categoryColors.set(EMOTICONS, EMOTICONS_COLOR);
@@ -58,6 +60,8 @@ class CategoriesModel extends ComponentModel {
 		categoryColors.set(MATH, MATH_COLOR);
 		categoryColors.set(SPACE, SPACE_COLOR);
 		categoryColors.set(FLOWERS, FLOWERS_COLOR);
+		categoryColors.set(FOOD, FOOD_COLOR);
+		categoryColors.set(GARDEN, GARDEN_COLOR);
 	}
 
 	function get_categories():Array<String> {
