@@ -16,6 +16,9 @@ class CategoriesModel extends ComponentModel {
 	public static inline var FLOWERS_COLOR:Int = 0xFC4850;
 	public static inline var FOOD_COLOR:Int = 0xD4246A;
 	public static inline var GARDEN_COLOR:Int = 0xFC3B44;
+	public static inline var NATURE_COLOR:Int = 0xFC3B44;
+	public static inline var BIRTHDAY_COLOR:Int = 0xFC3B44;
+	public static inline var DINOSAURS_COLOR:Int = 0xFC3B44;
 
 	public static inline var AVATARS:String = "avatars";
 	public static inline var CHRISTMAS:String = "christmas";
@@ -29,6 +32,9 @@ class CategoriesModel extends ComponentModel {
 	public static inline var FLOWERS:String = "flowers";
 	public static inline var FOOD:String = "food";
 	public static inline var GARDEN:String = "garden";
+	public static inline var NATURE:String = "nature";
+	public static inline var BIRTHDAY:String = "birthday";
+	public static inline var DINOSAURS:String = "dinosaurs";
 
 	public var avatars:Int = 50;
 	public var christmas:Int = 50;
@@ -42,11 +48,16 @@ class CategoriesModel extends ComponentModel {
 	public var flowers:Int = 50;
 	public var food:Int = 36;
 	public var garden:Int = 41;
+	public var nature:Int = 50;
+	public var birthday:Int = 26;
+	public var dinosaurs:Int = 50;
 
 	public var categories(get, null):Array<String>;
 	public var categoryColors(default, null):Map<String, Int>;
 
-	static var RANDOM_CATEGORIES:Array<String> = [SOCIAL, AVATARS, LANDSCAPES, WEDDING, MATH, FLOWERS, FOOD, GARDEN];
+	static var RANDOM_CATEGORIES:Array<String> = [SOCIAL, AVATARS, LANDSCAPES, WEDDING, MATH, FLOWERS,
+													FOOD, GARDEN, NATURE, BIRTHDAY, CHRISTMAS, DINOSAURS,
+													EMOTICONS, POKEMAN];
 
 	override public function init() {
 		categoryColors = new Map();
@@ -62,23 +73,18 @@ class CategoriesModel extends ComponentModel {
 		categoryColors.set(FLOWERS, FLOWERS_COLOR);
 		categoryColors.set(FOOD, FOOD_COLOR);
 		categoryColors.set(GARDEN, GARDEN_COLOR);
+		categoryColors.set(NATURE, NATURE_COLOR);
+		categoryColors.set(BIRTHDAY, BIRTHDAY_COLOR);
+		categoryColors.set(DINOSAURS, DINOSAURS_COLOR);
 	}
 
 	function get_categories():Array<String> {
-		categories = [CHRISTMAS, EMOTICONS, POKEMAN];
-
-		var cat = Std.random(RANDOM_CATEGORIES.length);
-		categories.push(RANDOM_CATEGORIES[cat]);
-		RANDOM_CATEGORIES.splice(cat, 1);
-
-		cat = Std.random(RANDOM_CATEGORIES.length);
-		categories.push(RANDOM_CATEGORIES[cat]);
-		RANDOM_CATEGORIES.splice(cat, 1);
-
-		cat = Std.random(RANDOM_CATEGORIES.length);
-		categories.push(RANDOM_CATEGORIES[cat]);
-		RANDOM_CATEGORIES.splice(cat, 1);
-
+		categories = [];
+		for (i in 0 ... 6) {
+			var cat = Std.random(RANDOM_CATEGORIES.length);
+			categories.push(RANDOM_CATEGORIES[cat]);
+			RANDOM_CATEGORIES.splice(cat, 1);
+		}
 		return categories;
 	}
 }
