@@ -1,6 +1,6 @@
 package matchit.components.menu;
 
-import pixi.core.text.TextStyleObject;
+import pixi.core.text.TextStyle;
 import pixi.core.text.Text;
 import pixi.core.sprites.Sprite;
 import pixi.core.textures.Texture;
@@ -18,11 +18,11 @@ class MenuItem extends Container {
 		_bg = new Sprite(bg);
 		addChild(_bg);
 
-		var style:TextStyleObject = {};
+		var style:TextStyle = new TextStyle();
 		style.fontSize = _getTextSize(stageProperties);
 		style.fill = 0xFFFFFF;
 		style.fontFamily = "Covered By Your Grace";
-		_label = new Text(label.toUpperCase(), style, stageProperties.pixelRatio);
+		_label = new Text(label.toUpperCase(), style);
 		_label.anchor.set(0.5);
 		_label.position.set(_bg.width / 2, _bg.height / 2);
 		addChild(_label);

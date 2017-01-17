@@ -4,7 +4,7 @@ import pixi.core.textures.Texture;
 import js.html.Storage;
 import js.Browser;
 import pixi.core.display.Container;
-import pixi.core.text.TextStyleObject;
+import pixi.core.text.TextStyle;
 import haxe.Timer;
 import matchit.core.utils.StageProperties;
 import matchit.core.components.ComponentView;
@@ -48,21 +48,21 @@ class TilesView extends ComponentView {
 		_tilesContainer = new Container();
 		_container.addChild(_tilesContainer);
 
-		var style:TextStyleObject = {};
+		var style:TextStyle = new TextStyle();
 		style.fill = 0x16511C;
 		style.fontSize = _getTextSize();
 		style.fontFamily = "Covered By Your Grace";
-		_movesCountTxt = new Text("", style, stageProperties.pixelRatio);
+		_movesCountTxt = new Text("", style);
 		_movesCountTxt.anchor.set(-0.1, 0.9);
 		_container.addChild(_movesCountTxt);
 
 		style.fill = 0xFF0000;
-		_bestTxt = new Text("", style, stageProperties.pixelRatio);
+		_bestTxt = new Text("", style);
 		_bestTxt.anchor.set(1.05, -0.1);
 		_container.addChild(_bestTxt);
 
 		style.fill = 0x000000;
-		_loadingTxt = new Text("", style, stageProperties.pixelRatio);
+		_loadingTxt = new Text("", style);
 		_loadingTxt.anchor.set(0.5);
 		_loadingTxt.position.set(stageProperties.screenWidth / 2, stageProperties.screenHeight / 2);
 		_container.addChild(_loadingTxt);

@@ -1,7 +1,7 @@
 package matchit.components.categories;
 
 import matchit.core.utils.StageProperties;
-import pixi.core.text.TextStyleObject;
+import pixi.core.text.TextStyle;
 import pixi.core.text.Text;
 import pixi.core.sprites.Sprite;
 import pixi.core.textures.Texture;
@@ -17,11 +17,11 @@ class Category extends Container {
 		_icon = new Sprite(icon);
 		addChild(_icon);
 
-		var style:TextStyleObject = {};
+		var style:TextStyle = new TextStyle();
 		style.fontSize = _getTextSize(stageProperties);
 		style.fill = clr;
 		style.fontFamily = "Covered By Your Grace";
-		_label = new Text(label.toUpperCase(), style, stageProperties.pixelRatio);
+		_label = new Text(label.toUpperCase(), style);
 		_label.anchor.x = 0.5;
 		_label.position.set(_icon.width / 2, _icon.height + 5);
 		addChild(_label);

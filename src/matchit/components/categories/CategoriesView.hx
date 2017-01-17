@@ -3,7 +3,7 @@ package matchit.components.categories;
 import js.Browser;
 import pixi.core.display.Container;
 import pixi.core.text.Text;
-import pixi.core.text.TextStyleObject;
+import pixi.core.text.TextStyle;
 import matchit.core.utils.StageProperties;
 import pixi.interaction.EventTarget;
 import msignal.Signal.Signal1;
@@ -41,10 +41,10 @@ class CategoriesView extends ComponentView {
 	public function createCategories() {
 		_categories = [];
 
-		var style:TextStyleObject = {};
+		var style:TextStyle = new TextStyle();
 		style.fontSize = _getTextCreditsSize();
 		style.fontFamily = "Pontano Sans";
-		_creditsTxt = new Text("Icons designed by Freepik from Flaticon", style, stageProperties.pixelRatio);
+		_creditsTxt = new Text("Icons designed by Freepik from Flaticon", style);
 		_creditsTxt.anchor.set(0.5, 1.2);
 		_creditsTxt.interactive = true;
 		_creditsTxt.click = _creditsTxt.tap = function(evt:EventTarget) {
@@ -52,10 +52,11 @@ class CategoriesView extends ComponentView {
 		};
 		_container.addChild(_creditsTxt);
 
+		style = new TextStyle();
 		style.fill = 0x003366;
 		style.fontSize = _getTextTitleSize();
 		style.fontFamily = "Covered By Your Grace";
-		_select = new Text("CHOOSE A CATEGORY", style, stageProperties.pixelRatio);
+		_select = new Text("CHOOSE A CATEGORY", style);
 		_select.anchor.set(0.5);
 		_container.addChild(_select);
 
