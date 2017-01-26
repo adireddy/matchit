@@ -94,16 +94,12 @@ class Main extends Application {
 		onResize = _onResize;
 		transparent = false;
 		super.start();
-
-		//var perf = new Perf(Perf.BOTTOM_RIGHT);
-		//perf.addInfo(["UNKNOWN", "WEBGL", "CANVAS"][renderer.type] + " - " + pixelRatio);
 	}
 
 	inline function _setupApplication() {
 		stage.interactive = true;
 
 		_model = new Model();
-		_model.updateFps.add(_onUpdateFps);
 		_view = new View(stage);
 		_controller = new Controller();
 
@@ -114,10 +110,6 @@ class Main extends Application {
 		injector.injectInto(_controller);
 
 		_controller.init();
-	}
-
-	function _onUpdateFps(val:Int) {
-		if (val > 0) fps = val;
 	}
 
 	function _onUpdate(time:Float) {

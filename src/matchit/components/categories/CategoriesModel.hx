@@ -47,7 +47,7 @@ class CategoriesModel extends ComponentModel {
 	public var space:Int = 50;
 	public var flowers:Int = 50;
 	public var food:Int = 36;
-	public var garden:Int = 41;
+	public var garden:Int = 90;
 	public var nature:Int = 50;
 	public var birthday:Int = 26;
 	public var dinosaurs:Int = 50;
