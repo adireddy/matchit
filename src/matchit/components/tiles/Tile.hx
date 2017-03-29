@@ -2,7 +2,7 @@ package matchit.components.tiles;
 
 import motion.Actuate;
 import msignal.Signal.Signal2;
-import pixi.interaction.EventTarget;
+import pixi.interaction.InteractionEvent;
 import pixi.core.textures.Texture;
 import pixi.core.sprites.Sprite;
 import pixi.core.display.Container;
@@ -30,7 +30,7 @@ class Tile extends Container {
 		enable();
 	}
 
-	function _onClick(evt:EventTarget) {
+	function _onClick(evt:InteractionEvent) {
 		Actuate.tween(_closeTile, 0.5, { alpha: 0 }).onComplete(function() {
 			_closeTile.visible = false;
 			_closeTile.alpha = 1;

@@ -4,21 +4,21 @@ import matchit.core.components.ComponentModel;
 
 class CategoriesModel extends ComponentModel {
 
-	public static inline var AVATARS_COLOR:Int = 0x666666;
+	public static inline var AVATARS_COLOR:Int = 0xFBB429;
 	public static inline var CHRISTMAS_COLOR:Int = 0xD84F48;
-	public static inline var EMOTICONS_COLOR:Int = 0x000000;
+	public static inline var EMOTICONS_COLOR:Int = 0xFFC10E;
 	public static inline var POKEMON_COLOR:Int = 0xD4101A;
-	public static inline var SOCIAL_COLOR:Int = 0x501A96;
-	public static inline var LANDSCAPES_COLOR:Int = 0x06A98C;
-	public static inline var WEDDING_COLOR:Int = 0x003366;
-	public static inline var MATH_COLOR:Int = 0x1DB6BC;
+	public static inline var SOCIAL_COLOR:Int = 0xFFFFFF;
+	public static inline var LANDSCAPES_COLOR:Int = 0xEAFFF2;
+	public static inline var WEDDING_COLOR:Int = 0xB2F9F9;
+	public static inline var MATH_COLOR:Int = 0xFFDAAA;
 	public static inline var SPACE_COLOR:Int = 0x003366;
-	public static inline var FLOWERS_COLOR:Int = 0xFC4850;
+	public static inline var FLOWERS_COLOR:Int = 0xFFA555;
 	public static inline var FOOD_COLOR:Int = 0xD4246A;
-	public static inline var GARDEN_COLOR:Int = 0xFC3B44;
-	public static inline var NATURE_COLOR:Int = 0xFC3B44;
-	public static inline var BIRTHDAY_COLOR:Int = 0xFC3B44;
-	public static inline var DINOSAURS_COLOR:Int = 0xFC3B44;
+	public static inline var GARDEN_COLOR:Int = 0x51B58B;
+	public static inline var NATURE_COLOR:Int = 0x75B569;
+	public static inline var BIRTHDAY_COLOR:Int = 0xA2D4DE;
+	public static inline var DINOSAURS_COLOR:Int = 0xFFE9B8;
 
 	public static inline var AVATARS:String = "avatars";
 	public static inline var CHRISTMAS:String = "christmas";

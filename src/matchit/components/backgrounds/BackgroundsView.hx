@@ -14,11 +14,11 @@ class BackgroundsView extends ComponentView {
 	}
 
 	override public function addAssetsToLoad() {
-		loader.addAsset(AssetsList.BACKGROUNDS_BG, AssetsList.BACKGROUNDS_BG_JPG);
+		loader.addAsset(AssetsList.BACKGROUNDS_BLUE, AssetsList.BACKGROUNDS_BLUE_JPG);
 	}
 
 	public function showBg() {
-		_bg = new TilingSprite(loader.getTexture(AssetsList.BACKGROUNDS_BG), stageProperties.screenWidth, stageProperties.screenHeight);
+		_bg = new TilingSprite(loader.getTexture(AssetsList.BACKGROUNDS_BLUE), stageProperties.screenWidth, stageProperties.screenHeight);
 		_container.addChild(_bg);
 	}
 

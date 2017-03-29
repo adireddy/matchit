@@ -5,7 +5,7 @@ import pixi.core.display.Container;
 import pixi.core.text.Text;
 import pixi.core.text.TextStyle;
 import matchit.core.utils.StageProperties;
-import pixi.interaction.EventTarget;
+import pixi.interaction.InteractionEvent;
 import msignal.Signal.Signal1;
 import matchit.core.components.ComponentView;
 
@@ -43,17 +43,18 @@ class CategoriesView extends ComponentView {
 
 		var style:TextStyle = new TextStyle();
 		style.fontSize = _getTextCreditsSize();
+		style.fill = 0x999999;
 		style.fontFamily = "Pontano Sans";
 		_creditsTxt = new Text("Icons designed by Freepik from Flaticon", style);
 		_creditsTxt.anchor.set(0.5, 1.2);
 		_creditsTxt.interactive = true;
-		_creditsTxt.click = _creditsTxt.tap = function(evt:EventTarget) {
+		_creditsTxt.click = _creditsTxt.tap = function(evt:InteractionEvent) {
 			Browser.window.open("http://www.flaticon.com/", "_blank");
 		};
 		_container.addChild(_creditsTxt);
 
 		style = new TextStyle();
-		style.fill = 0x003366;
+		style.fill = 0xFFFFFF;
 		style.fontSize = _getTextTitleSize();
 		style.fontFamily = "Covered By Your Grace";
 		_select = new Text("CHOOSE A CATEGORY", style);
@@ -74,7 +75,7 @@ class CategoriesView extends ComponentView {
 		_resize();
 	}
 
-	function _onCategorySelected(evt:EventTarget) {
+	function _onCategorySelected(evt:InteractionEvent) {
 		selectedCategory.dispatch(evt.target.name);
 	}
 

@@ -1,7 +1,6 @@
 package matchit.components.quickmenu;
 
-import matchit.core.utils.StageProperties;
-import pixi.interaction.EventTarget;
+import pixi.interaction.InteractionEvent;
 import msignal.Signal.Signal0;
 import pixi.core.sprites.Sprite;
 import matchit.core.components.ComponentView;
@@ -38,8 +37,8 @@ class QuickMenuView extends ComponentView {
 		_back = new Sprite(loader.getTexture(AssetsList.QUICKMENU_BACK));
 		_container.addChild(_back);
 
-		_home.click = _home.tap = function(evt:EventTarget) { home.dispatch(); };
-		_back.click = _back.tap = function(evt:EventTarget) { menu.dispatch(); };
+		_home.click = _home.tap = function(evt:InteractionEvent) { home.dispatch(); };
+		_back.click = _back.tap = function(evt:InteractionEvent) { menu.dispatch(); };
 
 		_home.interactive = true;
 		_back.interactive = true;
@@ -49,12 +48,12 @@ class QuickMenuView extends ComponentView {
 
 	public function setupForMenu() {
 		_home.visible = false;
-		_back.click = _back.tap = function(evt:EventTarget) { categories.dispatch(); };
+		_back.click = _back.tap = function(evt:InteractionEvent) { categories.dispatch(); };
 	}
 
 	public function setupForTiles() {
 		_home.visible = true;
-		_back.click = _back.tap = function(evt:EventTarget) { menu.dispatch(); };
+		_back.click = _back.tap = function(evt:InteractionEvent) { menu.dispatch(); };
 	}
 
 	function _resize() {

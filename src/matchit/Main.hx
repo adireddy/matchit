@@ -88,7 +88,7 @@ class Main extends Application {
 		update = new Signal1(Float);
 
 		pixelRatio = _stageProperties.pixelRatio;
-		backgroundColor = 0x06384A;
+		backgroundColor = 0x0B224B;
 		roundPixels = true;
 		onUpdate = _onUpdate;
 		onResize = _onResize;

@@ -30,6 +30,7 @@ class PreloaderView extends ComponentView {
 
 	function _onLoaded() {
 		_logo = new Sprite(loader.getTexture(AssetsList.PRELOADER_LOGO));
+		_logo.scale.set(0.5);
 		_logo.anchor.set(0.5);
 		_container.addChild(_logo);
 
@@ -48,12 +49,12 @@ class PreloaderView extends ComponentView {
 
 		_loadingBarBG = new Graphics();
 		_loadingBarBG.beginFill(0xEA5A20);
-		_loadingBarBG.drawRect(0, 0, 204, 24);
+		_loadingBarBG.drawRect(0, 0, 104, 12);
 		_loadingBarBG.endFill();
 
 		_loadingBar = new Graphics();
 		_loadingBar.beginFill(0x0FFFFFF);
-		_loadingBar.drawRect(0, 0, 200, 20);
+		_loadingBar.drawRect(0, 0, 100, 10);
 		_loadingBar.endFill();
 
 		_loadingBarContainer.addChild(_loadingBarBG);
@@ -86,7 +87,7 @@ class PreloaderView extends ComponentView {
 	}
 
 	function _animateLogo() {
-		Actuate.tween(_logo.scale, 0.4, { x: 2, y: 2 }).ease(Bounce.easeOut);
+		Actuate.tween(_logo.scale, 0.4, { x: 1, y: 1 }).ease(Bounce.easeOut);
 		Actuate.tween(_logo, 0.4, { y: _logo.y + 25 }).ease(Bounce.easeOut).reflect();
 	}
 

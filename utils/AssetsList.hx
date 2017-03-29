@@ -17,6 +17,7 @@ class AssetsList {
 			"assets/favico/safari-pinned-tab.svg",
 			"assets/1024x648/@1x/backgrounds/alchemy.jpg",
 			"assets/1024x648/@1x/backgrounds/bg.jpg",
+			"assets/1024x648/@1x/backgrounds/blue.jpg",
 			"assets/1024x648/@1x/backgrounds/restaurant.png",
 			"assets/1024x648/@1x/backgrounds/school.png",
 			"assets/1024x648/@1x/backgrounds/weather.png",
@@ -46,6 +47,7 @@ class AssetsList {
 			"assets/1024x648/@1x/quickmenu/home.png",
 			"assets/1024x648/@2x/backgrounds/alchemy.jpg",
 			"assets/1024x648/@2x/backgrounds/bg.jpg",
+			"assets/1024x648/@2x/backgrounds/blue.jpg",
 			"assets/1024x648/@2x/backgrounds/restaurant.png",
 			"assets/1024x648/@2x/backgrounds/school.png",
 			"assets/1024x648/@2x/backgrounds/weather.png",
@@ -75,6 +77,7 @@ class AssetsList {
 			"assets/1024x648/@2x/quickmenu/home.png",
 			"assets/480x320/@1x/backgrounds/alchemy.jpg",
 			"assets/480x320/@1x/backgrounds/bg.jpg",
+			"assets/480x320/@1x/backgrounds/blue.jpg",
 			"assets/480x320/@1x/backgrounds/restaurant.png",
 			"assets/480x320/@1x/backgrounds/school.png",
 			"assets/480x320/@1x/backgrounds/weather.png",
@@ -104,6 +107,7 @@ class AssetsList {
 			"assets/480x320/@1x/quickmenu/home.png",
 			"assets/480x320/@2x/backgrounds/alchemy.jpg",
 			"assets/480x320/@2x/backgrounds/bg.jpg",
+			"assets/480x320/@2x/backgrounds/blue.jpg",
 			"assets/480x320/@2x/backgrounds/restaurant.png",
 			"assets/480x320/@2x/backgrounds/school.png",
 			"assets/480x320/@2x/backgrounds/weather.png",
@@ -133,6 +137,7 @@ class AssetsList {
 			"assets/480x320/@2x/quickmenu/home.png",
 			"assets/728x392/@1x/backgrounds/alchemy.jpg",
 			"assets/728x392/@1x/backgrounds/bg.jpg",
+			"assets/728x392/@1x/backgrounds/blue.jpg",
 			"assets/728x392/@1x/backgrounds/restaurant.png",
 			"assets/728x392/@1x/backgrounds/school.png",
 			"assets/728x392/@1x/backgrounds/weather.png",
@@ -162,6 +167,7 @@ class AssetsList {
 			"assets/728x392/@1x/quickmenu/home.png",
 			"assets/728x392/@2x/backgrounds/alchemy.jpg",
 			"assets/728x392/@2x/backgrounds/bg.jpg",
+			"assets/728x392/@2x/backgrounds/blue.jpg",
 			"assets/728x392/@2x/backgrounds/restaurant.png",
 			"assets/728x392/@2x/backgrounds/school.png",
 			"assets/728x392/@2x/backgrounds/weather.png",
@@ -5345,6 +5351,7 @@ class AssetsList {
 	public static inline var TILES_DINOSAURS_ICON30_PNG:String = "tiles/dinosaurs/icon30.png";
 	public static inline var TILES_FLOWERS_ICON36_PNG:String = "tiles/flowers/icon36.png";
 	public static inline var TILES_BIRTHDAY_ICON4_PNG:String = "tiles/birthday/icon4.png";
+	public static inline var BACKGROUNDS_BLUE_JPG:String = "backgrounds/blue.jpg";
 	public static inline var TILES_LANDSCAPES_ICON28_PNG:String = "tiles/landscapes/icon28.png";
 	public static inline var AUDIO_APPLAUSE_MP3:String = "audio/applause.mp3";
 	public static inline var CATEGORIES_WEDDING_PNG:String = "categories/wedding.png";
@@ -6127,6 +6134,7 @@ class AssetsList {
 	public static inline var TILES_LANDSCAPES_ICON27:String = "tiles_landscapes_icon27";
 	public static inline var TILES_MATH_ICON34:String = "tiles_math_icon34";
 	public static inline var TILES_DINOSAURS_ICON1:String = "tiles_dinosaurs_icon1";
+	public static inline var BACKGROUNDS_BLUE:String = "backgrounds_blue";
 	public static inline var TILES_AVATARS_ICON26:String = "tiles_avatars_icon26";
 	public static inline var TILES_FLOWERS_ICON42:String = "tiles_flowers_icon42";
 	public static inline var TILES_SOCIAL_ICON25:String = "tiles_social_icon25";

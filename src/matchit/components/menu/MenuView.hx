@@ -1,8 +1,7 @@
 package matchit.components.menu;
 
-import pixi.interaction.EventTarget;
+import pixi.interaction.InteractionEvent;
 import msignal.Signal.Signal1;
-import pixi.core.sprites.Sprite;
 import matchit.core.components.ComponentView;
 
 class MenuView extends ComponentView {
@@ -46,10 +45,10 @@ class MenuView extends ComponentView {
 		_menu48.position.y = _menu24.position.y + _menu24.height + GAP;
 		_container.addChild(_menu48);
 
-		_menu6.click = _menu6.tap = function(evt:EventTarget) { tiles.dispatch(6); };
-		_menu12.click = _menu12.tap = function(evt:EventTarget) { tiles.dispatch(12); };
-		_menu24.click = _menu24.tap = function(evt:EventTarget) { tiles.dispatch(24); };
-		_menu48.click = _menu48.tap = function(evt:EventTarget) { tiles.dispatch(48); };
+		_menu6.click = _menu6.tap = function(evt:InteractionEvent) { tiles.dispatch(6); };
+		_menu12.click = _menu12.tap = function(evt:InteractionEvent) { tiles.dispatch(12); };
+		_menu24.click = _menu24.tap = function(evt:InteractionEvent) { tiles.dispatch(24); };
+		_menu48.click = _menu48.tap = function(evt:InteractionEvent) { tiles.dispatch(48); };
 
 		_resize();
 	}
